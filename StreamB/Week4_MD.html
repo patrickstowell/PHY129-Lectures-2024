@@ -1,0 +1,608 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Minima, maxima and points of inflection &#8212; PHY129 Mathematics for Physicists</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"HTML-CSS": {"matchFontHeight": true, "scale": 80}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'StreamB/Week4_MD';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../Overview.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="PHY129 Mathematics for Physicists - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="PHY129 Mathematics for Physicists - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../Overview.html">
+                    Overview
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream A - Notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../StreamA/Week1A_MD.html">1. Complex Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../StreamA/Week2A_MD.html">2. Vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../StreamA/Week3A_MD.html">3. Matrices</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream A - Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix1A_MD.html">Row Reduction Inverse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix2A_MD.html">Matrix Diagonalisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix3A_MD.html">Examples from Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix4A_MD.html">Adjoint Proof</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix5A_MD.html">Similarity Transforms</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FStreamB/Week4_MD.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/StreamB/Week4_MD.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Minima, maxima and points of inflection  </h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#higher-order-derivatives">Higher order derivatives <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-points">Critical points <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#absolute-minima">Absolute minima</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="minima-maxima-and-points-of-inflection">
+<h1>Minima, maxima and points of inflection <span class="xref std std-ref"> </span><a class="headerlink" href="#minima-maxima-and-points-of-inflection" title="Permalink to this heading">#</a></h1>
+<section id="higher-order-derivatives">
+<h2>Higher order derivatives <span class="xref std std-ref"> </span><a class="headerlink" href="#higher-order-derivatives" title="Permalink to this heading">#</a></h2>
+<p>So far, we have determined the rate of change of a function. This new
+derivative function can be analysed for its rate of change i.e. the
+2<span class="math notranslate nohighlight">\(^{\mathrm{nd}}\)</span> derivative. This process can be repeated as long as
+the derivatives are differentiable functions. These higher derivatives
+are very useful in analysing the original function such as determining:</p>
+<ul class="simple">
+<li><p>local maxima and minima</p></li>
+<li><p>points of inflection</p></li>
+<li><p>power series approximation (see next topic)</p></li>
+</ul>
+<p>Higher order derivatives also play a role in many theoretical
+descriptions of the physical world. Two examples include the equation
+describing heat diffusion and the wave equation.</p>
+</section>
+<section id="critical-points">
+<h2>Critical points <span class="xref std std-ref"> </span><a class="headerlink" href="#critical-points" title="Permalink to this heading">#</a></h2>
+<p>The first derivative of a function evaluated at a point provides a
+measure of the instantaneous rate of change of the function at that
+point. When the first derivative is equal to zero, we have what is
+called a <strong>stationary point</strong>. Although this term is used to describe
+functions that vary with any independent variable, its meaning is
+clearest if we consider the derivative of distance with respect to time;
+i.e., speed. When this derivative is zero the speed is zero, and
+something with zero speed is stationary. Some stationary points are
+local maxima or minima, while others are horizontal points of
+inflection. You may also see these referred to as <strong>critical points</strong>.
+The typical analytical process to locate these points is to:</p>
+<ol class="arabic simple">
+<li><p>First determine where there are any stationary points i.e. determine
+were <span class="math notranslate nohighlight">\(f'=0\)</span></p></li>
+<li><p>Then check the sign of the second derivative <span class="math notranslate nohighlight">\(f''\)</span> at this point if:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(f''(x)&lt;0\)</span> the function is a local maxima at this point.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f''(x)&gt;0\)</span> the function is a local minima at this point.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f''(x)=0\)</span> the function might be a local maxima, a local minima
+or a horizontal point of inflection. If <span class="math notranslate nohighlight">\(f'\)</span> has the same sign
+immediately above and below <span class="math notranslate nohighlight">\(x\)</span>, then the point is a point of
+inflection. If it changes sign, then it is a point of minimum or
+a maximum.</p></li>
+</ol>
+</li>
+</ol>
+<p>A point for which <span class="math notranslate nohighlight">\(f'\ne0\)</span> whilst <span class="math notranslate nohighlight">\(f''(x)=0\)</span> is a point of inflection.</p>
+<figure class="align-default" id="fig-criticalpointsa">
+<a class="reference internal image-reference" href="Images/poly_x3.png"><img alt="Images/poly_x3.png" src="Images/poly_x3.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-text">Visualising the function <span class="math notranslate nohighlight">\(f(x)=x^{3}-x^{2}-6x+3\)</span> we can see that
+there is an obvious maximum and minimum. The change in concavity of the
+curve is also apparent indicating an inflection point between 0 and 1;</span><a class="headerlink" href="#fig-criticalpointsa" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-criticalpointsb">
+<a class="reference internal image-reference" href="Images/poly_x3_Critical.png"><img alt="Images/poly_x3_Critical.png" src="Images/poly_x3_Critical.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-text">These critical points can be determined analytically via the higher
+derivatives of <span class="math notranslate nohighlight">\(f(x)\)</span>. Here the first derivative goes to zero at the
+max/min points and the second derivative changes sign at the inflection
+point.</span><a class="headerlink" href="#fig-criticalpointsb" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For example, let’s evaluate the critical points of the function</p>
+<div class="math notranslate nohighlight">
+\[f(x)=x^{3}-x^{2}-6x+3\]</div>
+<p>First, evaluate where <span class="math notranslate nohighlight">\(f'(x)=0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f'(x)=3x^{2}-2x-6\]</div>
+<p>and determine where this is zero:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+3x^{2}-2x-6= &amp; 0\\
+x_{0}= &amp; \frac{-2\pm\sqrt{2^{2}-72}}{6}\\
+x_{0}= &amp; -1.12,\,1.79\end{aligned}\end{split}\]</div>
+<p>The solution to the quadratic
+equation indicates multiple stationary point. Next, evaluate the second
+derivative <span class="math notranslate nohighlight">\(f''(x_{0})\)</span> at these points:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+f''(x) &amp; =6x-2\\
+f''(-1.12)= &amp; -6.72\\
+f''(1.79)= &amp; 10.74\end{aligned}\end{split}\]</div>
+<p>therefore we have a local maxima at
+-1.12 and a local minima at 1.79. Finally, we can check for points of
+inflection:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+f''(x) &amp; =6x-2=0\\
+x= &amp; \frac{2}{6}\\
+x= &amp; \frac{1}{3}\end{aligned}\end{split}\]</div>
+<p>The original function and its
+derivatives are shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:CriticalPOintsA</span></code> and <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:CriticalPOintsB</span></code>. Indeed, even with just the minima,
+maxima and <span class="math notranslate nohighlight">\(x_{0}\)</span> values we can typically sketch most functions.</p>
+<section id="absolute-minima">
+<h3>Absolute minima<a class="headerlink" href="#absolute-minima" title="Permalink to this heading">#</a></h3>
+<p>Often in physics we encounter problems where there are more than minima
+in the function. Of these points, the one which has the lowest value of
+the function is known as the <strong>absolute minimum</strong> or the <strong>global
+minimum</strong>. The other minima are referred to as <strong>local minima</strong>. Finding
+a global minimum can be a challenging mathematical task!</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./StreamB"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#higher-order-derivatives">Higher order derivatives <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-points">Critical points <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#absolute-minima">Absolute minima</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Alex Ramadan, Patrick Stowell
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

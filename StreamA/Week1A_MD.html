@@ -1,0 +1,812 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>1. Complex Numbers &#8212; PHY129 Mathematics for Physicists</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"HTML-CSS": {"matchFontHeight": true, "scale": 80}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'StreamA/Week1A_MD';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Vectors" href="Week2A_MD.html" />
+    <link rel="prev" title="Overview" href="../Overview.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../Overview.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="PHY129 Mathematics for Physicists - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="PHY129 Mathematics for Physicists - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../Overview.html">
+                    Overview
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream A - Notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Complex Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week2A_MD.html">2. Vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week3A_MD.html">3. Matrices</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream A - Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix1A_MD.html">Row Reduction Inverse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix2A_MD.html">Matrix Diagonalisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix3A_MD.html">Examples from Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix4A_MD.html">Adjoint Proof</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix5A_MD.html">Similarity Transforms</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FStreamA/Week1A_MD.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/StreamA/Week1A_MD.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Complex Numbers</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1.1. Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">1.2. Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addition-and-subtraction">1.3. Addition and subtraction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication">1.4. Multiplication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#argand-diagram">1.5. Argand Diagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polar-form">1.6. Polar form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-conjugate">1.7. Complex conjugate</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#division">1.8. Division</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powers-and-de-moivre-s-theorem">1.9. Powers and de Moivre’s theorem</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="complex-numbers">
+<h1><span class="section-number">1. </span>Complex Numbers<a class="headerlink" href="#complex-numbers" title="Permalink to this heading">#</a></h1>
+<p>The material in this topic is also covered in chapter 6 of the textbook
+Martin and Shaw “Mathematics for Physicists”. In Boas “Mathematical
+Methods in the Physical Sciences” it is in chapter 2.</p>
+<section id="introduction">
+<h2><span class="section-number">1.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>Complex numbers are used in many areas of physics. You will soon meet
+them in waves and oscillations, electromagnetism, and quantum mechanics.
+This section of the course is designed to help you develop the skills to
+tackle mathematical problems involving complex numbers across your
+university course.</p>
+</section>
+<section id="definition">
+<h2><span class="section-number">1.2. </span>Definition<a class="headerlink" href="#definition" title="Permalink to this heading">#</a></h2>
+<p>A complex number is a number that has real and imaginary parts, it is
+the sum of a real number and an imaginary number. An imaginary number is
+one that is proportional to <span class="math notranslate nohighlight">\(i\)</span> where <span class="math notranslate nohighlight">\(i^2=-1\)</span> i.e. <span class="math notranslate nohighlight">\(i=\sqrt{-1}\)</span>. The
+definition of a complex number, <span class="math notranslate nohighlight">\(z\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[z=x+iy\]</div>
+<p>where <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are
+real numbers and <span class="math notranslate nohighlight">\(i^2=-1\)</span>. We call <span class="math notranslate nohighlight">\(x\)</span> the real part, <span class="math notranslate nohighlight">\(\mathrm{Re}(z)\)</span>,
+and <span class="math notranslate nohighlight">\(y\)</span> the imaginary part, <span class="math notranslate nohighlight">\(\mathrm{Im}(z)\)</span>. Two complex numbers <span class="math notranslate nohighlight">\(z_1\)</span>
+and <span class="math notranslate nohighlight">\(z_2\)</span> are only equal if both their real parts and their imaginary
+parts are equal. i.e. <span class="math notranslate nohighlight">\(z_1=z_2\)</span> if and only if
+<span class="math notranslate nohighlight">\(\mathrm{Re}(z_1)=\mathrm{Re}(z_2)\)</span> and
+<span class="math notranslate nohighlight">\(\mathrm{Im}(z_1)=\mathrm{Im}(z_2)\)</span>.</p>
+</section>
+<section id="addition-and-subtraction">
+<h2><span class="section-number">1.3. </span>Addition and subtraction<a class="headerlink" href="#addition-and-subtraction" title="Permalink to this heading">#</a></h2>
+<p>To add complex numbers together, you need to separately add their real
+and imaginary parts i.e. if <span class="math notranslate nohighlight">\(z_1=x_1+iy_1\)</span> and <span class="math notranslate nohighlight">\(z_2=x_2+iy_2\)</span> then</p>
+<div class="math notranslate nohighlight">
+\[z_1+z_2=(x_1+iy_1)+(x_2+iy_2)=(x_1+x_2)+(y_1+y_2)i.\]</div>
+<p>Similarly for subtraction we obtain;</p>
+<div class="math notranslate nohighlight">
+\[z_1-z_2=(x_1+iy_1)-(x_2+iy_2)=(x_1-x_2)+(y_1-y_2)i.\]</div>
+</section>
+<section id="multiplication">
+<h2><span class="section-number">1.4. </span>Multiplication<a class="headerlink" href="#multiplication" title="Permalink to this heading">#</a></h2>
+<p>To multiply a complex number by a real number we must multiply both the
+real and imaginary parts of the complex number. For example, let us
+multiply the complex number <span class="math notranslate nohighlight">\(z\)</span> by a real number <span class="math notranslate nohighlight">\(a\)</span>;</p>
+<div class="math notranslate nohighlight">
+\[az=a(x+iy)=ax+iay.\]</div>
+<p>We can also multiply a complex number by an
+imaginary number. For example, let us multiply the complex number <span class="math notranslate nohighlight">\(z\)</span> by
+an imaginary number <span class="math notranslate nohighlight">\(bi\)</span>;</p>
+<div class="math notranslate nohighlight">
+\[zbi=(x+iy)bi=bxi+byi^2=bxi-by=-by+bxi.\]</div>
+<p>To multiply two complex numbers we perform the multiplication in the
+same way as we would multiply out brackets in normal algebra i.e.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  z_1z_2=&amp;(x_1+iy_1)(x_2+iy_2)\\
+  =&amp;x_1x_2+x_1y_2i+y_1x_2i +y_1y_2i^2\\
+  =&amp;x_1x_2+x_1y_2i+y_1x_2i -y_1y_2\\
+  =&amp;(x_1x_2-y_1y_2)+(x_1y_2+y_1x_2)i\\
+\end{aligned}\end{split}\]</div>
+</section>
+<section id="argand-diagram">
+<h2><span class="section-number">1.5. </span>Argand Diagram<a class="headerlink" href="#argand-diagram" title="Permalink to this heading">#</a></h2>
+<figure class="align-default" id="fig-argand">
+<a class="reference internal image-reference" href="StreamA/AlexImages/Argand.png"><img alt="StreamA/AlexImages/Argand.png" src="StreamA/AlexImages/Argand.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text">An Argand
+diagram depicting a complex number, <span
+class="math inline"><em>z</em> = <em>x</em> + <em>i</em><em>y</em></span>
+with the <span class="math inline"><em>x</em></span> axis representing
+the real part of <span class="math inline"><em>z</em></span> and the
+<span class="math inline"><em>y</em></span> axis representing the
+imaginary part of <span class="math inline"><em>z</em></span>. The
+complex number <span class="math inline"><em>z</em></span> is the point
+marked on the graph with a filled black circle. The line from the origin
+to the point <span class="math inline"><em>z</em></span> is shown as a
+thick black line with distance labelled as <span
+class="math inline"><em>r</em></span>. The angle between the <span
+class="math inline"><em>x</em></span>-axis and the line from the origin
+to the point <span class="math inline"><em>z</em></span> is labelled as
+<span class="math inline"><em>θ</em></span>. These labels <span
+class="math inline">(<em>r</em>, <em>θ</em>)</span> correspond to polar
+coordinates.</span><a class="headerlink" href="#fig-argand" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>An Argand diagram, shown in
+figure <a class="reference internal" href="#fig-argand"><span class="std std-numref">Fig. 1.1</span></a>,
+is a graphical way of representating complex numbers. The real
+components are represented on the horizontal axis and the imaginary
+components on the vertical axis. We call this space the complex plane.</p>
+<p>Using the complex plane we can visualise the geometrical interpretation
+of adding two complex numbers (see <a class="reference internal" href="#fig-argandaddition"><span class="std std-numref">Fig. 1.2</span></a>).</p>
+<figure class="align-default" id="fig-argandaddition">
+<a class="reference internal image-reference" href="StreamA/AlexImages/ArgandAddition.png"><img alt="StreamA/AlexImages/ArgandAddition.png" src="StreamA/AlexImages/ArgandAddition.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.2 </span><span class="caption-text">An Argand diagram showing addition of
+two complex numbers <span
+class="math inline"><em>z</em><sub>1</sub></span> and <span
+class="math inline"><em>z</em><sub>2</sub></span>.</span><a class="headerlink" href="#fig-argandaddition" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The sum of two complex numbers <span class="math notranslate nohighlight">\(z_1\)</span> and <span class="math notranslate nohighlight">\(z_2\)</span> depicted as points on the
+complex plane in an Argand diagram is the point obtained by forming a
+parallelogram in which the sides are the lines from the origin to the
+points <span class="math notranslate nohighlight">\(z_1\)</span> and <span class="math notranslate nohighlight">\(z_2\)</span>. If you consider these lines as vectors you can
+see that the addition of complex numbers on the complex plane is the
+same as adding vectors on a graph.</p>
+</section>
+<section id="polar-form">
+<h2><span class="section-number">1.6. </span>Polar form<a class="headerlink" href="#polar-form" title="Permalink to this heading">#</a></h2>
+<p>The polar form of a complex number is another way that we can represent
+a complex number. It has two parts: the modulus and the argument. The
+<em>modulus</em> of <span class="math notranslate nohighlight">\(z\)</span> is the absolute value or magnitude, written as <span class="math notranslate nohighlight">\(|z|\)</span>.
+On the Argand diagram (<a class="reference internal" href="#fig-argand"><span class="std std-numref">Fig. 1.1</span></a>) the modulus of the complex number <span class="math notranslate nohighlight">\(|z|\)</span> is the
+distance, <span class="math notranslate nohighlight">\(r\)</span>, of the point <span class="math notranslate nohighlight">\(z\)</span> from the origin. By Pythagoras’ theorem
+we can calculate this as;</p>
+<div class="math notranslate nohighlight">
+\[
+|z|=r=\sqrt{x^2+y^2}.
+\]</div>
+<p>The <em>argument</em> (or phase) of <span class="math notranslate nohighlight">\(z\)</span> is the angle, <span class="math notranslate nohighlight">\(\theta\)</span>, between <span class="math notranslate nohighlight">\(r\)</span> and
+the positive <span class="math notranslate nohighlight">\(x\)</span>-axis. Here the standard convention is used whereby
+angles are measured anticlockwise from the positive <span class="math notranslate nohighlight">\(x\)</span>-axis. The
+argument of <span class="math notranslate nohighlight">\(z\)</span> is often written as <span class="math notranslate nohighlight">\(\mathrm{arg}(z)\)</span>. We can calculate
+the angle using trigonometry as;</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{arg}(z)=\theta=\tan^{-1}{\left(\frac{y}{x}\right)}
+\]</div>
+<p>Usually
+we use the principal argument which is defined as the angle in the range
+<span class="math notranslate nohighlight">\(-\pi&lt;\theta\le\pi\)</span>. We can also write <span class="math notranslate nohighlight">\(\theta\)</span> in terms of the modulus,
+<span class="math notranslate nohighlight">\(r\)</span>, i.e.</p>
+<div class="math notranslate nohighlight">
+\[
+\tan{\theta}=\frac{y}{x},\quad\quad \sin{\theta}=\frac{y}{r}\quad{\text{and}}\quad\cos{\theta}=\frac{x}{r}.
+\]</div>
+<p>Therefore we can write any complex number <span class="math notranslate nohighlight">\(z\)</span> in the trigonometric form
+or <em>polar form</em> which is equivalent to expressing <span class="math notranslate nohighlight">\(z\)</span> in polar
+coordinates i.e.</p>
+<div class="math notranslate nohighlight" id="equation-eq-polarz">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-eq-polarz" title="Permalink to this equation">#</a></span>\[
+z=r(\cos{\theta}+i\,\sin{\theta}).
+\]</div>
+<p>Using Euler’s formula, <span class="math notranslate nohighlight">\(e^{i\theta}=\cos{\theta}+i\,\sin{\theta}\)</span>, a
+complex number can be written in exponential form as</p>
+<div class="math notranslate nohighlight" id="equation-eq-expz">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-eq-expz" title="Permalink to this equation">#</a></span>\[
+z=re^{i\theta}.
+\]</div>
+<p>Let us consider a famous example of a complex number
+in this form. Let <span class="math notranslate nohighlight">\(r=1\)</span> and <span class="math notranslate nohighlight">\(\theta=\pi\)</span> then using
+equations (<span class="xref myst">[eq:polarz]</span>{reference-type=”ref”
+reference=”eq:polarz”}) and
+(<span class="xref myst">[eq:expz]</span>{reference-type=”ref” reference=”eq:expz”}) we
+have</p>
+<div class="math notranslate nohighlight">
+\[
+e^{i\pi}=\cos{\pi}+i\,\sin{\pi}=-1.
+\]</div>
+<p>This particular example
+appears in the equation known as Euler’s identity:</p>
+<div class="math notranslate nohighlight">
+\[
+e^{i\pi}+1=0
+\]</div>
+<p>Complex numbers are used in most areas of physics and the exponential
+form is particularly powerful.</p>
+</section>
+<section id="complex-conjugate">
+<h2><span class="section-number">1.7. </span>Complex conjugate<a class="headerlink" href="#complex-conjugate" title="Permalink to this heading">#</a></h2>
+<p>Every complex number has associated with it another complex number which
+is known as its complex conjugate. The <em>complex conjugate</em> of a complex
+number <span class="math notranslate nohighlight">\(z=x+iy\)</span> is given by;</p>
+<div class="math notranslate nohighlight">
+\[
+\bar{z}=z^{*}=x-iy=r(\cos{\theta}-i\sin{\theta})=re^{-i\theta}.
+\]</div>
+<p>Both
+notations <span class="math notranslate nohighlight">\(\bar{z}\)</span>, “z bar”, or <span class="math notranslate nohighlight">\(z^{*}\)</span>, “z star”, are used to mean the
+complex conjugate of <span class="math notranslate nohighlight">\(z\)</span>.</p>
+<p>On an Argand diagram the complex conjugate is the reflection in the real
+axis (the <span class="math notranslate nohighlight">\(x\)</span>-axis) as shown in
+figure <a class="reference internal" href="#fig-argandconjugate"><span class="std std-numref">Fig. 1.3</span></a>.</p>
+<figure class="align-default" id="fig-argandconjugate">
+<a class="reference internal image-reference" href="StreamA/AlexImages/ArgandConjugate.png"><img alt="StreamA/AlexImages/ArgandConjugate.png" src="StreamA/AlexImages/ArgandConjugate.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.3 </span><span class="caption-text">An Argand diagram showing the complex
+number <span class="math inline"><em>z</em></span> (black filled circle)
+and its complex conjugate <span class="math inline"><em>z̄</em></span>
+(blue filled circle).</span><a class="headerlink" href="#fig-argandconjugate" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Multiplying a complex number by its complex conjugate gives the square
+of its modulus:</p>
+<div class="math notranslate nohighlight">
+\[
+z^{*}z=z\bar{z}=(x+iy)(x-iy)=x^2+y^2=r^2=|z|^2.
+\]</div>
+<p>Note
+that multiplying a complex number by its complex conjugate gives a real
+number.</p>
+<p>We can write the real and imaginary parts of a complex number in terms
+of its complex conjugate as;</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{Re}(z)=\frac{z+\bar{z}}{2}\quad{\text{and}}\quad\mathrm{Im}(z)=\frac{z-\bar{z}}{2i}
+\]</div>
+<p>This shows that a complex number is real if and only if it equals its
+own conjugate i.e. if <span class="math notranslate nohighlight">\(z=\bar{z}\)</span> then <span class="math notranslate nohighlight">\(z\)</span> is real since its imaginary
+part is zero.</p>
+</section>
+<section id="division">
+<h2><span class="section-number">1.8. </span>Division<a class="headerlink" href="#division" title="Permalink to this heading">#</a></h2>
+<p>Division of a complex number <span class="math notranslate nohighlight">\(z_1\)</span> by another complex number <span class="math notranslate nohighlight">\(z_2\)</span> is
+complex. It is not directly possible to divide one complex number by
+another, so we have to use a mathematical trick to enable this. There
+are three ways you can approach division of a complex number <span class="math notranslate nohighlight">\(z_1\)</span> by
+another complex number <span class="math notranslate nohighlight">\(z_2\)</span>:</p>
+<p>1. Using the complex conjugate:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{z_1}{z_2}=\frac{z_1z_2^{*}}{z_2z_2^{*}}=z_1\frac{z_2^{*}}{|z_2|^2}=\frac{(x_1+iy_1)(x_2-iy_2)}{x_2^2+y_2^2}=\frac{x_1x_2+y_1y_2}{x_2^2+y_2^2}+\frac{(y_1x_2-x_1y_2)i}{x_2^2+y_2^2}
+\]</div>
+<p>2. Using the complex exponential approach:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{z_1}{z_2}=\frac{r_1e^{i\theta_1}}{r_2e^{i\theta_2}}=\frac{r_1}{r_2}e^{i\theta_1}e^{-i\theta_2}=\frac{r_1}{r_2}e^{i(\theta_1-\theta_2)}
+\]</div>
+<p>3. Using the polar form using the following trigonometric identities :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+  \sin{(a\pm b)}=&amp;\sin{a}\cos{b}\pm\cos{a}\sin{b}\\
+  \cos{(a\pm b)}=&amp;\cos{a}\cos{b}\mp\sin{a}\sin{b}.
+\end{aligned}
+\end{split}\]</div>
+<p>Note that these trigonometric identities will be given
+to you in an exam on the formula sheet so you don’t need to worry about
+memorising them. Division can be done as</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{z_1}{z_2}=\frac{r_1}{r_2}(\cos{(\theta_1-\theta_2)}+i\sin{(\theta_1-\theta_2)})
+\]</div>
+<p>by simply dividing the absolute values and subtracting the arguments.</p>
+</section>
+<section id="powers-and-de-moivre-s-theorem">
+<h2><span class="section-number">1.9. </span>Powers and de Moivre’s theorem<a class="headerlink" href="#powers-and-de-moivre-s-theorem" title="Permalink to this heading">#</a></h2>
+<p>Taking a complex number to the power <span class="math notranslate nohighlight">\(n\)</span> where <span class="math notranslate nohighlight">\(n\)</span> is an integer can be
+done most easily by considering the exponential form of a complex
+number, given in equation (<span class="xref myst">[eq:expz]</span>{reference-type=”ref”
+reference=”eq:expz”}). Taking the exponential form to the power <span class="math notranslate nohighlight">\(n\)</span>
+gives</p>
+<div class="math notranslate nohighlight">
+\[
+z^n=(re^{i\theta})^n=r^ne^{i n\theta}.
+\]</div>
+<p>Putting this into
+trigonometric form gives</p>
+<div class="math notranslate nohighlight">
+\[
+(r(\cos{\theta} + i\sin{\theta}))^n=r^n(\cos{n\theta}+i\sin{n\theta}).
+\]</div>
+<p>This reveals another trigonometric identity, known as de Moivre’s
+theorem, also called de Moivre’s formula or de Moivre’s identity. It
+states that</p>
+<div class="math notranslate nohighlight" id="equation-eq-demoivre">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-eq-demoivre" title="Permalink to this equation">#</a></span>\[
+(\cos{\theta} + i\sin{\theta})^n=\cos{n\theta}+i\sin{n\theta}
+\]</div>
+<p>for any
+integer <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<p>Using de Moivre’s
+identity (<span class="xref myst">[eq:deMoivre]</span>{reference-type=”ref”
+reference=”eq:deMoivre”}) we can find, for example, that</p>
+<div class="math notranslate nohighlight">
+\[
+z^n+\frac{1}{z^n}=2\cos{n\theta}\quad\text{and}\quad z^n-\frac{1}{z^n}=2i\sin{n\theta}
+\]</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./StreamA"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Overview.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Overview</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Week2A_MD.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Vectors</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1.1. Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">1.2. Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addition-and-subtraction">1.3. Addition and subtraction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication">1.4. Multiplication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#argand-diagram">1.5. Argand Diagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polar-form">1.6. Polar form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-conjugate">1.7. Complex conjugate</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#division">1.8. Division</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powers-and-de-moivre-s-theorem">1.9. Powers and de Moivre’s theorem</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Alex Ramadan, Patrick Stowell
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

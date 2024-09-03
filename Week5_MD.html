@@ -1,0 +1,724 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>8. Power and Maclaurin Series &#8212; PHY129 Mathematics for Physicists</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"HTML-CSS": {"matchFontHeight": true, "scale": 80}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Week5_MD';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="9. Taylor Series, L’Hopital’s rule and approximation errors" href="Week6_MD.html" />
+    <link rel="prev" title="7. Minima, maxima and points of inflection" href="Week4_MD.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="IntroA.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">PHY129 Mathematics for Physicists</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="IntroA.html">
+                    Overview
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream A - Notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Week1A_MD.html">1. Complex Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week2A_MD.html">2. Vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week3A_MD.html">3. Matrices</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream A - Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Appendix1A_MD.html">Row Reduction Inverse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Appendix2A_MD.html">Matrix Diagonalisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Appendix3A_MD.html">Examples from Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Appendix4A_MD.html">Adjoint Proof</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Appendix5A_MD.html">Similarity Transforms</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream B - Notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Week1_MD.html">4. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week2_MD.html">5. Trigonometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week3_MD.html">6. Differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week4_MD.html">7. Inflection</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Power and Maclaurin Series <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week6_MD.html">9. Taylor Series, L’Hopital’s rule and approximation errors <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week7_MD.html">10. Integration <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week8_MD.html">11. Integration by Parts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week9_MD.html">12. Differential Equations <span class="xref std std-ref"> </span></a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FWeek5_MD.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Week5_MD.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Power and Maclaurin Series  </h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#approximating-functions-using-series">8.1. Approximating functions using series <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#power-series">8.2. Power series <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-series-centred-at-zero">8.3. Taylor series centred at zero <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-the-exponential-series">8.3.1. Example 1: The exponential series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-the-binomial-series">8.3.2. Example 2: The Binomial series <span class="xref std std-ref"> </span></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="power-and-maclaurin-series">
+<h1><span class="section-number">8. </span>Power and Maclaurin Series <span class="xref std std-ref"> </span><a class="headerlink" href="#power-and-maclaurin-series" title="Permalink to this heading">#</a></h1>
+<section id="approximating-functions-using-series">
+<h2><span class="section-number">8.1. </span>Approximating functions using series <span class="xref std std-ref"> </span><a class="headerlink" href="#approximating-functions-using-series" title="Permalink to this heading">#</a></h2>
+<p>We can already see how higher derivatives can enable functions to be
+analysed for critical points including maxima and minima. Another, even
+more powerful application of higher derivatives is approximating
+functions as polynomials. This is really useful because the resulting
+polynomials, although approximate, are often much easier to study and
+evaluate than the original functions. Applied to physics, this approach
+enables complicated analytical expressions to be simplified. Hence,
+whenever you are attempting to solve some complex physical model, series
+approximations can reduce the work involved and may ultimately enable
+predictions or deeper insights to be made.</p>
+</section>
+<section id="power-series">
+<h2><span class="section-number">8.2. </span>Power series <span class="xref std std-ref"> </span><a class="headerlink" href="#power-series" title="Permalink to this heading">#</a></h2>
+<p>An infinite <strong>power series</strong> about some point <span class="math notranslate nohighlight">\(x=c\)</span> is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+f(x)=a_{0}+a_{1}(x-c)^{1}+a_{2}(x-c)^{2}+\cdots=\sum_{n=0}^{\infty}a_{n}\left(x-c\right)^{n}
+\]</div>
+<p>Typically, <span class="math notranslate nohighlight">\(c\)</span> represents a point near to which we are particularly
+interested in knowing the behaviour of the function. Often in physics,
+we try to choose our coordinate system, or independent variable, such
+that <span class="math notranslate nohighlight">\(c = 0\)</span>.</p>
+<p>Having defined a power series, we now show that we can rewrite functions
+by relating the coefficients <span class="math notranslate nohighlight">\(a_n\)</span> to the appropriate order of
+derivative of <span class="math notranslate nohighlight">\(f(x)\)</span> evaluated at <span class="math notranslate nohighlight">\(x=c\)</span>. Consider the 3^rd^ order
+polynomial</p>
+<div class="math notranslate nohighlight">
+\[
+f(x) = a_0+a_1(x-c)+a_2(x-c)^2+a_3(x-c)^3
+\]</div>
+<p>Note firstly
+that we have <span class="math notranslate nohighlight">\(a_0=f(x=c)\)</span>. The first three derivatives are:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+    \frac{df}{dx}\equiv f^{(1)}&amp;=a_1+2a_2(x-c)+3a_3(x-c)^2 \\
+    \frac{d^2f}{dx^2}\equiv f^{(2)}&amp;=2a_2+2.3a_3(x-c) \\
+    \frac{d^3f}{dx^3}\equiv f^{(3)}&amp;=2.3a_3 \\  \end{aligned}    
+\end{split}\]</div>
+<p>Hence we can see that the <span class="math notranslate nohighlight">\(n\)</span>^th^ coefficient in the polynomial corresponds to
+the <span class="math notranslate nohighlight">\(n\)</span>^th^ derivative evaluated at <span class="math notranslate nohighlight">\(x=c\)</span>; i.e.,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+    f^{(0)}(x=c)&amp;=a_0\\
+    f^{(1)}(x=c)&amp;=a_1\\
+    f^{(2)}(x=c)&amp;=2a_2 \\
+    f^{(3)}(x=c)&amp;=2.3a_3 \\ 
+\end{aligned}    
+\end{split}\]</div>
+<p>We could repeat this process
+for a higher order polynomial to find the general result that</p>
+<div class="math notranslate nohighlight">
+\[
+a_n=\frac{1}{n!}f^{(n)}(x=c)
+\]</div>
+<p>so that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+f(x)&amp;=a_{0}+a_{1}(x-c)^{1}+a_{2}(x-c)^{2}+\cdots \\
+&amp;=\sum_{n=0}^{\infty}a_{n}\left(x-c\right)^{n} \\
+&amp;=\sum_{n=0}^{\infty}\frac{1}{n!}f^{(n)}(x=c)\left(x-c\right)^{n} \end{aligned}
+\end{split}\]</div>
+<p>where the factor <span class="math notranslate nohighlight">\(1/n!\)</span> arises from the repeated differentiations which
+reduce the power by one each time as we saw above for the 3^rd^ order
+polynomial.</p>
+<p>If the function <span class="math notranslate nohighlight">\(f(x)\)</span> is a polynomial, the final relation above is
+exact for all values of <span class="math notranslate nohighlight">\(x\)</span>. However, we can generalise the techniques
+to find approximate expressions to more complex functions. We are able
+to do this due to the <span class="math notranslate nohighlight">\(1/n!\)</span> prefactor such that higher order terms
+might become increasingly small as long as the higher order derivatives
+also become increasingly small. Such an approximation is referred to as
+a Taylor series.</p>
+</section>
+<section id="taylor-series-centred-at-zero">
+<h2><span class="section-number">8.3. </span>Taylor series centred at zero <span class="xref std std-ref"> </span><a class="headerlink" href="#taylor-series-centred-at-zero" title="Permalink to this heading">#</a></h2>
+<p>This special case is often referred to as a Maclaurin series. It takes
+the form</p>
+<div class="math notranslate nohighlight">
+\[
+f(x)=\sum_{n=0}^{\infty}\frac{f^{(n)}(0)x^{n}}{n!}
+\]</div>
+<p>Writing
+the first <span class="math notranslate nohighlight">\(n\)</span> terms, we create a <span class="math notranslate nohighlight">\(n\)</span>-degree polynomial of the form:</p>
+<div class="math notranslate nohighlight">
+\[
+f(x)\approx\frac{1}{0!}f^{(0)}(0)x^{0}+\frac{1}{1!}f^{(1)}(0)x^{1}+\frac{1}{2!}f^{(2)}(0)x^{2}+\frac{1}{3!}f^{(3)}(0)x^{3}\ldots+\frac{1}{n!}f^{(n)}x^{n}
+\]</div>
+<p>The key ingredient here is the specific function <span class="math notranslate nohighlight">\(f\)</span> we are attempting
+to approximate. We need to calculate the value of this function and its
+derivatives at <span class="math notranslate nohighlight">\(x=0\)</span>. By doing so, we are then able to approximate the
+function for <span class="math notranslate nohighlight">\(x \ne 0\)</span>.</p>
+<section id="example-1-the-exponential-series">
+<h3><span class="section-number">8.3.1. </span>Example 1: The exponential series<a class="headerlink" href="#example-1-the-exponential-series" title="Permalink to this heading">#</a></h3>
+<p>The easiest example to start with is the function <span class="math notranslate nohighlight">\(e^{x}\)</span>, since its
+derivatives all equal the function itself. Here we expand the series to
+a 4<span class="math notranslate nohighlight">\(^{\mathrm{th}}\)</span> degree polynomial:</p>
+<div class="math notranslate nohighlight">
+\[
+e^{x}\approx e^{0}+e^{0}x+\frac{e^{0}}{2}x^{2}+\frac{e^{0}}{6}x^{3}+\frac{e^{0}}{24}x^{4}
+\]</div>
+<p>and since <span class="math notranslate nohighlight">\(e^{0}=1\)</span>, we have:</p>
+<div class="math notranslate nohighlight">
+\[
+e^{x}\approx1+x+\frac{x^{2}}{2}+\frac{x^{3}}{6}+\frac{x^{4}}{24}
+\]</div>
+<p>As
+shown in <a class="reference internal" href="#fig-ex-taylor-approximation"><span class="std std-numref">Fig. 8.1</span></a>, this simple approximation is
+accurate up to <span class="math notranslate nohighlight">\(x\approx 2\)</span> and diverges afterwards.</p>
+<figure class="align-default" id="fig-ex-taylor-approximation">
+<a class="reference internal image-reference" href="_images/Taylor_e.png"><img alt="_images/Taylor_e.png" src="_images/Taylor_e.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8.1 </span><span class="caption-text">The Taylor approximation of <span class="math notranslate nohighlight">\(e^{x}\)</span> is shown as a 4th degree, 6th
+degree and 10th degree polynomial.</span><a class="headerlink" href="#fig-ex-taylor-approximation" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We can improve the approximation by adding more higher order terms.
+Since we can see the form of the series as:</p>
+<div class="math notranslate nohighlight">
+\[
+e^{x}=\sum_{n=0}^{\infty}\frac{x^{n}}{n!}
+\]</div>
+<p>adding more terms is
+simple, so a 6-degree polynomial approximation is:</p>
+<div class="math notranslate nohighlight">
+\[
+e^{x}\approx1+x+\frac{x^{2}}{2}+\frac{x^{3}}{6}+\frac{x^{4}}{24}+\frac{x^{5}}{120}+\frac{x^{6}}{720}
+\]</div>
+</section>
+<section id="example-2-the-binomial-series">
+<h3><span class="section-number">8.3.2. </span>Example 2: The Binomial series <span class="xref std std-ref"> </span><a class="headerlink" href="#example-2-the-binomial-series" title="Permalink to this heading">#</a></h3>
+<p>Binomial functions are of the form</p>
+<div class="math notranslate nohighlight">
+\[
+f(x)=(1+x)^{k}
+\]</div>
+<p>which can be
+expanded by performing a Taylor approximation centred at <span class="math notranslate nohighlight">\(x=0\)</span>. The
+first three derivatives are:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{ll}
+f^{(0)}(x)=(1+x)^{k} &amp; f^{(0)}(0)=1\\
+f^{(1)}(x)=k(1+x)^{k-1} &amp; f^{(1)}(0)=k\\
+f^{(2)}(x)=k(k-1)(1+x)^{k-2} &amp; f^{(2)}(0)=k(k-1)\\
+f^{(3)}(x)=k(k-1)(k-2)(1+x)^{k-3} &amp; f^{(3)}(0)=k(k-1)(k-2)
+\end{array}
+\end{split}\]</div>
+<p>Hence, the series is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+f(x) &amp; =f^{(0)}(0)x^{0}+\frac{1}{1!}f^{(1)}(0)x^{1}+\frac{1}{2!}f^{(2)}(0)x^{2}+\frac{1}{3!}f^{(3)}(0)x^{3}+\cdots\\
+ &amp; =1+kx+\frac{k(k-1)x^{2}}{2}+\frac{k(k-1)(k-2)}{6}x^{3}+\cdots\end{aligned}
+\end{split}\]</div>
+<p>The binomial series is a useful analytical tool. For example, when both
+<span class="math notranslate nohighlight">\(|x|\ll1\)</span> and <span class="math notranslate nohighlight">\(|nx|\ll1\)</span> than we use just the first two terms in the
+expansion:</p>
+<div class="math notranslate nohighlight">
+\[
+(1+x)^{k}\approx1+kx
+\]</div>
+<p>You will see this applied in many
+cases in your physics courses where approximations can be made for
+certain limiting conditions.</p>
+<p>The total energy derived from the theory of
+special relativity is <span class="math notranslate nohighlight">\(E=mc^{2}(1-v^{2}/c^{2})^{-\frac{1}{2}}\)</span>.</p>
+<p>For
+<span class="math notranslate nohighlight">\(v &lt;&lt; c\)</span>, this can be simplified using a binomial expansion of
+<span class="math notranslate nohighlight">\((1+x)^k\)</span>: The quantity <span class="math notranslate nohighlight">\(-v^{2}/c^{2}\)</span> corresponds to <span class="math notranslate nohighlight">\(x\)</span> and
+<span class="math notranslate nohighlight">\(k=-\tfrac{1}{2}\)</span>.</p>
+<p>For <span class="math notranslate nohighlight">\(x &lt;&lt; 1\)</span>, <span class="math notranslate nohighlight">\((1+x)^{k}\)</span> approximates to
+<span class="math notranslate nohighlight">\((1+\tfrac{1}{2}x)\)</span>. Hence</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+    E &amp; =mc^{2}(1-v^{2}/c^{2})^{-\frac{1}{2}}\\
+    &amp; \approx mc^{2}(1+\tfrac{1}{2}v^{2}/c^{2})\\
+    &amp; =mc^{2}+\tfrac{1}{2}mv^{2}.\end{aligned}    
+\end{split}\]</div>
+<p>When we then multiple the constant <span class="math notranslate nohighlight">\(mc^{2}\)</span> term, we can discover that
+the classical form of kinetic energy appears in the low speed limit of
+special relatively.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Week4_MD.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Minima, maxima and points of inflection <span class="xref std std-ref"> </span></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Week6_MD.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Taylor Series, L’Hopital’s rule and approximation errors <span class="xref std std-ref"> </span></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#approximating-functions-using-series">8.1. Approximating functions using series <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#power-series">8.2. Power series <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-series-centred-at-zero">8.3. Taylor series centred at zero <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-the-exponential-series">8.3.1. Example 1: The exponential series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-the-binomial-series">8.3.2. Example 2: The Binomial series <span class="xref std std-ref"> </span></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Patrick Stowell
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
