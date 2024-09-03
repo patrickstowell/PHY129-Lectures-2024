@@ -141,7 +141,7 @@ shown in {numref}`fig:ex-Taylor-approximation`, this simple approximation is
 accurate up to $x\approx 2$ and diverges afterwards.
 
 
-```{figure} ../Images/Taylor_e.png
+```{figure} ImagesB/Taylor_e.png
 ---
 width: 50%
 name: fig:ex-Taylor-approximation

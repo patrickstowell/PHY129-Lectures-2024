@@ -92,7 +92,7 @@ figure {numref}`fig:vectorCart` for a vector $\vec{v}=(\:a\:\:\:b\:)$ in 2D
 
 
 
-```{figure} AlexImages/vectorCart.png
+```{figure} ImagesA/vectorCart.png
 ---
 width: 50%
 name: fig:vectorCart
@@ -239,7 +239,7 @@ reference="fig:vectorAdd"}.
 
 
 
-```{figure} AlexImages/vectorAdd.png
+```{figure} ImagesA/vectorAdd.png
 ---
 width: 50%
 name: fig:vectorAdd
@@ -485,7 +485,7 @@ denote this type of product using a cross $\times$ which is why it is
 also called the cross product.
 
 
-```{figure} AlexImages/CrossProduct.png
+```{figure} ImagesA/CrossProduct.png
 ---
 width: 50%
 name: fig:CrossProduct
@@ -698,7 +698,7 @@ the *parametric* form.
 
 
 
-```{figure} AlexImages/eqline.png
+```{figure} ImagesA/eqline.png
 ---
 width: 50%
 name: fig:eqline
@@ -761,7 +761,7 @@ $\lambda$ and $\mu$ are scalars.
 
 
 
-```{figure} AlexImages/eqplane.png
+```{figure} ImagesA/eqplane.png
 ---
 width: 50%
 name: fig:eqplane
