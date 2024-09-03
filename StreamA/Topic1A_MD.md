@@ -103,7 +103,7 @@ $$
 ## Argand Diagram
 
 
-```{figure} AlexImages/Argand.png
+```{figure} ImagesA/Argand.png
 ---
 width: 50%
 name: fig:Argand
@@ -137,7 +137,7 @@ Using the complex plane we can visualise the geometrical interpretation
 of adding two complex numbers (see {numref}`fig:ArgandAddition`).
 
 
-```{figure} AlexImages/ArgandAddition.png
+```{figure} ImagesA/ArgandAddition.png
 ---
 width: 50%
 name: fig:ArgandAddition
@@ -251,7 +251,7 @@ figure {numref}`fig:ArgandConjugate`.
 
 
 
-```{figure} AlexImages/ArgandConjugate.png
+```{figure} ImagesA/ArgandConjugate.png
 ---
 width: 50%
 name: fig:ArgandConjugate

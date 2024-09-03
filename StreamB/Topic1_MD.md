@@ -9,7 +9,7 @@ future sections we will explore the diferentiation of functions and how
 we can approximate functions using series expansions. A flavour of what
 these tools enable is shown in {numref}`fig:U1_topics`.
 
-```{figure} ../Images/CosDiffTaylor.png
+```{figure} ImagesB/CosDiffTaylor.png
 ---
 width: 40%
 name: fig:U1_topics
@@ -112,7 +112,7 @@ defined by the highest power or degree. For example:
 
 and so on as visualised in {numref}`fig:Poly`.
 
-```{figure} ../Images/Polynoms.png
+```{figure} ImagesB/Polynoms.png
 ---
 width: 50%
 name: fig:Poly
@@ -219,7 +219,7 @@ These are the positive and
 negative semi-circles as shown in
 {numref}`fig:circle`.
 
-```{figure} ../Images/Circle.png
+```{figure} ImagesB/Circle.png
 ---
 width: 50%
 name: fig:circle
@@ -252,7 +252,7 @@ $$
 that the particle follows as $t$ is varied is shown in
 {numref}`fig:kinematicparabola`.
 
-```{figure} ../Images/ParametricProjectile.png
+```{figure} ImagesB/ParametricProjectile.png
 ---
 width: 50%
 name: fig:kinematicparabola
@@ -279,7 +279,7 @@ down repeatedly at $x=\pi/2,\,\,3\pi/2..$ where it goes to infinity.
 
 
 
-```{figure} ../Images/1_x3.png
+```{figure} ImagesB/1_x3.png
 ---
 width: 50%
 name: fig:discont
@@ -303,7 +303,7 @@ vertical asymptote at $x = 0$ and a horizontal asymptote at $y = 0$.
 
 
 
-```{figure} ../Images/tan2.png
+```{figure} ImagesB/tan2.png
 ---
 width: 50%
 name: fig:discont2
@@ -326,7 +326,7 @@ function and checking if it is symmetric with respect to the $y$-axis or
 the origin. The symmetry is easy to appreciate via graphs such as in {numref}`fig:-Even-Odd` and {numref}`fig:-Even-Odd2`.
 
 
-```{figure} ../Images/Even1.png
+```{figure} ImagesB/Even1.png
 ---
 width: 50%
 name: fig:-Even-Odd
@@ -337,7 +337,7 @@ is symmetric around the $y$-axis.
 ```
 
 
-```{figure} ../Images/Odd1.png
+```{figure} ImagesB/Odd1.png
 ---
 width: 50%
 name: fig:-Even-Odd2
@@ -383,7 +383,7 @@ then reflect it through a $45^{\circ}$ line in the $x,\,y$ plane.
 
 
 
-```{figure} ../Images/Inverse1.png
+```{figure} ImagesB/Inverse1.png
 ---
 width: 50%
 name: fig:inverse

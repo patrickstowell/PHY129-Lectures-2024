@@ -35,7 +35,7 @@ $$
 
 
 
-```{figure} ../Images/Wiki_slope_in_2d.png
+```{figure} ImagesB/Wiki_slope_in_2d.png
 ---
 width: 40%
 name: fig:Approximating-the-rate
@@ -65,7 +65,7 @@ $$
 
 
 
-```{figure} ../Images/Tangent-calculus.png
+```{figure} ImagesB/Tangent-calculus.png
 ---
 width: 50%
 name: fig:tangent-calculus
@@ -172,7 +172,7 @@ In {numref}`fig:Differentiation-example`, we see both the function and
 its derivative visualised allowing us a more intuitive understanding of
 the meaning of differentiation.
 
-```{figure} ../Images/Diff_Eg.png
+```{figure} ImagesB/Diff_Eg.png
 ---
 width: 50%
 name: fig:Differentiation-example
@@ -186,7 +186,7 @@ $nx^{n-1}$.
 ```
 
 
-```{figure} ../Images/Diff_Eg2.png
+```{figure} ImagesB/Diff_Eg2.png
 ---
 width: 50%
 name: fig:Differentiation-example2
@@ -396,7 +396,7 @@ $$
 
 
 
-```{figure} ../Images/CircleDerivative.png
+```{figure} ImagesB/CircleDerivative.png
 ---
 width: 70%
 name: fig:ImplicitDiff

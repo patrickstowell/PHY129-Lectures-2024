@@ -50,7 +50,7 @@ The typical analytical process to locate these points is to:
 
 A point for which $f'\ne0$ whilst $f''(x)=0$ is a point of inflection.
 
-```{figure} ../Images/poly_x3.png
+```{figure} ImagesB/poly_x3.png
 ---
 width: 70%
 name: fig:CriticalPOintsA
@@ -60,7 +60,7 @@ there is an obvious maximum and minimum. The change in concavity of the
 curve is also apparent indicating an inflection point between 0 and 1;
 ```
 
-```{figure} ../Images/poly_x3_Critical.png
+```{figure} ImagesB/poly_x3_Critical.png
 ---
 width: 70%
 name: fig:CriticalPOintsB
