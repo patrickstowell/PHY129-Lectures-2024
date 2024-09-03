@@ -1,0 +1,713 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Similarity transformations {#sec:similarity} &#8212; PHY129 Mathematics for Physicists</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"HTML-CSS": {"matchFontHeight": true, "scale": 80}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'StreamA/Appendix5A_MD';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../Overview.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="PHY129 Mathematics for Physicists - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="PHY129 Mathematics for Physicists - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../Overview.html">
+                    Overview
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream A - Notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Week1A_MD.html">1. Complex Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week2A_MD.html">2. Vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week3A_MD.html">3. Matrices</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FStreamA/Appendix5A_MD.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/StreamA/Appendix5A_MD.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Similarity transformations {#sec:similarity}</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotations-around-an-arbitrary-axis">Rotations around an arbitrary axis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#invariants-under-similarity-transformations">Invariants under similarity transformations</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="similarity-transformations-sec-similarity">
+<h1>Similarity transformations {#sec:similarity}<a class="headerlink" href="#similarity-transformations-sec-similarity" title="Permalink to this heading">#</a></h1>
+<p>In section <span class="xref myst">[sec:linear]</span>{reference-type=”ref”
+reference=”sec:linear”}, we saw that matrices can be viewed as taking a
+set of basis vectors to another set of basis vectors. This means that
+the actual numbers in a matrix are intimately connected to the initial
+basis. For example, a matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+ A = 
+ \begin{pmatrix}
+  2 &amp; 1 \cr 5 &amp; 3
+ \end{pmatrix}
+\end{aligned}\]</div>
+<p>takes the unit vector
+<span class="math notranslate nohighlight">\(\hat{\rm e}_x = \begin{pmatrix} 1 \\ 0 \end{pmatrix}\)</span> to the vector
+<span class="math notranslate nohighlight">\(\begin{pmatrix} 2 \\ 5 \end{pmatrix}\)</span>, and it takes the unit vector
+<span class="math notranslate nohighlight">\(\hat{\rm e}_y = \begin{pmatrix} 0 \\ 
+1 \end{pmatrix}\)</span> to the vector <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 \\ 3 \end{pmatrix}\)</span>.
+The numbers in the matrix tell us directly what is the destination of
+<span class="math notranslate nohighlight">\(\hat{\rm e}_x\)</span> and <span class="math notranslate nohighlight">\(\hat{\rm e}_y\)</span>. So now what do we do if we want to
+express the matrix <span class="math notranslate nohighlight">\(A\)</span> in different coordinates, let’s say</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+ \hat{\rm e}_u = \frac{1}{\sqrt{2}}
+ \begin{pmatrix}
+  1 \cr 1
+ \end{pmatrix}
+ \qquad\text{and}\qquad
+  \hat{\rm e}_v = \frac{1}{\sqrt{2}}
+ \begin{pmatrix}
+  1 \cr -1
+ \end{pmatrix}\, .
+\end{aligned}\]</div>
+<p>Clearly the numerical values of the matrix elements of
+<span class="math notranslate nohighlight">\(A\)</span> much change in some way. To answer this question, we first note that
+given the basis vectors <span class="math notranslate nohighlight">\(\hat{\rm e}_j\)</span> we can find the matrix element
+<span class="math notranslate nohighlight">\(a_{jk}\)</span> via</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+ a_{jk} = (\hat{\rm e}_j,A\hat{\rm e}_k)\, ,
+\end{aligned}\]</div>
+<p>where in the example above <span class="math notranslate nohighlight">\(j,k = x,y\)</span>. You should
+verify that you can reproduce the values</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+ a_{11} = (\hat{\rm e}_x,A\hat{\rm e}_x) = 2\, , \quad
+ a_{12} = (\hat{\rm e}_x,A\hat{\rm e}_y) = 1\, , \quad
+ a_{21} = (\hat{\rm e}_y,A\hat{\rm e}_x) = 5\, , \quad
+ a_{22} = (\hat{\rm e}_y,A\hat{\rm e}_y) = 3\, .
+\end{aligned}\]</div>
+<p>So if the matrix elements of <span class="math notranslate nohighlight">\(A\)</span> with respect to the
+basis <span class="math notranslate nohighlight">\(\{ \hat{\rm e}_j \}\)</span> are given by
+<span class="math notranslate nohighlight">\((\hat{\rm e}_j,A\hat{\rm e}_k)\)</span>, then the same matrix, but in different
+coordinates, i.e., a basis <span class="math notranslate nohighlight">\(\{ 
+\hat{\rm e}_j' \}\)</span>, will be given by
+<span class="math notranslate nohighlight">\(a_{jk}' = (\hat{\rm e}_j',A\hat{\rm e}_k')\)</span>. We can denote the matrix
+in the primed basis by <span class="math notranslate nohighlight">\(A'\)</span>.</p>
+<p>Next, we define the primed basis <span class="math notranslate nohighlight">\(\{ \hat{\rm e}_j' \}\)</span> in terms of a
+transformation <span class="math notranslate nohighlight">\(S\)</span> that has an inverse <span class="math notranslate nohighlight">\(S^{-1}\)</span>, acting on the basis
+<span class="math notranslate nohighlight">\(\{ \hat{\rm e}_j \}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+ \hat{\rm e}_j' = S \hat{\rm e}_j\, .
+\end{aligned}\]</div>
+<p>We can then write</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+ (\hat{\rm e}_j,A\hat{\rm e}_k) = \left(S^{-1}\hat{\rm e}_j',A S^{-1}\hat{\rm e}_k'\right) = \left(\hat{\rm e}_j',S A S^{-1}\hat{\rm e}_k'\right) \equiv (\hat{\rm e}_j',A' \hat{\rm e}_k')\, ,
+\end{aligned}\]</div>
+<p>where we used <span class="math notranslate nohighlight">\((S^{-1}\a,\b) = (\a,S\b)\)</span>. You can see
+this by noting that changing <span class="math notranslate nohighlight">\(\b\)</span> in the scalar product is equivalent to
+changing <span class="math notranslate nohighlight">\(\a\)</span> in the opposite way. Therefore the matrix elements of <span class="math notranslate nohighlight">\(A\)</span>
+in the <span class="math notranslate nohighlight">\(\{ \hat{\rm e}_j \}\)</span> basis are the same as the matrix elements
+of <span class="math notranslate nohighlight">\(A'\)</span> in the <span class="math notranslate nohighlight">\(\{ \hat{\rm e}_j' \}\)</span> basis, and we can write</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+ A' = SAS^{-1}\, .
+\end{aligned}\]</div>
+<p>This is called a <em>similarity transformation</em> of <span class="math notranslate nohighlight">\(A\)</span>. It
+allows us to write matrices in different coordinate systems, among other
+things.</p>
+<p>Returning to our example above, we note that the transformation <span class="math notranslate nohighlight">\(S\)</span> that
+takes <span class="math notranslate nohighlight">\(\hat{\rm e}_x\)</span> and <span class="math notranslate nohighlight">\(\hat{\rm e}_y\)</span> to <span class="math notranslate nohighlight">\(\hat{\rm e}_u\)</span> and
+<span class="math notranslate nohighlight">\(\hat{\rm e}_v\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ S = \frac{1}{\sqrt{2}} 
+ \begin{pmatrix}
+  1 &amp; 1 \\ 1 &amp; -1
+ \end{pmatrix}
+ \qquad\text{and} \qquad
+ S^{-1} = S\, .
+\end{aligned}\end{split}\]</div>
+<p>The matrix <span class="math notranslate nohighlight">\(A'\)</span> is then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ A' = SAS = \frac12
+ \begin{pmatrix}
+  1 &amp; 1 \\ 1 &amp; -1
+ \end{pmatrix}
+ \begin{pmatrix}
+  2 &amp; 1 \\ 5 &amp; 3
+ \end{pmatrix}
+ \begin{pmatrix}
+  1 &amp; 1 \\ 1 &amp; -1
+ \end{pmatrix}
+ = \frac12
+ \begin{pmatrix}
+  11 &amp; 3 \\ -5 &amp; -1
+ \end{pmatrix}\, .
+\end{aligned}\end{split}\]</div>
+<p>Again, you should verify this.</p>
+<p>The main subtlety of similarity transformations is to figure out which
+operation is <span class="math notranslate nohighlight">\(S\)</span> and which one is <span class="math notranslate nohighlight">\(S^{-1}\)</span>. It requires careful thought
+about what the basis vectors are doing. In that sense similarity
+transforms are the trickiest part of this course on matrices.</p>
+<section id="rotations-around-an-arbitrary-axis">
+<h2>Rotations around an arbitrary axis<a class="headerlink" href="#rotations-around-an-arbitrary-axis" title="Permalink to this heading">#</a></h2>
+<p>We left a question in section
+<span class="xref myst">[sec:linear]</span>{reference-type=”ref”
+reference=”sec:linear”} about how we can construct a matrix around an
+arbitrary axis in three dimensions. Consider the 3D rotation matrix
+around the <span class="math notranslate nohighlight">\(x\)</span>-axis:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ R_x(\theta) =
+ \begin{pmatrix}
+  1 &amp; 0 &amp; 0 \\
+  0 &amp; \cos\theta &amp; -\sin\theta \\
+  0 &amp; \sin\theta &amp; \cos\theta
+ \end{pmatrix}\, .
+\end{aligned}\end{split}\]</div>
+<p>Suppose we want to rotate around the axis that lies
+45<span class="math notranslate nohighlight">\(^\circ\)</span> rotated towards the <span class="math notranslate nohighlight">\(z\)</span>axis. This axis rotation is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ R_y(\pi/4) =
+ \begin{pmatrix}
+  \cos\pi/4 &amp; 0 &amp; -\sin\pi/4 \\
+  0 &amp; 1 &amp; 0 \\
+  \sin\pi/4 &amp; 0 &amp; \cos\pi/4
+ \end{pmatrix}
+ = \frac{1}{\sqrt{2}}
+ \begin{pmatrix}
+  1 &amp; 0 &amp; -1 \\
+  0 &amp; \sqrt{2} &amp; 0 \\
+  1 &amp; 0 &amp; 1
+ \end{pmatrix}\, .
+\end{aligned}\end{split}\]</div>
+<p>This rotation takes the unit in the <span class="math notranslate nohighlight">\(x\)</span> direction to the
+rotation axis. However, the similarity transform <span class="math notranslate nohighlight">\(S\)</span> above is actually
+the opposite (inverse) of this, because <span class="math notranslate nohighlight">\(S\)</span> is the matrix that changes
+the basis vectors and <span class="math notranslate nohighlight">\(\hat{\rm e}_x\)</span> rotates away from the rotation
+axis towards the <em>negative</em> <span class="math notranslate nohighlight">\(z\)</span>-axis. The rotation matrix around an axis
+midway between the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(z\)</span>-axis is therefore</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ R_{45}(\theta) &amp; = R_y(-\pi/4) R_x(\theta) R_y(\pi/4) \cr &amp; = \frac12
+ \begin{pmatrix}
+  1 &amp; 0 &amp; 1 \\
+  0 &amp; \sqrt{2} &amp; 0 \\
+  -1 &amp; 0 &amp; 1
+ \end{pmatrix}
+ \begin{pmatrix}
+  1 &amp; 0 &amp; 0 \\
+  0 &amp; \cos\theta &amp; -\sin\theta \\
+  0 &amp; \sin\theta &amp; \cos\theta
+ \end{pmatrix}
+ \begin{pmatrix}
+  1 &amp; 0 &amp; -1 \\
+  0 &amp; \sqrt{2} &amp; 0 \\
+  1 &amp; 0 &amp; 1
+ \end{pmatrix} \cr
+ &amp; = 
+ \begin{pmatrix}
+  \cos^2\frac{\theta}{2} &amp; \sin\theta / \sqrt{2} &amp; \sin^2\frac{\theta}{2} \\
+  -\sin\theta / \sqrt{2} &amp; \cos\theta &amp; -\sin\theta / \sqrt{2} \\
+  \sin^2\frac{\theta}{2} &amp; \sin\theta / \sqrt{2} &amp; \cos^2\frac{\theta}{2}
+ \end{pmatrix} \, .
+\end{aligned}\end{split}\]</div>
+<p>We used that the inverse of a rotation matrix
+<span class="math notranslate nohighlight">\(R(\theta)\)</span> is rotating by the same amount in the opposite direction
+<span class="math notranslate nohighlight">\(R(-\theta)\)</span>. We can obtain other rotation axes using suitable
+rotations, and this technique also works if one wants to reflect in some
+arbitrary axis or plane.</p>
+</section>
+<section id="invariants-under-similarity-transformations">
+<h2>Invariants under similarity transformations<a class="headerlink" href="#invariants-under-similarity-transformations" title="Permalink to this heading">#</a></h2>
+<p>Similarity transforms preserve some aspects of a matrix. From the
+properties of the determinant in section
+<span class="xref myst">[sec:det]</span>{reference-type=”ref” reference=”sec:det”} you
+can see that the determinant of a matrix after a similarity transform
+remains unchanged:</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+ \det A' = \det(SAS^{-1}) = \det S \det A \det S^{-1} = \det S \det A (\det S)^{-1} = \det A\, .
+\end{aligned}\]</div>
+<p>This makes sense, because a similarity transform takes a
+matrix to a matrix that has the same effect on vectors, but in a
+different coordinate system.</p>
+<p>Another important quantity that remains invariant under similarity
+transformations is the trace. The idea is simple: add up all the
+elements along the diagonal:</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+ \tr A = \sum_{j=1}^n a_{jj} = \sum_{j=1}^n (\hat{\rm e}_j, A \hat{\rm e}_j)\, .
+\end{aligned}\]</div>
+<p>Without proof we state that the trace has the so-called
+<em>cyclic property</em>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+ \tr(ABC) = \tr(CAB)\, .
+\end{aligned}\]</div>
+<p>Using this property, we can show that the trace of a
+matrix is invariant under similarity transformations:</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+ \tr(A') = \tr(SAS^{-1}) = \tr(AS^{-1}S) = \tr(A)\, .
+\end{aligned}\]</div>
+<p>The trace will play a key role in the calculation of
+probabilities in quantum mechanics.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./StreamA"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotations-around-an-arbitrary-axis">Rotations around an arbitrary axis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#invariants-under-similarity-transformations">Invariants under similarity transformations</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Alex Ramadan, Patrick Stowell
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

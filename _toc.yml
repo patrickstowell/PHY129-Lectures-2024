@@ -1,0 +1,37 @@
+format: jb-book
+root: Overview
+options:
+  numbered: True
+parts:
+- caption: Stream A - Notes
+  numbered: True
+  chapters:
+    - file: StreamA/Topic1A_MD
+    - file: StreamA/Topic2A_MD
+    - file: StreamA/Topic3A_MD
+- caption: Stream A - Appendix
+  numbered: False
+  chapters:
+    - file: AppendixA/Appendix1A_MD
+      title: Row Reduction Inverse
+    - file: AppendixA/Appendix2A_MD  
+      title: Matrix Diagonalisation
+    - file: AppendixA/Appendix3A_MD  
+      title: Examples from Physics
+    - file: AppendixA/Appendix4A_MD  
+      title: Adjoint Proof
+    - file: AppendixA/Appendix5A_MD  
+      title: Similarity Transforms
+- caption: Stream B - Notes
+  numbered: True
+  chapters:
+    - file: Topic1_MD
+    - file: Topic2_MD
+      title: Trigonometry
+    - file: Topic3_MD
+    - file: Topic4_MD
+    - file: Topic5_MD
+    - file: Topic6_MD
+    - file: Topic7_MD
+    - file: Topic8_MD
+    - file: Topic9_MD

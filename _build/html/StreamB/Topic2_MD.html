@@ -1,0 +1,617 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Trigonometric and Hyperbolic Functions &#8212; PHY129 Mathematics for Physicists</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"HTML-CSS": {"matchFontHeight": true, "scale": 80}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'StreamB/Topic2_MD';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../Overview.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="PHY129 Mathematics for Physicists - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="PHY129 Mathematics for Physicists - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../Overview.html">
+                    Overview
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream A - Notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../StreamA/Topic1A_MD.html">1. Complex Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../StreamA/Topic2A_MD.html">2. Vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../StreamA/Topic3A_MD.html">3. Matrices</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream A - Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix1A_MD.html">Row Reduction Inverse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix2A_MD.html">Matrix Diagonalisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix3A_MD.html">Examples from Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix4A_MD.html">Adjoint Proof</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix5A_MD.html">Similarity Transforms</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FStreamB/Topic2_MD.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/StreamB/Topic2_MD.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Trigonometric and Hyperbolic Functions  </h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-functions">Trigonometric functions <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-identities">Trigonometric identities <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperbolic-functions">Hyperbolic Functions <span class="xref std std-ref"> </span></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="trigonometric-and-hyperbolic-functions">
+<h1>Trigonometric and Hyperbolic Functions <span class="xref std std-ref"> </span><a class="headerlink" href="#trigonometric-and-hyperbolic-functions" title="Permalink to this heading">#</a></h1>
+<section id="trigonometric-functions">
+<h2>Trigonometric functions <span class="xref std std-ref"> </span><a class="headerlink" href="#trigonometric-functions" title="Permalink to this heading">#</a></h2>
+<p>Trigonometry functions associate the sides of a right angled triangle to
+it’s angles. The three basic trigonometry functions are:</p>
+<ul class="simple">
+<li><p><strong>cosine</strong>: ratio of adjacent to hypotenuse</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-cos">
+<span class="eqno">()<a class="headerlink" href="#equation-eq-cos" title="Permalink to this equation">#</a></span>\[
+\frac{y}{r}=\cos\theta
+\]</div>
+<ul class="simple">
+<li><p><strong>sine</strong>: ratio of opposite to hypotenuse</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-sin">
+<span class="eqno">()<a class="headerlink" href="#equation-eq-sin" title="Permalink to this equation">#</a></span>\[
+\frac{x}{r}=\sin\theta
+\]</div>
+<ul class="simple">
+<li><p><strong>tan</strong>: ratio of opposite to adjacent</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-tan">
+<span class="eqno">()<a class="headerlink" href="#equation-eq-tan" title="Permalink to this equation">#</a></span>\[
+\frac{x}{y}=\tan\theta=\frac{\sin\theta}{\cos\theta}
+\]</div>
+<p>Since the input angle can be 0-360<span class="math notranslate nohighlight">\(^{\circ}\)</span>, these trig functions are
+typically defined using a circle. If the radius of the circle, i.e the
+hypotenuse, is set to 1 the sine and cosine ratios reduce to opposite
+and adjacent respectively. As the angle increases the values of these
+ratios change and repeat periodically for each cycle around the circle.
+Due to their periodic nature, trigonometric functions are used
+frequently in physics to describe oscillating phenomena.</p>
+<p>The other three possible ratios should also be noted:</p>
+<div class="math notranslate nohighlight" id="equation-eg-alternatives">
+<span class="eqno">()<a class="headerlink" href="#equation-eg-alternatives" title="Permalink to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+\mathrm{cosec}\,\theta &amp; =\frac{r}{y}=\frac{1}{\sin\theta}\\
+\sec\theta &amp; =\frac{r}{x}=\frac{1}{\cos\theta}\\
+\cot\theta &amp; =\frac{x}{y}=\frac{1}{\tan\theta}\end{aligned}
+\end{split}\]</div>
+</section>
+<section id="trigonometric-identities">
+<h2>Trigonometric identities <span class="xref std std-ref"> </span><a class="headerlink" href="#trigonometric-identities" title="Permalink to this heading">#</a></h2>
+<p>There are many standard identities which can be useful in solving
+analytical problems in physics. Memory of these is of course not
+required but you should be aware of their existence or even better
+practice proving them!</p>
+<p>The first set relate the squares of the functions and can be proven via
+Pythagoras’s Theorem:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\cos^{2}\theta+\sin^{2}\theta=1\\
+1+\tan^{2}\theta=\sec^{2}\theta\\
+\cot^{2}\theta+1=\mathrm{cosec}^{2}\,\theta\end{aligned}\end{split}\]</div>
+<p>The double
+angle formula are:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+{\rm sin}\;2\theta&amp;={\rm sin}\;(\theta+\theta)={\rm sin}\;\theta\;{\rm cos}\;\theta+{\rm cos}\;\theta\;{\rm sin}\;\theta=2{\rm sin}\;\theta{\rm \,cos}\;\theta\\
+{\rm cos}\;2\theta&amp;={\rm cos}\;(\theta+\theta)={\rm cos}\;\theta\;{\rm cos}\;\theta-{\rm sin}\;\theta\;{\rm sin}\;\theta={\rm cos}^{2}\;\theta-{\rm sin}^{2}\;\theta\end{aligned}
+\end{split}\]</div>
+<p>The sum formula are:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+{\rm sin}\;A-{\rm sin}\;B &amp; =2{\rm cos}\;(\frac{A+B}{2}){\rm sin}\;(\frac{A-B}{2})\\
+{\rm sin}\;(A\pm B)= &amp; {\rm sin}\;A\;{\rm cos}\;B\pm{\rm cos}\;A\;{\rm sin}\;B\\
+{\rm cos}\;(A\pm B)= &amp; {\rm cos}\;A\;{\rm cos}\;B\pm{\rm sin}\;A\;{\rm sin}\;B\\
+{\rm sin}\;A+{\rm sin}\;B= &amp; 2{\rm sin}\;(\frac{A+B}{2}){\rm cos}\;(\frac{A-B}{2})\\
+{\rm sin}\;A-{\rm sin}\;B= &amp; 2{\rm cos}\;(\frac{A+B}{2}){\rm sin}\;(\frac{A-B}{2})\\
+{\rm cos}\;A+{\rm cos}\;B= &amp; 2{\rm cos}\;(\frac{A+B}{2}){\rm cos}\;(\frac{A-B}{2})\\
+{\rm cos}\;A-{\rm cos}\;B= &amp; -2{\rm sin}\;(\frac{A+B}{2}){\rm sin}\;(\frac{A-B}{2})\\
+2{\rm sin}\;A\;{\rm cos}\;B= &amp; {\rm sin}\;(A+B)-{\rm sin}\;(A-B)\\
+2{\rm sin}\;A\;{\rm sin}\;B= &amp; {\rm cos}\;(A+B)-{\rm cos}\;(A-B)\\
+2{\rm cos}\;A\;{\rm cos}\;B= &amp; {\rm cos}\;(A+B)+{\rm cos}\;(A-B)\\
+{\rm tan}\;(A+B)= &amp; \frac{{\rm tan}\;A+{\rm tan}\;B}{1+{\rm tan}\;A\;{\rm tan}\;B}
+\end{aligned}
+\end{split}\]</div>
+<p>Finally there is the Cosine Rule:</p>
+<div class="math notranslate nohighlight">
+\[c^{2}=a^{2}+b^{2}-2ab\cos C\]</div>
+<p>the Sine rule:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\sin A}{a}=\frac{\sin B}{b}=\frac{\sin C}{c}\]</div>
+<p>and the area of a triangle:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{2}ab\sin C=\frac{1}{2}bc\sin A=\frac{1}{2}ac\sin B\]</div>
+</section>
+<section id="hyperbolic-functions">
+<h2>Hyperbolic Functions <span class="xref std std-ref"> </span><a class="headerlink" href="#hyperbolic-functions" title="Permalink to this heading">#</a></h2>
+<p>Whereas the standard trigonometric functions are based on circles
+(<span class="math notranslate nohighlight">\(x^{2}+y^{2}=r^{2}\)</span>), hyperbolic trigonometric functions are based on
+hyperbola (<span class="math notranslate nohighlight">\(x^{2}-y^{2}=1\)</span>) as shown in
+Fig. <span class="xref myst">1.2</span>. The geometry defined by hyperbolic
+functions have numerous applications in physics.</p>
+<p>The functions themselves are combinations of exponential <span class="math notranslate nohighlight">\(e^{x}\)</span> curves
+and define hyperbolic versions of the trigonometric sine, cosine etc.:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\sinh x &amp; =\frac{1}{2}\left(e^{x}-e^{-x}\right)\\
+\cosh x &amp; =\frac{1}{2}\left(e^{x}+e^{-x}\right)\\
+\tanh x &amp; =\frac{\sinh x}{\cosh x}=\frac{\mathrm{e}^{2x}-1}{\mathrm{e}^{2x}+1}\end{aligned}
+\end{split}\]</div>
+<p>The graphs of these functions are shown in
+Fig. <span class="xref myst">1.4</span>{reference-type=”ref”
+reference=”fig:hyperbolicfuncs”}. There are also corresponding
+reciprocals:</p>
+<div class="math notranslate nohighlight">
+\[\DeclareMathOperator{\sech}{sech} \sech x = 1/\cosh x\]</div>
+<div class="math notranslate nohighlight">
+\[\DeclareMathOperator{\cosech}{cosech} \cosech x =1/\sinh x \]</div>
+<div class="math notranslate nohighlight">
+\[\DeclareMathOperator{\coth}{coth} \coth x = 1/\tanh x\]</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./StreamB"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-functions">Trigonometric functions <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-identities">Trigonometric identities <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperbolic-functions">Hyperbolic Functions <span class="xref std std-ref"> </span></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Alex Ramadan, Patrick Stowell
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

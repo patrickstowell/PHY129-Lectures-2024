@@ -1,0 +1,1088 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>2. Vectors &#8212; PHY129 Mathematics for Physicists</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"HTML-CSS": {"matchFontHeight": true, "scale": 80}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'StreamA/Week2A_MD';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Matrices" href="Week3A_MD.html" />
+    <link rel="prev" title="1. Complex Numbers" href="Week1A_MD.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../Overview.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="PHY129 Mathematics for Physicists - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="PHY129 Mathematics for Physicists - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../Overview.html">
+                    Overview
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream A - Notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Week1A_MD.html">1. Complex Numbers</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week3A_MD.html">3. Matrices</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream A - Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix1A_MD.html">Row Reduction Inverse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix2A_MD.html">Matrix Diagonalisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix3A_MD.html">Examples from Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix4A_MD.html">Adjoint Proof</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix5A_MD.html">Similarity Transforms</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FStreamA/Week2A_MD.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/StreamA/Week2A_MD.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Vectors</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">2.1. Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">2.2. Definitions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors-in-cartesian-coordinates">2.2.1. Vectors in Cartesian coordinates</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basis-vectors">2.2.2. Basis vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magnitude-modulus">2.2.3. Magnitude/Modulus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-vectors">2.2.4. Unit vectors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-vectors">2.3. Manipulating vectors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#addition-and-subtraction-of-vectors">2.3.1. Addition and subtraction of vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scalar-multiplication">2.3.2. Scalar multiplication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dot-product">2.3.3. The dot product</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-cross-product">2.3.4. The cross product</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#triple-product">2.3.5. Triple product</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lines-and-planes">2.4. Lines and planes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equation-of-a-line">2.4.1. Equation of a line</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equation-of-a-plane">2.4.2. Equation of a plane</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="vectors">
+<h1><span class="section-number">2. </span>Vectors<a class="headerlink" href="#vectors" title="Permalink to this heading">#</a></h1>
+<p>The material in this topic is also covered in chapter 8 of the textbook
+Martin and Shaw “Mathematics for Physicists”. In Boas “Mathematical
+Methods in the Physical Sciences” it is in chapter 3 sections 4 and 5
+and in chapter 6 sections 2 and 3.</p>
+<section id="introduction">
+<h2><span class="section-number">2.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>Vectors are an essential mathematical tool for describing many physical
+phenomena. They allow us to encode the concept of directionality in a
+physical quantity. Familiar examples include velocity, which requires
+both a speed and a direction of travel, and force, which requires a
+magnitude and direction in which the force is acting. By developing
+knowledge of the mathematics of vectors you will become familiar with
+some powerful tools that simplify manipulations and calculations that
+are of relevance to physics ranging from classical mechanics and
+electromagnetism to relativity.</p>
+<p>In this introductory course we will only consider 2 and 3 dimensional
+Cartesian space, but the concepts can be extended and applied to other
+spaces, for example, 4 dimensional space-time coordinate systems for
+special relativity and curved spaces for general relativity.</p>
+</section>
+<section id="definitions">
+<h2><span class="section-number">2.2. </span>Definitions<a class="headerlink" href="#definitions" title="Permalink to this heading">#</a></h2>
+<section id="vectors-in-cartesian-coordinates">
+<h3><span class="section-number">2.2.1. </span>Vectors in Cartesian coordinates<a class="headerlink" href="#vectors-in-cartesian-coordinates" title="Permalink to this heading">#</a></h3>
+<p>A vector is a list of numbers that together define an arrow in space
+i.e. specify its length and its direction. For example for a velocity,
+<span class="math notranslate nohighlight">\(\vec{v}\)</span>, its length is the speed and its direction is the direction
+of motion. Vectors can be written in several different ways. For example
+a <em>row vector</em> is written as a list of numbers in a row:</p>
+<div class="math notranslate nohighlight">
+\[\vec{v}=(\begin{array}{ccc}a&amp;b&amp;c\end{array})\]</div>
+<p>where <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> and <span class="math notranslate nohighlight">\(c\)</span>
+are numbers. Sometimes commas are used to separate the numbers in the
+list of a row vector i.e.</p>
+<div class="math notranslate nohighlight">
+\[\vec{v}=(a,b,c)\]</div>
+<p>We call these the numbers
+<span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> and <span class="math notranslate nohighlight">\(c\)</span> the <em>components</em> or <em>elements</em> of the vector. A <em>column
+vector</em> lists the elements in a column i.e.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{v}=\left(\begin{array}{c}a\\b\\c\end{array}\right)\end{split}\]</div>
+<p>Often in
+typed documents and textbooks bold font is used to indicate that a
+quantity is a vector as I have used here for the vector <span class="math notranslate nohighlight">\(\vec{v}\)</span>.
+However, in handwriting and on a blackboard it is not easy to write in
+bold font and therefore other conventions are used such as an arrow
+above the letter or a line underneath it;</p>
+<div class="math notranslate nohighlight">
+\[\vec{v}=\vec{v}=\underline{v}\]</div>
+<p>Each of these notations mean the same
+thing i.e. that this quantity is a vector not a scalar which would be
+written as <span class="math notranslate nohighlight">\(v\)</span>. A scalar is a single number such as speed whereas
+velocity is a vector so needs several components. To specify a vector in
+space we need one component for each dimension e.g. for 3D space we need
+3 components as in my example <span class="math notranslate nohighlight">\(\vec{v}\)</span> above. To describe space we use
+a coordinate system. Here we will use the coordinate system you are most
+familiar with, the Cartesian coordinate system i.e. <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(z\)</span> axes.
+Each element gives the component in that direction. In our example
+<span class="math notranslate nohighlight">\(\vec{v}\)</span> defined above <span class="math notranslate nohighlight">\(a\)</span> is the <span class="math notranslate nohighlight">\(x\)</span> component, <span class="math notranslate nohighlight">\(b\)</span> is the <span class="math notranslate nohighlight">\(y\)</span>
+component and <span class="math notranslate nohighlight">\(c\)</span> is the <span class="math notranslate nohighlight">\(z\)</span> component. To draw the arrow described by
+the vector <span class="math notranslate nohighlight">\(\vec{v}\)</span> on a graph we simply plot the coordinates <span class="math notranslate nohighlight">\((a,b,c)\)</span>
+and draw an arrow from the origin to this point, as done in
+figure <a class="reference internal" href="#fig-vectorcart"><span class="std std-numref">Fig. 2.1</span></a> for a vector <span class="math notranslate nohighlight">\(\vec{v}=(\:a\:\:\:b\:)\)</span> in 2D
+(two dimensional) Cartesian <span class="math notranslate nohighlight">\(x\)</span>-<span class="math notranslate nohighlight">\(y\)</span> space.</p>
+<figure class="align-default" id="fig-vectorcart">
+<a class="reference internal image-reference" href="StreamA/AlexImages/vectorCart.png"><img alt="StreamA/AlexImages/vectorCart.png" src="StreamA/AlexImages/vectorCart.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">The
+vector <span class="math inline"><span class="math notranslate nohighlight">\(\vec{v}=(\:a\:\:\:b\:)\)</span></span> is
+plotted as a large black arrow on a graph of 2D Cartesian space with
+axes <span class="math inline"><em>x</em></span> and <span
+class="math inline"><em>y</em></span>. The basis vectors are indicated
+as small red arrows.</span><a class="headerlink" href="#fig-vectorcart" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="basis-vectors">
+<h3><span class="section-number">2.2.2. </span>Basis vectors<a class="headerlink" href="#basis-vectors" title="Permalink to this heading">#</a></h3>
+<p>To express a vector in space, we must first define a coordinate system.
+We do this be specifying the axes e.g. the <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(z\)</span>-axes for the
+Cartesian coordinate system. We can define these axes using <em>basis
+vectors</em>. These are vectors of length one unit in the directions we want
+the axes to be in. A vector of length one is called a <em>unit vector</em> and
+is usually denoted by a hat on top e.g. <span class="math notranslate nohighlight">\(\hat{\vec{x}}\)</span>. The basis
+vector in the <span class="math notranslate nohighlight">\(x\)</span> direction is sometimes called <span class="math notranslate nohighlight">\(\hat{\vec{i}}\)</span>. The
+<span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> basis vectors are indicated on
+figure <a href="#id1"><span class="problematic" id="id2">fig:vectorCart</span></a>.</p>
+<p>Since the 3 basis vectors in the Cartesian coordinate system are
+mutually perpendicular we can write any point in space as a combination
+of the basis vectors. There are several notations used for the basis
+vectors in the Cartesian coordinate system and it is worth remembering
+them all since different lecturers/books will use them interchangably.
+Let us express our velocity vector from the previous section in terms of
+the basis vectors;</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    \vec{v} &amp;= a\hat{\vec{i}} + b\hat{\vec{j}} + c\hat{\vec{k}}\\
+        &amp;= a\hat{\vec{x}} + b\hat{\vec{y}} + c\hat{\vec{z}}\\
+        &amp;=a\hat{\vec{e_x}} + b\hat{\vec{e_y}} + c\hat{\vec{e_z}}\\
+         &amp;=a\hat{\vec{e_1}} + b\hat{\vec{e_2}} + c\hat{\vec{e_3}}
+\end{aligned}\end{split}\]</div>
+<p>The component <span class="math notranslate nohighlight">\(a\)</span> gives the speed in the <span class="math notranslate nohighlight">\(x\)</span> direction
+and the component <span class="math notranslate nohighlight">\(b\)</span> the speed in the <span class="math notranslate nohighlight">\(y\)</span> direction etc. To remind
+ourselves of this meaning of the components it can be helpful to write
+them as <span class="math notranslate nohighlight">\(a=v_x\)</span>, <span class="math notranslate nohighlight">\(b=v_y\)</span> and <span class="math notranslate nohighlight">\(c=v_z\)</span> i.e.</p>
+<div class="math notranslate nohighlight">
+\[\vec{v} = v_x\hat{\vec{i}} + v_y\hat{\vec{j}} + v_z\hat{\vec{k}}\]</div>
+<p>where the subscripts indicate the relevant component.</p>
+</section>
+<section id="magnitude-modulus">
+<h3><span class="section-number">2.2.3. </span>Magnitude/Modulus<a class="headerlink" href="#magnitude-modulus" title="Permalink to this heading">#</a></h3>
+<p>The <em>magnitude</em>, also known as the <em>modulus</em>, of a vector is the length
+of the arrow specified by the vector. By Pythagoras’ theorem this length
+is given by</p>
+<div class="math notranslate nohighlight">
+\[v=\left|\vec{v}\right|=\sqrt{v_{x}^2 + v_{y}^2 + v_{z}^2}.\]</div>
+<p>If the
+vector represents velocity, its magnitude is the speed. Note that the
+letter without its bold font or arrow indicating the vector is often
+used to denote the magnitude of the vector i.e. the speed is <span class="math notranslate nohighlight">\(v\)</span> and the
+velocity is <span class="math notranslate nohighlight">\(\vec{v}\)</span>. However if this distinction is a bit subtle it
+is safer to use the modulus signs <span class="math notranslate nohighlight">\(|\vec{v}|\)</span>.</p>
+<p>Note that this definition of the magnitude is true for any vector, not
+just the velocity. For example let us define a general vector <span class="math notranslate nohighlight">\(\vec{a}\)</span>
+as</p>
+<div class="math notranslate nohighlight">
+\[\vec{a} = a_x\hat{\vec{i}} + a_y\hat{\vec{j}} + a_z\hat{\vec{k}}\]</div>
+<p>the the magnitude of <span class="math notranslate nohighlight">\(\vec{a}\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[a=\left|\vec{a}\right|=\sqrt{a_{x}^2 + a_{y}^2 + a_{z}^2}.\]</div>
+</section>
+<section id="unit-vectors">
+<h3><span class="section-number">2.2.4. </span>Unit vectors<a class="headerlink" href="#unit-vectors" title="Permalink to this heading">#</a></h3>
+<p>We’re already met unit vectors in the context of basis vectors but we
+can also define a unit vector for any vector as the vector of magnitude
+one in the direction of the vector of interest. For our general vector
+<span class="math notranslate nohighlight">\(\vec{a}\)</span> we can define its unit vector as</p>
+<div class="math notranslate nohighlight">
+\[\hat{\vec{a}}=\frac{a_{x}}{a} \hat{\vec{i}}  + \frac{a_{y}}{a} \hat{\vec{j}} + 
+\frac{a_{z}}{a} \hat{\vec{k}}\]</div>
+<p>corresponding to a unit vector in the
+direction of <span class="math notranslate nohighlight">\(\vec{a}\)</span>.</p>
+</section>
+</section>
+<section id="manipulating-vectors">
+<h2><span class="section-number">2.3. </span>Manipulating vectors<a class="headerlink" href="#manipulating-vectors" title="Permalink to this heading">#</a></h2>
+<section id="addition-and-subtraction-of-vectors">
+<h3><span class="section-number">2.3.1. </span>Addition and subtraction of vectors<a class="headerlink" href="#addition-and-subtraction-of-vectors" title="Permalink to this heading">#</a></h3>
+<p>In physics we often need to add vectors. For example, to find the net
+force we often need to add forces that are actin in different
+directions. You know Newton’s second law, <span class="math notranslate nohighlight">\(F=ma\)</span> in scalar form which is
+valid for one dimensional problems. But in 2D or 3D space force and
+acceleration are vectors i.e. <span class="math notranslate nohighlight">\(\vec{F}=m\vec{a}\)</span>. To find the
+resulting acceleration of an object subject to several forces, we need
+to use vector addition of the forces.</p>
+<p>Graphically (see figure <span class="xref myst">1.2</span>{reference-type=”ref”
+reference=”fig:vectorAdd”}) we can add vectors using the triangle (or
+parallelogram) law. To add a vector <span class="math notranslate nohighlight">\(\vec{b}\)</span> to a vector <span class="math notranslate nohighlight">\(\vec{a}\)</span>,
+we displace <span class="math notranslate nohighlight">\(\vec{b}\)</span>, without changing its orientation, so that it
+starts where <span class="math notranslate nohighlight">\(\vec{a}\)</span> ends i.e. place the tail of the arrow
+representing <span class="math notranslate nohighlight">\(\vec{b}\)</span> at the head of the arrow <span class="math notranslate nohighlight">\(\vec{a}\)</span>. Then we
+draw the line joining the start of <span class="math notranslate nohighlight">\(\vec{a}\)</span> to the end of <span class="math notranslate nohighlight">\(\vec{b}\)</span>
+(from the tail of <span class="math notranslate nohighlight">\(\vec{a}\)</span> to the head of <span class="math notranslate nohighlight">\(\vec{b}\)</span>) to get the
+vector representing the addition of <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span>. This is
+shown in figure <span class="xref myst">1.2</span>{reference-type=”ref”
+reference=”fig:vectorAdd”}.</p>
+<figure class="align-default" id="fig-vectoradd">
+<a class="reference internal image-reference" href="StreamA/AlexImages/vectorAdd.png"><img alt="StreamA/AlexImages/vectorAdd.png" src="StreamA/AlexImages/vectorAdd.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Diagram to show the addition of two
+vectors. The vectors <span class="math inline"><span class="math notranslate nohighlight">\(\vec{a}\)</span></span> and
+<span class="math inline"><span class="math notranslate nohighlight">\(\vec{b}\)</span></span> are plotted as black arrows
+and their sum <span class="math inline"><span class="math notranslate nohighlight">\(\vec{a}+\vec{b}\)</span></span> is
+the red arrow.</span><a class="headerlink" href="#fig-vectoradd" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>However we don’t actually need to plot vectors to add them. We can find
+<span class="math notranslate nohighlight">\(\vec{a}+\vec{b}\)</span> algebraically by adding their components i.e.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{a}+\vec{b}=&amp;a_x\hat{\vec{i}} + a_y\hat{\vec{j}} + b_x\hat{\vec{i}} + b_y\hat{\vec{j}} =(a_x+b_x)\hat{\vec{i}} + (a_y+b_y)\hat{\vec{j}}\\
+  \vec{a}+\vec{b}=&amp;\left(\begin{array}{c}a_x\\a_y\end{array}\right)+\left(\begin{array}{c}b_x\\b_y\end{array}\right)=\left(\begin{array}{c}a_x+b_x\\a_y+b_y\end{array}\right)\\
+\end{aligned}\end{split}\]</div>
+<p>where each of the notation examples I have given are
+equivalent.</p>
+<p>Vector addition is <em>commutative</em>, that is adding <span class="math notranslate nohighlight">\(\vec{b}\)</span> to <span class="math notranslate nohighlight">\(\vec{a}\)</span>
+is the same as adding <span class="math notranslate nohighlight">\(\vec{a}\)</span> to <span class="math notranslate nohighlight">\(\vec{b}\)</span>, i.e.</p>
+<div class="math notranslate nohighlight">
+\[\vec{b}+\vec{a}=\vec{a}+\vec{b}.\]</div>
+<p>Vector addition is also
+associative, meaning that if we add three or more vectors, the order in
+which we do the addition does not matter, i.e.</p>
+<div class="math notranslate nohighlight">
+\[\vec{a}+(\vec{b}+\vec{c})=(\vec{a}+\vec{b})+\vec{c}\]</div>
+<p>Vector
+subtraction, e.g., <span class="math notranslate nohighlight">\(\vec{a}-\vec{b}\)</span>, is done by adding the negative of
+<span class="math notranslate nohighlight">\(\vec{b}\)</span> to <span class="math notranslate nohighlight">\(\vec{a}\)</span>. The negative of a vector simply corresponds to
+reversing its direction so it points the opposite way.</p>
+</section>
+<section id="scalar-multiplication">
+<h3><span class="section-number">2.3.2. </span>Scalar multiplication<a class="headerlink" href="#scalar-multiplication" title="Permalink to this heading">#</a></h3>
+<p>A vector multiplied by a positive scalar, <span class="math notranslate nohighlight">\(k\)</span>, has the same direction as
+the original vector but has a magnitude (length) that is <span class="math notranslate nohighlight">\(k\)</span> times
+longer which corresponds to multiplying each component by <span class="math notranslate nohighlight">\(k\)</span> i.e.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  k\vec{a}=&amp;k(a_x\hat{\vec{i}} + a_y\hat{\vec{j}}) =ka_x\hat{\vec{i}} + ka_y\hat{\vec{j}}\\
+  k\vec{a}=&amp;k\left(\begin{array}{c}a_x\\a_y\end{array}\right)=\left(\begin{array}{c}ka_x\\ka_y\end{array}\right)\\
+        k\vec{a}=&amp;k(a_x,a_y)=(ka_x,ka_y)
+\end{aligned}\end{split}\]</div>
+<p>This follows on directly from the rules of addition
+discussed in the previous section e.g.
+<span class="math notranslate nohighlight">\(\vec{a}+\vec{a}+\vec{a}=3\vec{a}\)</span>.</p>
+<p>If we multiply a vector by a negative scalar, <span class="math notranslate nohighlight">\(-k\)</span>, the magnitude again
+increases by a factor of <span class="math notranslate nohighlight">\(k\)</span> but the direction is reversed.</p>
+<p>The multiplication of vectors by scalars obey the following standard
+rules of multiplication</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    k(\vec{a}+\vec{b})=&amp;k\vec{a}+k\vec{b}\\
+    (p+q)\vec{a}=&amp;p\vec{a}+q\vec{a}\\
+    p(q\vec{a})=&amp;(pq)\vec{a}=pq\vec{a}
+\end{aligned}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(k\)</span>, <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(q\)</span> are scalars.</p>
+</section>
+<section id="the-dot-product">
+<h3><span class="section-number">2.3.3. </span>The dot product<a class="headerlink" href="#the-dot-product" title="Permalink to this heading">#</a></h3>
+<p>Multiplication of vectors is more complicated than addition or
+subtraction. There are different kinds of products of two vectors. One,
+called the <em>scalar product</em>, gives a result which is a scalar. Another
+type of product, called the vector product, gives a result which is a
+vector. We will discuss the vector product in
+section <span class="xref myst">1.3.4</span>{reference-type=”ref”
+reference=”sec:crossprod”}. There is a third type of product of two
+vectors, called the outer product, which results in a matrix. Here we
+discuss the <em>scalar product</em> which is also called the <em>dot product</em> or
+<em>inner product</em>.</p>
+<p>If <span class="math notranslate nohighlight">\(\vec{a} = a_x\hat{i} + a_y\hat{j} + a_z\hat{k}\)</span> and
+<span class="math notranslate nohighlight">\(\vec{b} = b_x\hat{i} + b_y\hat{j} + b_z\hat{k}\)</span>, then the scalar, or
+dot, product is given by</p>
+<div class="math notranslate nohighlight">
+\[\vec{a}\cdot\vec{b}=\vec{a}\cdot\vec{b} = a_xb_x + a_yb_y +a_zb_z = ab\cos{\theta}\label{eq:scalarproduct}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between the two vectors. Note that the
+result is a scalar, which is why we call it the scalar product. Note
+also that that to denote this kind of product between vectors we use a
+dot <span class="math notranslate nohighlight">\(\cdot\)</span> which is why it is also called it the dot product. Note that
+the dot product between two perpendicular vevctors is zero.</p>
+<p>From
+equation (<span class="xref myst">[eq:scalarproduct]</span>{reference-type=”ref”
+reference=”eq:scalarproduct”}), we can see that the scalar product is
+commutative; i.e.,</p>
+<div class="math notranslate nohighlight">
+\[
+\underline{a}\cdot\underline{b} = \underline{b}\cdot\underline{a}
+\]</div>
+<p>It
+is also <em>distributive</em>, meaning that,</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{a}\cdot(\vec{b}+\vec{c})=\vec{a}\cdot\vec{b}+\vec{a}\cdot\vec{c}
+\]</div>
+<p>If we multiply a scalar product by a scalar, <span class="math notranslate nohighlight">\(k\)</span>, then we have the
+following equalities,</p>
+<div class="math notranslate nohighlight">
+\[
+k(\vec{a}\cdot\vec{b})=(k\vec{a})\cdot\vec{b}=\vec{a}\cdot(k\vec{b})
+\]</div>
+<p>We can use the scalar product to find the angle between two lines by
+rearragning
+equation (<span class="xref myst">[eq:scalarproduct]</span>{reference-type=”ref”
+reference=”eq:scalarproduct”}) to obtain;</p>
+<div class="math notranslate nohighlight">
+\[
+\theta = \cos^{-1}\left(\frac{\vec{a}\cdot\vec{b}}{ab}\right).
+\]</div>
+<p>The
+special case of finding whether two lines are perpendicular, which
+corresponds to the scalar product being zero, is particularly useful in
+physics.</p>
+<p>Another very common use of the scalar product in phyics is to find the
+component of a vector in a particular direction. We often want to know
+the component of a force in a particular direction. For example it is
+often useful to resolve forces into perpendicular directions i.e. find
+the component of a force in each perpendicular direction. In general, if
+we wish to find the component of <span class="math notranslate nohighlight">\(\vec{a}\)</span> in the direction of
+<span class="math notranslate nohighlight">\(\vec{b}\)</span>, then we take the scalar product of <span class="math notranslate nohighlight">\(\vec{b}\)</span> with the unit
+vector parallel to <span class="math notranslate nohighlight">\(\vec{b}\)</span>; i.e.,</p>
+<div class="math notranslate nohighlight">
+\[
+a_b=\vec{a}\cdot\hat{\vec{b}}=a\cos{\theta}.
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\theta\)</span> is the
+angle between the vectors <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span> and the subscript is
+used to denote the component in that direction i.e. <span class="math notranslate nohighlight">\(a_b\)</span> is teh
+component of <span class="math notranslate nohighlight">\(\vec{a}\)</span> in the direction of <span class="math notranslate nohighlight">\(\vec{b}\)</span>. This is also
+known as the <em>projection</em> of <span class="math notranslate nohighlight">\(\vec{a}\)</span> onto <span class="math notranslate nohighlight">\(\vec{b}\)</span>. Often the
+directions we are interested in correspond to the Cartesian axes
+directions <span class="math notranslate nohighlight">\(\hat{\vec{x}}\)</span>, <span class="math notranslate nohighlight">\(\hat{\vec{y}}\)</span>, <span class="math notranslate nohighlight">\(\hat{\vec{z}}\)</span>. For
+example the component of a force <span class="math notranslate nohighlight">\(\vec{f}\)</span> along the <span class="math notranslate nohighlight">\(x\)</span> axis would be
+given by;</p>
+<div class="math notranslate nohighlight">
+\[
+f_x=\vec{f}\cdot\hat{\vec{x}}=f\cos{\theta}
+\]</div>
+<p>where
+<span class="math notranslate nohighlight">\(\theta\)</span> is the angle between the force <span class="math notranslate nohighlight">\(\vec{f}\)</span> and the <span class="math notranslate nohighlight">\(x\)</span>-axis.</p>
+</section>
+<section id="the-cross-product">
+<h3><span class="section-number">2.3.4. </span>The cross product<a class="headerlink" href="#the-cross-product" title="Permalink to this heading">#</a></h3>
+<p>The <em>cross product</em>, or <em>vector product</em> of two vectors <span class="math notranslate nohighlight">\({\vec{a}}\)</span> and
+<span class="math notranslate nohighlight">\({\vec{b}}\)</span> is denoted by <span class="math notranslate nohighlight">\(\vec{a}\,\times\,\vec{b}\)</span> is defined as a
+vector <span class="math notranslate nohighlight">\({\vec{c}}\)</span> which is perpendicular to both <span class="math notranslate nohighlight">\({\vec{a}}\)</span> and
+<span class="math notranslate nohighlight">\({\vec{b}}\)</span>. It has a direction and a magnitude which is equal to the
+area of the parallelogram that the vectors span. The following formula
+can be used to define the cross product:</p>
+<div class="math notranslate nohighlight">
+\[\vec{a}\,\times\,\vec{b} = \left|\vec{a}\,\right|\left|\vec{b}\,\right|\sin{\theta} \vec{n}\]</div>
+<p>In this equation <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between <span class="math notranslate nohighlight">\(\vec{a}\)</span> and
+<span class="math notranslate nohighlight">\(\vec{b}\)</span>, and n is the unit vector parallel to the plane. See
+figure [1.3](#fig:Cross product){reference-type=”ref”
+reference=”fig:Cross product”})</p>
+<p>The cross product can also be expressed as a three–by–three
+determinant</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\vec{a}\,\times\,\vec{b} 
+             &amp; = &amp; {\left|\begin{array}{ccc}\hat{\vec{i}}&amp;\hat{\vec{j}}&amp;\hat{\vec{k}}\\      
+  a_x&amp;a_y&amp;a_z\\b_x&amp;b_y&amp;b_z\end{array}\right|}\\
+&amp;&amp;\\
+&amp; = &amp;(a_yb_z - a_zb_y)\,\hat{\vec{i}}- (a_xb_z-a_zb_x)\,\hat{\vec{j}}
++ (a_xb_y - a_yb_x)\,\hat{\vec{k}}
+\end{aligned}\end{split}\]</div>
+<p>Note that the result of the cross product of two vectors
+is another vector. This is why it is called the vector product. We
+denote this type of product using a cross <span class="math notranslate nohighlight">\(\times\)</span> which is why it is
+also called the cross product.</p>
+<figure class="align-default" id="fig-crossproduct">
+<a class="reference internal image-reference" href="StreamA/AlexImages/CrossProduct.png"><img alt="StreamA/AlexImages/CrossProduct.png" src="StreamA/AlexImages/CrossProduct.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Diagram to show the cross product with
+of a right-handed coordinate system.</span><a class="headerlink" href="#fig-crossproduct" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>An important feature of the cross product is that it is perpendicular to
+both of the original vectors.</p>
+<p>Note that the cross product is <em>anticommutative</em> meaning it changes sign
+if the order of the vectors is swapped i.e.</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{a}\times\vec{b} = -\vec{b}\times\vec{a}
+\]</div>
+<p>It is distributive
+i.e.</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{a}\times(\vec{b}+\vec{c})=\vec{a}\times\vec{b}+\vec{a}\times\vec{c}
+\]</div>
+<p>Cross products occur in many areas of physics, for example, the force on
+a particle with charge <span class="math notranslate nohighlight">\(q\)</span> moving with velocity <span class="math notranslate nohighlight">\(\vec{v}\)</span> in a magnetic
+field <span class="math notranslate nohighlight">\(\vec{B}\)</span> is given by <span class="math notranslate nohighlight">\(\vec{F}=q\vec{v}\times\vec{B}\)</span>. The
+resultant force is perpendicular to both the direction of movement and
+the magnetic field.</p>
+<p>The magnitude of the vector product is given by</p>
+<div class="math notranslate nohighlight" id="equation-eq-crossproduct">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-eq-crossproduct" title="Permalink to this equation">#</a></span>\[
+\left|\vec{a}\,\times\,\vec{b}\,\right| = a\,b\,|\sin{\theta} |
+\]</div>
+<p>Hence the cross product (as well as the dot product) also provides a
+method for finding the angle between two vectors. Note that the cross
+product between two parallel vectors is zero.</p>
+</section>
+<section id="triple-product">
+<h3><span class="section-number">2.3.5. </span>Triple product<a class="headerlink" href="#triple-product" title="Permalink to this heading">#</a></h3>
+<p>The triple product is the product of three vectors. The <em>scalar triple
+product</em> results in a scalar whereas the vector triple product results
+in a vector.</p>
+<p>The scalar triple product is given by the dot product between one vector
+and the cross product of the other two vectors i.e.</p>
+<div class="math notranslate nohighlight">
+\[\vec{a}\cdot(\vec{b}\times\vec{c})\]</div>
+<p>The triple scalar product can be obtained from the three–by–three
+determinant of the matrix with the vectors as the rows i.e.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\vec{a}\cdot(\vec{b}\times\vec{c})
+&amp; = &amp; {\left|\begin{array}{ccc}    
+  a_x&amp;a_y&amp;a_z\\b_x&amp;b_y&amp;b_z\\c_x&amp;c_y&amp;c_z\end{array}\right|}\\
+&amp;&amp;\\
+&amp; = &amp;a_x(b_yc_z - b_zc_y)- a_y(b_xc_z-b_zc_x)+ a_z(b_xc_y - b_yc_x)
+\end{aligned}\end{split}\]</div>
+<p>Changing the vector one starts with in a triple scalar product does not
+change the value as long as the circular order of the vectors is
+maintained i.e.</p>
+<div class="math notranslate nohighlight">
+\[\vec{a}\cdot(\vec{b}\times\vec{c})=\vec{b}\cdot(\vec{c}\times\vec{a})=\vec{c}\cdot(\vec{a}\times\vec{b})\]</div>
+<p>Swapping the order of the operations does not change the value i.e.</p>
+<div class="math notranslate nohighlight">
+\[\vec{a}\cdot(\vec{b}\times\vec{c})=(\vec{a}\times\vec{b})\cdot\vec{c}\]</div>
+<p>But swapping the order or any two of the vectors changes the sign of the
+triple product i.e.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{a}\cdot(\vec{b}\times\vec{c})=&amp;-\vec{a}\cdot(\vec{c}\times\vec{b})\\
+  =&amp;-\vec{b}\cdot(\vec{a}\times\vec{c})\\
+    =&amp;-\vec{c}\cdot(\vec{b}\times\vec{a})
+\end{aligned}\end{split}\]</div>
+<p>Note that, since the the cross product between parallel vectors is zero
+and the dot product of perpendicular vectors is zero and the cross
+product of two vectors is perpendicular to both the original vectors,
+the triple scalar product is zero if any two of the original vectors are
+equal i.e.</p>
+<div class="math notranslate nohighlight">
+\[\vec{a}\cdot(\vec{a}\times\vec{b})=\vec{a}\cdot(\vec{b}\times\vec{a})=\vec{a}\cdot(\vec{b}\times\vec{b})=\vec{b}\cdot(\vec{a}\times\vec{a})=0.\]</div>
+<p>The vector triple product is the cross product between one vector and
+the cross product of the other two vectors i.e.</p>
+<div class="math notranslate nohighlight">
+\[\vec{a}\times(\vec{b}\times\vec{c})\]</div>
+<p>The vector triple product
+expansion is given by the following relationship:</p>
+<div class="math notranslate nohighlight">
+\[\vec{a}\times(\vec{b}\times\vec{c})= (\vec{a}\cdot\vec{c})\vec{b} - (\vec{a}\cdot\vec{b})\vec{c}\]</div>
+<p>Since the cross product is anticommutative (changes sign when we swap
+the order) we have;</p>
+<div class="math notranslate nohighlight">
+\[(\vec{a}\times\vec{b})\times\vec{c}=-\vec{c}\times(\vec{a}\times\vec{b})\]</div>
+<p>From this we can also find that</p>
+<div class="math notranslate nohighlight">
+\[\vec{a}\times(\vec{b}\times\vec{c})+\vec{b}\times(\vec{c}\times\vec{a})+\vec{c}\times(\vec{a}\times\vec{b})=0\]</div>
+<p>and therefore</p>
+<div class="math notranslate nohighlight">
+\[(\vec{a}\times\vec{b})\times\vec{c}=\vec{a}\times(\vec{b}\times\vec{c})-\vec{b}\times(\vec{a}\times\vec{c})\]</div>
+</section>
+</section>
+<section id="lines-and-planes">
+<h2><span class="section-number">2.4. </span>Lines and planes<a class="headerlink" href="#lines-and-planes" title="Permalink to this heading">#</a></h2>
+<section id="equation-of-a-line">
+<h3><span class="section-number">2.4.1. </span>Equation of a line<a class="headerlink" href="#equation-of-a-line" title="Permalink to this heading">#</a></h3>
+<p>In the Cartesian coordinate system, we can describe any straight line by
+an equation using vectors. The position vector, <span class="math notranslate nohighlight">\(\vec{r}=(x,y,z)\)</span> of
+any point on the line is given by</p>
+<div class="math notranslate nohighlight">
+\[\vec{r} = \vec{a} + \lambda \vec{c}\label{eq:line}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\lambda\)</span>
+is a scalar, <span class="math notranslate nohighlight">\(\vec{a}=(a_{x},a_{y},a_{z})\)</span> is the position vector of a
+point on the line and <span class="math notranslate nohighlight">\(\vec{c}=(c_{x},c_{y},c_{z})\)</span> is a vector parallel
+to the line (see <a class="reference internal" href="#fig-eqline"><span class="std std-numref">Fig. 2.4</span></a>). This form of the equation of a line is called
+the <em>parametric</em> form.</p>
+<figure class="align-default" id="fig-eqline">
+<a class="reference internal image-reference" href="StreamA/AlexImages/eqline.png"><img alt="StreamA/AlexImages/eqline.png" src="StreamA/AlexImages/eqline.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Plot showing
+the equation of a line using vectors.</span><a class="headerlink" href="#fig-eqline" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Since, a vector has components in each of the directions, the line in
+equation (<span class="xref myst">[eq:line]</span>{reference-type=”ref”
+reference=”eq:line”}) can also be expressed in a <em>symmetric form</em> as;</p>
+<div class="math notranslate nohighlight">
+\[\frac{x-a_{x}}{c_{x}} =  \frac{y-a_{y}}{c_{y}} = 
+\frac{z-a_{z}}{c_{z}} = \lambda\]</div>
+<p>Alternatively, if we know the coordinates of two points on a line,
+<span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span>, then the line can be expressed in parametric
+form as;</p>
+<div class="math notranslate nohighlight">
+\[\vec{r} = \vec{a} + \lambda (\vec{b}-\vec{a})\]</div>
+<p>since the
+difference between the position vectors of two points on the line gives
+a vector along the line i.e. a vector in the direction of <span class="math notranslate nohighlight">\(\vec{c}\)</span> in
+equation (<span class="xref myst">[eq:line]</span>{reference-type=”ref”
+reference=”eq:line”}). This relationship is a direct consequence of the
+triangle law of vector addition (see
+figure <span class="xref myst">1.2</span>{reference-type=”ref”
+reference=”fig:vectorAdd”}).</p>
+</section>
+<section id="equation-of-a-plane">
+<h3><span class="section-number">2.4.2. </span>Equation of a plane<a class="headerlink" href="#equation-of-a-plane" title="Permalink to this heading">#</a></h3>
+<p>We can also use vectors to write down an equation for a plane (see
+figure <span class="xref myst">1.5</span>{reference-type=”ref”
+reference=”fig:eqplane”}). The parametric equation of a plane which
+passes through a point with position vector <span class="math notranslate nohighlight">\(\vec{c}\)</span>, and which
+contains non-parallel vectors <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\vec{r} = \vec{c} + \lambda \vec{a} + \mu \vec{b}\]</div>
+<p>where
+<span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\mu\)</span> are scalars.</p>
+<figure class="align-default" id="fig-eqplane">
+<a class="reference internal image-reference" href="StreamA/AlexImages/eqplane.png"><img alt="StreamA/AlexImages/eqplane.png" src="StreamA/AlexImages/eqplane.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Plot
+showing the equation of a plane using vectors.</span><a class="headerlink" href="#fig-eqplane" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Alternatively, the equation of a plane may also be defined using the
+scalar and vector product. Since the cross product of two vectors is
+perpendicular to both vectors, the cross product between two
+non-parallel vectors that lie in the plane is perpendicular to the
+plane. A vector perpendicular to a plane is called the vector normal to
+the plane and often denoted, <span class="math notranslate nohighlight">\(\vec{n}\)</span>. So for non-parallel vectors
+<span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span> that lie in plane the normal to the plane is
+given by <span class="math notranslate nohighlight">\(\vec{n}=\vec{a} \times \vec{b}\)</span>. The scalar product of any
+vector that lies in the plane with the normal <span class="math notranslate nohighlight">\(\vec{n}\)</span> must be zero
+since the scalar product of perpendicular vectors is zero. The vector
+between any two points in the plane is parallel to the plane and
+therefore perpendicular to the normal vector <span class="math notranslate nohighlight">\(\vec{n}\)</span>. Therefore the
+vector between some general point on the plane with position vector
+<span class="math notranslate nohighlight">\(\vec{r}\)</span> and the point on the plane with position vector <span class="math notranslate nohighlight">\(\vec{c}\)</span> must
+lie in the plane. This vector can be written as <span class="math notranslate nohighlight">\((\vec{r} - \vec{c})\)</span>
+and since it lies in the plane it must be perpendicular to the normal
+vector <span class="math notranslate nohighlight">\(\vec{n}\)</span>. Therefore the scalar product between
+<span class="math notranslate nohighlight">\((\vec{r} - \vec{c})\)</span> and <span class="math notranslate nohighlight">\(\vec{n}\)</span> must be zero i.e.,</p>
+<div class="math notranslate nohighlight" id="equation-eq-plane">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-eq-plane" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
+  (\vec{r} - \vec{c}) \cdot \vec{n} &amp;= 0\nonumber\\
+  \vec{r}\cdot\vec{n}&amp; =  \vec{c}\cdot\vec{n}
+\end{aligned}\end{split}\]</div>
+<p>The perpendicular distance from the plane to the origin,
+<span class="math notranslate nohighlight">\(d\)</span>, is given by the projection of the position vector of any point in
+the plane onto the unit normal, <span class="math notranslate nohighlight">\(\hat{\vec{n}}=\vec{n}/|\vec{n}|\)</span>, i.e.</p>
+<div class="math notranslate nohighlight">
+\[
+d=\vec{c}\cdot\hat{\vec{n}}.
+\]</div>
+<p>This enables us to write the equation
+of a plane <code class="xref std std-numref docutils literal notranslate"><span class="pre">eq:plane</span></code> in the more compact form</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{r}\cdot\hat{\vec{n}} =  d.
+\]</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./StreamA"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Week1A_MD.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Complex Numbers</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Week3A_MD.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Matrices</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">2.1. Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">2.2. Definitions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors-in-cartesian-coordinates">2.2.1. Vectors in Cartesian coordinates</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basis-vectors">2.2.2. Basis vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magnitude-modulus">2.2.3. Magnitude/Modulus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-vectors">2.2.4. Unit vectors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-vectors">2.3. Manipulating vectors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#addition-and-subtraction-of-vectors">2.3.1. Addition and subtraction of vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scalar-multiplication">2.3.2. Scalar multiplication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dot-product">2.3.3. The dot product</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-cross-product">2.3.4. The cross product</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#triple-product">2.3.5. Triple product</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lines-and-planes">2.4. Lines and planes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equation-of-a-line">2.4.1. Equation of a line</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equation-of-a-plane">2.4.2. Equation of a plane</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Alex Ramadan, Patrick Stowell
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
