@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Integration &#8212; PHY129 Mathematics for Physicists</title>
+    <title>10. Integration &#8212; PHY129 Mathematics for Physicists</title>
   
   
   
@@ -70,6 +70,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'StreamB/Topic7_MD';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="11. Integration by Parts" href="Topic8_MD.html" />
+    <link rel="prev" title="9. Taylor Series, L’Hopital’s rule and approximation errors" href="Topic6_MD.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,6 +186,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix3A_MD.html">Examples from Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix4A_MD.html">Adjoint Proof</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix5A_MD.html">Similarity Transforms</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream B - Notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Topic1_MD.html">4. Stream B Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2_MD.html">5. Trigonometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic3_MD.html">6. Differentiation <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic4_MD.html">7. Minima, maxima and points of inflection <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic5_MD.html">8. Power and Maclaurin Series <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic6_MD.html">9. Taylor Series, L’Hopital’s rule and approximation errors <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">10. Integration <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic8_MD.html">11. Integration by Parts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic9_MD.html">12. Differential Equations <span class="xref std std-ref"> </span></a></li>
 </ul>
 
     </div>
@@ -379,24 +393,24 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indefinite-integrals-and-signed-area">Indefinite Integrals and Signed Area <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-integrals">Common Integrals <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#significance-of-the-areas-bounded-by-the-curve">Significance of the areas bounded by the curve. <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-area">Negative area <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indefinite-integrals-and-signed-area">10.1. Indefinite Integrals and Signed Area <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-integrals">10.1.1. Common Integrals <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#significance-of-the-areas-bounded-by-the-curve">10.1.2. Significance of the areas bounded by the curve. <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-area">10.1.3. Negative area <span class="xref std std-ref"> </span></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definite-integrals">Definite integrals <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-from-first-principles">Integration from First Principles <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#improper-integrals">Improper Integrals <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-integrals">Symmetric Integrals <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definite-integrals">10.2. Definite integrals <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-from-first-principles">10.2.1. Integration from First Principles <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#improper-integrals">10.2.2. Improper Integrals <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-integrals">10.2.3. Symmetric Integrals <span class="xref std std-ref"> </span></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-of-integration">Methods of integration <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#substitution">Substitution <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#integrals-of-the-form-displaystyle-int-f-small-ax-b-small-mathrm-d-x">Integrals of the form <span class="math notranslate nohighlight">\(\displaystyle{\int}f\small(ax+b\small)\,\mathrm{d}x\)</span> <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#integrals-of-the-form-displaystyle-int-f-left-g-x-right-g-x-mathrm-d-x">Integrals of the form <span class="math notranslate nohighlight">\(\displaystyle{\int}f\left(g(x)\right)\,g'(x)\,\mathrm{d}x\)</span> <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-trigonometric-and-hyperbolic-identities">Using trigonometric and hyperbolic identities <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#definite-integrals-and-substitution">Definite integrals and substitution <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-of-integration">10.3. Methods of integration <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#substitution">10.3.1. Substitution <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#integrals-of-the-form-displaystyle-int-f-small-ax-b-small-mathrm-d-x">10.3.1.1. Integrals of the form <span class="math notranslate nohighlight">\(\displaystyle{\int}f\small(ax+b\small)\,\mathrm{d}x\)</span> <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#integrals-of-the-form-displaystyle-int-f-left-g-x-right-g-x-mathrm-d-x">10.3.1.2. Integrals of the form <span class="math notranslate nohighlight">\(\displaystyle{\int}f\left(g(x)\right)\,g'(x)\,\mathrm{d}x\)</span> <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-trigonometric-and-hyperbolic-identities">10.3.1.3. Using trigonometric and hyperbolic identities <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#definite-integrals-and-substitution">10.3.1.4. Definite integrals and substitution <span class="xref std std-ref"> </span></a></li>
 </ul>
 </li>
 </ul>
@@ -413,16 +427,16 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="integration">
-<h1>Integration <span class="xref std std-ref"> </span><a class="headerlink" href="#integration" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">10. </span>Integration <span class="xref std std-ref"> </span><a class="headerlink" href="#integration" title="Permalink to this heading">#</a></h1>
 <section id="indefinite-integrals-and-signed-area">
-<h2>Indefinite Integrals and Signed Area <span class="xref std std-ref"> </span><a class="headerlink" href="#indefinite-integrals-and-signed-area" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">10.1. </span>Indefinite Integrals and Signed Area <span class="xref std std-ref"> </span><a class="headerlink" href="#indefinite-integrals-and-signed-area" title="Permalink to this heading">#</a></h2>
 <p>Integration is the opposite process to differentiation, and is used to
 calculate the area under a curve. However in this unit you will discover
 that integration is a much more powerful tool than simply working out
 areas, and you will learn methods of integration that are used time and
 again throughout your degree.</p>
 <section id="common-integrals">
-<h3>Common Integrals <span class="xref std std-ref"> </span><a class="headerlink" href="#common-integrals" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.1.1. </span>Common Integrals <span class="xref std std-ref"> </span><a class="headerlink" href="#common-integrals" title="Permalink to this heading">#</a></h3>
 <p>There are some common integrals with which you should already be
 faniliar. The following list are ones that you should be able to recall.</p>
 <div class="math notranslate nohighlight">
@@ -441,7 +455,7 @@ dealing with indefinite integrals (that is, those that do not have
 limits specified).</p>
 </section>
 <section id="significance-of-the-areas-bounded-by-the-curve">
-<h3>Significance of the areas bounded by the curve. <span class="xref std std-ref"> </span><a class="headerlink" href="#significance-of-the-areas-bounded-by-the-curve" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.1.2. </span>Significance of the areas bounded by the curve. <span class="xref std std-ref"> </span><a class="headerlink" href="#significance-of-the-areas-bounded-by-the-curve" title="Permalink to this heading">#</a></h3>
 <p>The area between a curve and the x-axis is equal to the integral of the
 function; for a <strong>definite</strong> integral we specify limits and consider the
 signed area under the curve between these limits.</p>
@@ -452,16 +466,16 @@ integral <span class="math notranslate nohighlight">\(F\left(x\right)\)</span> g
 </figure>
 </section>
 <section id="negative-area">
-<h3>Negative area <span class="xref std std-ref"> </span><a class="headerlink" href="#negative-area" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.1.3. </span>Negative area <span class="xref std std-ref"> </span><a class="headerlink" href="#negative-area" title="Permalink to this heading">#</a></h3>
 <p>The convention is that a positive area lies above the x-axis (i.e.
 <span class="math notranslate nohighlight">\(y &gt; 0\)</span>) whereas a negative area lies below it (i.e. <span class="math notranslate nohighlight">\(y &lt; 0\)</span>).</p>
 </section>
 </section>
 <section id="definite-integrals">
-<h2>Definite integrals <span class="xref std std-ref"> </span><a class="headerlink" href="#definite-integrals" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">10.2. </span>Definite integrals <span class="xref std std-ref"> </span><a class="headerlink" href="#definite-integrals" title="Permalink to this heading">#</a></h2>
 <section id="integration-from-first-principles">
-<h3>Integration from First Principles <span class="xref std std-ref"> </span><a class="headerlink" href="#integration-from-first-principles" title="Permalink to this heading">#</a></h3>
-<p>If we take a general function <span class="math notranslate nohighlight">\(f\left(x\right)\)</span> as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:U4_FirstPrinciples</span></code>, the area below the curve between
+<h3><span class="section-number">10.2.1. </span>Integration from First Principles <span class="xref std std-ref"> </span><a class="headerlink" href="#integration-from-first-principles" title="Permalink to this heading">#</a></h3>
+<p>If we take a general function <span class="math notranslate nohighlight">\(f\left(x\right)\)</span> as shown in <a class="reference internal" href="#fig-u4-firstprinciples"><span class="std std-numref">Fig. 10.1</span></a>, the area below the curve between
 limits <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> has been divided up into <span class="math notranslate nohighlight">\(N\)</span> slices each with width
 <span class="math notranslate nohighlight">\(\delta x\)</span> and approximate height <span class="math notranslate nohighlight">\(f\left(x\right)\)</span> - note that this is
 an approximation but becomes more precise as <span class="math notranslate nohighlight">\(\delta x\)</span> becomes very
@@ -469,7 +483,7 @@ small.</p>
 <figure class="align-default" id="fig-u4-firstprinciples">
 <a class="reference internal image-reference" href="Images/FirstPrinciples.png"><img alt="Images/FirstPrinciples.png" src="Images/FirstPrinciples.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-text">Integration from first
+<p><span class="caption-number">Fig. 10.1 </span><span class="caption-text">Integration from first
 principles</span><a class="headerlink" href="#fig-u4-firstprinciples" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
@@ -504,7 +518,7 @@ integral form</p>
 \[A=\lim_{\delta x\rightarrow0}\sum_{x=a}^{x=b}f\left(x\right)\delta x=\int_{a}^{b}f\left(x\right)dx\]</div>
 </section>
 <section id="improper-integrals">
-<h3>Improper Integrals <span class="xref std std-ref"> </span><a class="headerlink" href="#improper-integrals" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.2.2. </span>Improper Integrals <span class="xref std std-ref"> </span><a class="headerlink" href="#improper-integrals" title="Permalink to this heading">#</a></h3>
 <p>Improper integrals are those in which either the integral has an
 infinite range (i.e. one or both limits are infinite) or the integrand
 itself can become infinite for some value of x within the range over
@@ -529,16 +543,16 @@ highlight this.</p>
 exponential function behaves at the limit of <span class="math notranslate nohighlight">\(-\infty\)</span>.</p>
 </section>
 <section id="symmetric-integrals">
-<h3>Symmetric Integrals <span class="xref std std-ref"> </span><a class="headerlink" href="#symmetric-integrals" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.2.3. </span>Symmetric Integrals <span class="xref std std-ref"> </span><a class="headerlink" href="#symmetric-integrals" title="Permalink to this heading">#</a></h3>
 <p>An even function is defined as <span class="math notranslate nohighlight">\(f\left(x\right)=f\left(-x\right)\)</span> and
-odd functions defined by <span class="math notranslate nohighlight">\(f\left(x\right)=-f\left(-x\right)\)</span>. <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:U4_Symm</span></code> and <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:U4_SymmOdd</span></code> shows
+odd functions defined by <span class="math notranslate nohighlight">\(f\left(x\right)=-f\left(-x\right)\)</span>. <a class="reference internal" href="#fig-u4-symm"><span class="std std-numref">Fig. 10.2</span></a> and <a class="reference internal" href="#fig-u4-symmodd"><span class="std std-numref">Fig. 10.3</span></a> shows
 two examples: the left diagram shows the even function
 <span class="math notranslate nohighlight">\(f\left(x\right)=x^{4}-x^{2}+3\)</span> and the right is the odd function
 <span class="math notranslate nohighlight">\(f\left(x\right)=x^{3}-x\)</span>.</p>
 <figure class="align-default" id="fig-u4-symm">
 <a class="reference internal image-reference" href="Images/Evenfunction.png"><img alt="Images/Evenfunction.png" src="Images/Evenfunction.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-text">First example of symmetric functions. This is the even function
+<p><span class="caption-number">Fig. 10.2 </span><span class="caption-text">First example of symmetric functions. This is the even function
 <span class="math notranslate nohighlight">\(f\left(x\right)=x^{4}-x^{2}+3\)</span>. Yellow regions are the areas under the curve
 between symmetric limits.</span><a class="headerlink" href="#fig-u4-symm" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -546,7 +560,7 @@ between symmetric limits.</span><a class="headerlink" href="#fig-u4-symm" title=
 <figure class="align-default" id="fig-u4-symmodd">
 <a class="reference internal image-reference" href="Images/Oddfunction.png"><img alt="Images/Oddfunction.png" src="Images/Oddfunction.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-text">Second example of symmetric functions. This is the odd function
+<p><span class="caption-number">Fig. 10.3 </span><span class="caption-text">Second example of symmetric functions. This is the odd function
 <span class="math notranslate nohighlight">\(f\left(x\right)=x^{3}-x\)</span>. Yellow regions are the areas under the curve
 between symmetric limits.</span><a class="headerlink" href="#fig-u4-symmodd" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -578,11 +592,11 @@ therefore</p>
 </section>
 </section>
 <section id="methods-of-integration">
-<h2>Methods of integration <span class="xref std std-ref"> </span><a class="headerlink" href="#methods-of-integration" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">10.3. </span>Methods of integration <span class="xref std std-ref"> </span><a class="headerlink" href="#methods-of-integration" title="Permalink to this heading">#</a></h2>
 <section id="substitution">
-<h3>Substitution <span class="xref std std-ref"> </span><a class="headerlink" href="#substitution" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.3.1. </span>Substitution <span class="xref std std-ref"> </span><a class="headerlink" href="#substitution" title="Permalink to this heading">#</a></h3>
 <section id="integrals-of-the-form-displaystyle-int-f-small-ax-b-small-mathrm-d-x">
-<h4>Integrals of the form <span class="math notranslate nohighlight">\(\displaystyle{\int}f\small(ax+b\small)\,\mathrm{d}x\)</span> <span class="xref std std-ref"> </span><a class="headerlink" href="#integrals-of-the-form-displaystyle-int-f-small-ax-b-small-mathrm-d-x" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">10.3.1.1. </span>Integrals of the form <span class="math notranslate nohighlight">\(\displaystyle{\int}f\small(ax+b\small)\,\mathrm{d}x\)</span> <span class="xref std std-ref"> </span><a class="headerlink" href="#integrals-of-the-form-displaystyle-int-f-small-ax-b-small-mathrm-d-x" title="Permalink to this heading">#</a></h4>
 <p>For such functions, for example <span class="math notranslate nohighlight">\(f(x)=\left(x-5\right)^5\)</span> or
 <span class="math notranslate nohighlight">\(f(x) = \sin\left(3x+1\right)\)</span>, we utilise the fact that the integrals
 of functions such as <span class="math notranslate nohighlight">\(x^3\)</span> and <span class="math notranslate nohighlight">\(\sin(x)\)</span> are standard, so we use a
@@ -600,7 +614,7 @@ y &amp;= \int\sin\left(3x+1\right)\,\mathrm{d}x\\
 &amp;= -\dfrac{\cos(u)}{3} +c = -\dfrac{\cos(3x+1)}{3} + c\end{aligned}\end{split}\]</div>
 </section>
 <section id="integrals-of-the-form-displaystyle-int-f-left-g-x-right-g-x-mathrm-d-x">
-<h4>Integrals of the form <span class="math notranslate nohighlight">\(\displaystyle{\int}f\left(g(x)\right)\,g'(x)\,\mathrm{d}x\)</span> <span class="xref std std-ref"> </span><a class="headerlink" href="#integrals-of-the-form-displaystyle-int-f-left-g-x-right-g-x-mathrm-d-x" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">10.3.1.2. </span>Integrals of the form <span class="math notranslate nohighlight">\(\displaystyle{\int}f\left(g(x)\right)\,g'(x)\,\mathrm{d}x\)</span> <span class="xref std std-ref"> </span><a class="headerlink" href="#integrals-of-the-form-displaystyle-int-f-left-g-x-right-g-x-mathrm-d-x" title="Permalink to this heading">#</a></h4>
 <p>This method can be used when your integrand contains both a function
 (sometimes within another function) and its derivative. The difficulty
 with this method is correctly identifying the appropriate substitution.
@@ -628,7 +642,7 @@ y&amp;= \int 6x\cos x^2 \,\mathrm{d}x\\
 &amp;= 3\sin(u) + c = 3\sin(x^2)+c\end{aligned}\end{split}\]</div>
 </section>
 <section id="using-trigonometric-and-hyperbolic-identities">
-<h4>Using trigonometric and hyperbolic identities <span class="xref std std-ref"> </span><a class="headerlink" href="#using-trigonometric-and-hyperbolic-identities" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">10.3.1.3. </span>Using trigonometric and hyperbolic identities <span class="xref std std-ref"> </span><a class="headerlink" href="#using-trigonometric-and-hyperbolic-identities" title="Permalink to this heading">#</a></h4>
 <p>As with other substitution methods this one requires you to identify the
 appropriate function to substitute. However some of these require you to
 already know, <strong>from experience</strong>, what substitution to use.<a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>
@@ -665,7 +679,7 @@ for this method - it comes with practice and familiarity with
 identities.</p>
 </section>
 <section id="definite-integrals-and-substitution">
-<h4>Definite integrals and substitution <span class="xref std std-ref"> </span><a class="headerlink" href="#definite-integrals-and-substitution" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">10.3.1.4. </span>Definite integrals and substitution <span class="xref std std-ref"> </span><a class="headerlink" href="#definite-integrals-and-substitution" title="Permalink to this heading">#</a></h4>
 <p>When using substitution with definite integrals, you need to change the
 limits of integration since these are usually different for the new
 variable. For example</p>
@@ -741,6 +755,24 @@ substitutions when they arise.</p>
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Topic6_MD.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Taylor Series, L’Hopital’s rule and approximation errors <span class="xref std std-ref"> </span></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Topic8_MD.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Integration by Parts</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -756,24 +788,24 @@ substitutions when they arise.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indefinite-integrals-and-signed-area">Indefinite Integrals and Signed Area <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-integrals">Common Integrals <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#significance-of-the-areas-bounded-by-the-curve">Significance of the areas bounded by the curve. <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-area">Negative area <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indefinite-integrals-and-signed-area">10.1. Indefinite Integrals and Signed Area <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-integrals">10.1.1. Common Integrals <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#significance-of-the-areas-bounded-by-the-curve">10.1.2. Significance of the areas bounded by the curve. <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-area">10.1.3. Negative area <span class="xref std std-ref"> </span></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definite-integrals">Definite integrals <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-from-first-principles">Integration from First Principles <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#improper-integrals">Improper Integrals <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-integrals">Symmetric Integrals <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definite-integrals">10.2. Definite integrals <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-from-first-principles">10.2.1. Integration from First Principles <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#improper-integrals">10.2.2. Improper Integrals <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-integrals">10.2.3. Symmetric Integrals <span class="xref std std-ref"> </span></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-of-integration">Methods of integration <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#substitution">Substitution <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#integrals-of-the-form-displaystyle-int-f-small-ax-b-small-mathrm-d-x">Integrals of the form <span class="math notranslate nohighlight">\(\displaystyle{\int}f\small(ax+b\small)\,\mathrm{d}x\)</span> <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#integrals-of-the-form-displaystyle-int-f-left-g-x-right-g-x-mathrm-d-x">Integrals of the form <span class="math notranslate nohighlight">\(\displaystyle{\int}f\left(g(x)\right)\,g'(x)\,\mathrm{d}x\)</span> <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-trigonometric-and-hyperbolic-identities">Using trigonometric and hyperbolic identities <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#definite-integrals-and-substitution">Definite integrals and substitution <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-of-integration">10.3. Methods of integration <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#substitution">10.3.1. Substitution <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#integrals-of-the-form-displaystyle-int-f-small-ax-b-small-mathrm-d-x">10.3.1.1. Integrals of the form <span class="math notranslate nohighlight">\(\displaystyle{\int}f\small(ax+b\small)\,\mathrm{d}x\)</span> <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#integrals-of-the-form-displaystyle-int-f-left-g-x-right-g-x-mathrm-d-x">10.3.1.2. Integrals of the form <span class="math notranslate nohighlight">\(\displaystyle{\int}f\left(g(x)\right)\,g'(x)\,\mathrm{d}x\)</span> <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-trigonometric-and-hyperbolic-identities">10.3.1.3. Using trigonometric and hyperbolic identities <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#definite-integrals-and-substitution">10.3.1.4. Definite integrals and substitution <span class="xref std std-ref"> </span></a></li>
 </ul>
 </li>
 </ul>

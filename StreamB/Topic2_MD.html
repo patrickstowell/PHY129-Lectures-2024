@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Trigonometric and Hyperbolic Functions &#8212; PHY129 Mathematics for Physicists</title>
+    <title>5. Trigonometric and Hyperbolic Functions &#8212; PHY129 Mathematics for Physicists</title>
   
   
   
@@ -70,6 +70,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'StreamB/Topic2_MD';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. Differentiation" href="Topic3_MD.html" />
+    <link rel="prev" title="4. Stream B Introduction" href="Topic1_MD.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,6 +186,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix3A_MD.html">Examples from Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix4A_MD.html">Adjoint Proof</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix5A_MD.html">Similarity Transforms</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream B - Notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Topic1_MD.html">4. Stream B Introduction</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Trigonometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic3_MD.html">6. Differentiation <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic4_MD.html">7. Minima, maxima and points of inflection <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic5_MD.html">8. Power and Maclaurin Series <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic6_MD.html">9. Taylor Series, L’Hopital’s rule and approximation errors <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic7_MD.html">10. Integration <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic8_MD.html">11. Integration by Parts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic9_MD.html">12. Differential Equations <span class="xref std std-ref"> </span></a></li>
 </ul>
 
     </div>
@@ -379,9 +393,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-functions">Trigonometric functions <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-identities">Trigonometric identities <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperbolic-functions">Hyperbolic Functions <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-functions">5.1. Trigonometric functions <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-identities">5.2. Trigonometric identities <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperbolic-functions">5.3. Hyperbolic Functions <span class="xref std std-ref"> </span></a></li>
 </ul>
             </nav>
         </div>
@@ -394,30 +408,30 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="trigonometric-and-hyperbolic-functions">
-<h1>Trigonometric and Hyperbolic Functions <span class="xref std std-ref"> </span><a class="headerlink" href="#trigonometric-and-hyperbolic-functions" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">5. </span>Trigonometric and Hyperbolic Functions <span class="xref std std-ref"> </span><a class="headerlink" href="#trigonometric-and-hyperbolic-functions" title="Permalink to this heading">#</a></h1>
 <section id="trigonometric-functions">
-<h2>Trigonometric functions <span class="xref std std-ref"> </span><a class="headerlink" href="#trigonometric-functions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.1. </span>Trigonometric functions <span class="xref std std-ref"> </span><a class="headerlink" href="#trigonometric-functions" title="Permalink to this heading">#</a></h2>
 <p>Trigonometry functions associate the sides of a right angled triangle to
 it’s angles. The three basic trigonometry functions are:</p>
 <ul class="simple">
 <li><p><strong>cosine</strong>: ratio of adjacent to hypotenuse</p></li>
 </ul>
 <div class="math notranslate nohighlight" id="equation-eq-cos">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-cos" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-eq-cos" title="Permalink to this equation">#</a></span>\[
 \frac{y}{r}=\cos\theta
 \]</div>
 <ul class="simple">
 <li><p><strong>sine</strong>: ratio of opposite to hypotenuse</p></li>
 </ul>
 <div class="math notranslate nohighlight" id="equation-eq-sin">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-sin" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-eq-sin" title="Permalink to this equation">#</a></span>\[
 \frac{x}{r}=\sin\theta
 \]</div>
 <ul class="simple">
 <li><p><strong>tan</strong>: ratio of opposite to adjacent</p></li>
 </ul>
 <div class="math notranslate nohighlight" id="equation-eq-tan">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-tan" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-eq-tan" title="Permalink to this equation">#</a></span>\[
 \frac{x}{y}=\tan\theta=\frac{\sin\theta}{\cos\theta}
 \]</div>
 <p>Since the input angle can be 0-360<span class="math notranslate nohighlight">\(^{\circ}\)</span>, these trig functions are
@@ -429,7 +443,7 @@ Due to their periodic nature, trigonometric functions are used
 frequently in physics to describe oscillating phenomena.</p>
 <p>The other three possible ratios should also be noted:</p>
 <div class="math notranslate nohighlight" id="equation-eg-alternatives">
-<span class="eqno">()<a class="headerlink" href="#equation-eg-alternatives" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-eg-alternatives" title="Permalink to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 \mathrm{cosec}\,\theta &amp; =\frac{r}{y}=\frac{1}{\sin\theta}\\
 \sec\theta &amp; =\frac{r}{x}=\frac{1}{\cos\theta}\\
@@ -437,7 +451,7 @@ frequently in physics to describe oscillating phenomena.</p>
 \end{split}\]</div>
 </section>
 <section id="trigonometric-identities">
-<h2>Trigonometric identities <span class="xref std std-ref"> </span><a class="headerlink" href="#trigonometric-identities" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.2. </span>Trigonometric identities <span class="xref std std-ref"> </span><a class="headerlink" href="#trigonometric-identities" title="Permalink to this heading">#</a></h2>
 <p>There are many standard identities which can be useful in solving
 analytical problems in physics. Memory of these is of course not
 required but you should be aware of their existence or even better
@@ -484,7 +498,7 @@ angle formula are:</p>
 \[\frac{1}{2}ab\sin C=\frac{1}{2}bc\sin A=\frac{1}{2}ac\sin B\]</div>
 </section>
 <section id="hyperbolic-functions">
-<h2>Hyperbolic Functions <span class="xref std std-ref"> </span><a class="headerlink" href="#hyperbolic-functions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.3. </span>Hyperbolic Functions <span class="xref std std-ref"> </span><a class="headerlink" href="#hyperbolic-functions" title="Permalink to this heading">#</a></h2>
 <p>Whereas the standard trigonometric functions are based on circles
 (<span class="math notranslate nohighlight">\(x^{2}+y^{2}=r^{2}\)</span>), hyperbolic trigonometric functions are based on
 hyperbola (<span class="math notranslate nohighlight">\(x^{2}-y^{2}=1\)</span>) as shown in
@@ -542,6 +556,24 @@ reciprocals:</p>
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Topic1_MD.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Stream B Introduction</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Topic3_MD.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Differentiation <span class="xref std std-ref"> </span></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -557,9 +589,9 @@ reciprocals:</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-functions">Trigonometric functions <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-identities">Trigonometric identities <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperbolic-functions">Hyperbolic Functions <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-functions">5.1. Trigonometric functions <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-identities">5.2. Trigonometric identities <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperbolic-functions">5.3. Hyperbolic Functions <span class="xref std std-ref"> </span></a></li>
 </ul>
   </nav></div>
 

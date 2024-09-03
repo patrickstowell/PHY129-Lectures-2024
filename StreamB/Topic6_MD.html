@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Taylor Series, L’Hopital’s rule and approximation errors &#8212; PHY129 Mathematics for Physicists</title>
+    <title>9. Taylor Series, L’Hopital’s rule and approximation errors &#8212; PHY129 Mathematics for Physicists</title>
   
   
   
@@ -70,6 +70,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'StreamB/Topic6_MD';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="10. Integration" href="Topic7_MD.html" />
+    <link rel="prev" title="8. Power and Maclaurin Series" href="Topic5_MD.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,6 +186,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix3A_MD.html">Examples from Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix4A_MD.html">Adjoint Proof</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix5A_MD.html">Similarity Transforms</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream B - Notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Topic1_MD.html">4. Stream B Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2_MD.html">5. Trigonometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic3_MD.html">6. Differentiation <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic4_MD.html">7. Minima, maxima and points of inflection <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic5_MD.html">8. Power and Maclaurin Series <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Taylor Series, L’Hopital’s rule and approximation errors <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic7_MD.html">10. Integration <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic8_MD.html">11. Integration by Parts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic9_MD.html">12. Differential Equations <span class="xref std std-ref"> </span></a></li>
 </ul>
 
     </div>
@@ -379,9 +393,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-series-centred-at-x-c">Taylor series centred at <span class="math notranslate nohighlight">\(x=c\)</span> <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indeterminate-values-l-hospital-s-rule">Indeterminate values: l’Hospital’s Rule <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluating-errors-of-approximations">Evaluating errors of approximations <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-series-centred-at-x-c">9.1. Taylor series centred at <span class="math notranslate nohighlight">\(x=c\)</span> <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indeterminate-values-l-hospital-s-rule">9.2. Indeterminate values: l’Hospital’s Rule <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluating-errors-of-approximations">9.3. Evaluating errors of approximations <span class="xref std std-ref"> </span></a></li>
 </ul>
             </nav>
         </div>
@@ -394,9 +408,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="taylor-series-l-hopital-s-rule-and-approximation-errors">
-<h1>Taylor Series, L’Hopital’s rule and approximation errors <span class="xref std std-ref"> </span><a class="headerlink" href="#taylor-series-l-hopital-s-rule-and-approximation-errors" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">9. </span>Taylor Series, L’Hopital’s rule and approximation errors <span class="xref std std-ref"> </span><a class="headerlink" href="#taylor-series-l-hopital-s-rule-and-approximation-errors" title="Permalink to this heading">#</a></h1>
 <section id="taylor-series-centred-at-x-c">
-<h2>Taylor series centred at <span class="math notranslate nohighlight">\(x=c\)</span>  <span class="xref std std-ref"> </span><a class="headerlink" href="#taylor-series-centred-at-x-c" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">9.1. </span>Taylor series centred at <span class="math notranslate nohighlight">\(x=c\)</span>  <span class="xref std std-ref"> </span><a class="headerlink" href="#taylor-series-centred-at-x-c" title="Permalink to this heading">#</a></h2>
 <p>There are cases where a function cannot be defined as a Taylor series
 centered at zero. A good example is when there are no derivatives at
 <span class="math notranslate nohighlight">\(x=0\)</span> such as for <span class="math notranslate nohighlight">\(\ln(x)\)</span>. The area of interest may not be near zero
@@ -414,7 +428,7 @@ f(u+c) &amp; =\sum_{n=0}^{\infty}\frac{f^{(n)}(c)}{n!}u^{n}\\
  &amp; =f(a)+hf^{(1)}(c)+\frac{h^{2}f^{(2)}(c)}{2}+\cdots\end{aligned}\end{split}\]</div>
 </section>
 <section id="indeterminate-values-l-hospital-s-rule">
-<h2>Indeterminate values: l’Hospital’s Rule <span class="xref std std-ref"> </span><a class="headerlink" href="#indeterminate-values-l-hospital-s-rule" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">9.2. </span>Indeterminate values: l’Hospital’s Rule <span class="xref std std-ref"> </span><a class="headerlink" href="#indeterminate-values-l-hospital-s-rule" title="Permalink to this heading">#</a></h2>
 <p>An indeterminate value is often in the form such as
 <span class="math notranslate nohighlight">\({\displaystyle {\frac{0}{0}},~{\frac{\infty}{\infty}}}\)</span> and
 <span class="math notranslate nohighlight">\({\displaystyle 0\times\infty,~1^{\infty},~\infty-\infty,~0^{0}{\text{ and }}\infty^{0}.}\)</span>
@@ -467,11 +481,11 @@ also a possible outcome of applying such limits. For example:</p>
 \[\lim_{x\to0}\frac{e^{x}-1}{x^{3}}=\lim_{x\to0}\frac{e^{x}}{3x^{2}}=\frac{1}{0}=\infty\]</div>
 <p>Such functions, which originally appeared indeterminate, can thus be
 analysed to yield real or infinite values. These examples are visualised
-in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:IndeterminateExamples</span></code>.</p>
+in <a class="reference internal" href="#fig-indeterminateexamples"><span class="std std-numref">Fig. 9.1</span></a>.</p>
 <figure class="align-default" id="fig-indeterminateexamples">
 <a class="reference internal image-reference" href="Images/HospitalExamples.png"><img alt="Images/HospitalExamples.png" src="Images/HospitalExamples.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-text">Example of functions which have indeterminate values at <span class="math notranslate nohighlight">\(x=0\)</span>. Using
+<p><span class="caption-number">Fig. 9.1 </span><span class="caption-text">Example of functions which have indeterminate values at <span class="math notranslate nohighlight">\(x=0\)</span>. Using
 l’Hospital’s Rule we can show that the example functions comprised of
 sine and cosine terms produce a finite value at <span class="math notranslate nohighlight">\(x=0\)</span> whereas the
 exponential function does to
@@ -480,7 +494,7 @@ infinity.</span><a class="headerlink" href="#fig-indeterminateexamples" title="P
 </figure>
 </section>
 <section id="evaluating-errors-of-approximations">
-<h2>Evaluating errors of approximations <span class="xref std std-ref"> </span><a class="headerlink" href="#evaluating-errors-of-approximations" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">9.3. </span>Evaluating errors of approximations <span class="xref std std-ref"> </span><a class="headerlink" href="#evaluating-errors-of-approximations" title="Permalink to this heading">#</a></h2>
 <p>As mentioned at the beginning of this section, it is important to be
 aware of the imperfections of approximations. In many cases, we can be
 content in approximating some function to within some acceptable
@@ -512,13 +526,13 @@ series centred at zero:</p>
 <figure class="align-default" id="fig-a-taylor-error">
 <a class="reference internal image-reference" href="Images/CosineTaylor.png"><img alt="Images/CosineTaylor.png" src="Images/CosineTaylor.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-text">A Taylor approximation of a cosine function using a 10 degree
+<p><span class="caption-number">Fig. 9.2 </span><span class="caption-text">A Taylor approximation of a cosine function using a 10 degree
 polynomial. While centred at zero, the Taylor series is relatively
 accurate up until <span class="math notranslate nohighlight">\(x\approx4\)</span>. This accuracy is also shown by the error
 curve.</span><a class="headerlink" href="#fig-a-taylor-error" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>We can see via <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:A-Taylor-Error</span></code> that the approximation is good until
+<p>We can see via <a class="reference internal" href="#fig-a-taylor-error"><span class="std std-numref">Fig. 9.2</span></a> that the approximation is good until
 near <span class="math notranslate nohighlight">\(x=4\)</span>. Afterwards the series diverges from the exact solution. By
 <span class="math notranslate nohighlight">\(x=5\)</span> the absolute error is approaching 0.3. For such trigonometric
 functions, an infinite number of terms are needed. However, in most
@@ -551,11 +565,11 @@ the series converges to the exact value. For example at <span class="math notran
 our approximation is accurate to 4 decimal places with <span class="math notranslate nohighlight">\(n=10\)</span>. We can
 then proceed along <span class="math notranslate nohighlight">\(x\)</span> until our estimate becomes too large for comfort
 such as by <span class="math notranslate nohighlight">\(x=5\)</span> where it is much larger than <span class="math notranslate nohighlight">\(f(x)\)</span> with <span class="math notranslate nohighlight">\(R_{n}=1.22\)</span>
-as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:Remainders</span></code>.</p>
+as shown in <a class="reference internal" href="#fig-remainders"><span class="std std-numref">Fig. 9.3</span></a>.</p>
 <figure class="align-default" id="fig-remainders">
 <a class="reference internal image-reference" href="Images/RemainderTaylor.png"><img alt="Images/RemainderTaylor.png" src="Images/RemainderTaylor.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-text">Adding more terms to the Taylor series reduces the error at the
+<p><span class="caption-number">Fig. 9.3 </span><span class="caption-text">Adding more terms to the Taylor series reduces the error at the
 expense of increased computations. Here we visualise the remainder
 function, <span class="math notranslate nohighlight">\(R_{n}\)</span>, for <span class="math notranslate nohighlight">\(n=10\)</span> and <span class="math notranslate nohighlight">\(n=12\)</span> series approximating the cosine
 function centred at <span class="math notranslate nohighlight">\(x=0\)</span>.</span><a class="headerlink" href="#fig-remainders" title="Permalink to this image">#</a></p>
@@ -594,6 +608,24 @@ function centred at <span class="math notranslate nohighlight">\(x=0\)</span>.</
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Topic5_MD.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Power and Maclaurin Series <span class="xref std std-ref"> </span></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Topic7_MD.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Integration <span class="xref std std-ref"> </span></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -609,9 +641,9 @@ function centred at <span class="math notranslate nohighlight">\(x=0\)</span>.</
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-series-centred-at-x-c">Taylor series centred at <span class="math notranslate nohighlight">\(x=c\)</span> <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indeterminate-values-l-hospital-s-rule">Indeterminate values: l’Hospital’s Rule <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluating-errors-of-approximations">Evaluating errors of approximations <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-series-centred-at-x-c">9.1. Taylor series centred at <span class="math notranslate nohighlight">\(x=c\)</span> <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indeterminate-values-l-hospital-s-rule">9.2. Indeterminate values: l’Hospital’s Rule <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluating-errors-of-approximations">9.3. Evaluating errors of approximations <span class="xref std std-ref"> </span></a></li>
 </ul>
   </nav></div>
 

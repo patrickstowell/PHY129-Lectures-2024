@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Differentiation &#8212; PHY129 Mathematics for Physicists</title>
+    <title>6. Differentiation &#8212; PHY129 Mathematics for Physicists</title>
   
   
   
@@ -70,6 +70,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'StreamB/Topic3_MD';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7. Minima, maxima and points of inflection" href="Topic4_MD.html" />
+    <link rel="prev" title="5. Trigonometric and Hyperbolic Functions" href="Topic2_MD.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,6 +186,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix3A_MD.html">Examples from Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix4A_MD.html">Adjoint Proof</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix5A_MD.html">Similarity Transforms</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream B - Notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Topic1_MD.html">4. Stream B Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2_MD.html">5. Trigonometry</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Differentiation <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic4_MD.html">7. Minima, maxima and points of inflection <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic5_MD.html">8. Power and Maclaurin Series <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic6_MD.html">9. Taylor Series, L’Hopital’s rule and approximation errors <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic7_MD.html">10. Integration <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic8_MD.html">11. Integration by Parts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic9_MD.html">12. Differential Equations <span class="xref std std-ref"> </span></a></li>
 </ul>
 
     </div>
@@ -379,10 +393,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rates-of-change">Rates of change <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-of-differentiation">Rules of differentiation <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiating-implicit-functions">Differentiating implicit functions <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logarithmic-differentiation">Logarithmic differentiation <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rates-of-change">6.1. Rates of change <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-of-differentiation">6.2. Rules of differentiation <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiating-implicit-functions">6.3. Differentiating implicit functions <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logarithmic-differentiation">6.4. Logarithmic differentiation <span class="xref std std-ref"> </span></a></li>
 </ul>
             </nav>
         </div>
@@ -395,7 +409,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="differentiation">
-<h1>Differentiation <span class="xref std std-ref"> </span><a class="headerlink" href="#differentiation" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">6. </span>Differentiation <span class="xref std std-ref"> </span><a class="headerlink" href="#differentiation" title="Permalink to this heading">#</a></h1>
 <p><span class="xref std std-ref"> </span></p>
 <p>Once we are comfortable recognising and using different functions, a key
 next step is analysing them to determine their rate of change. This type
@@ -408,7 +422,7 @@ to describe how variables change with each other was instrumental in the
 development of physics and will be a key component in your analytical
 toolbox.</p>
 <section id="rates-of-change">
-<h2>Rates of change <span class="xref std std-ref"> </span><a class="headerlink" href="#rates-of-change" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.1. </span>Rates of change <span class="xref std std-ref"> </span><a class="headerlink" href="#rates-of-change" title="Permalink to this heading">#</a></h2>
 <p>The rate of change of some function corresponds to the slope of the
 curve of the function. As a first approximation, we can determine the
 slope at a point <span class="math notranslate nohighlight">\(x_{1}\)</span> by considering how much the value of the
@@ -422,7 +436,7 @@ slope corresponds to the change in <span class="math notranslate nohighlight">\(
 <figure class="align-default" id="fig-approximating-the-rate">
 <a class="reference internal image-reference" href="Images/Wiki_slope_in_2d.png"><img alt="Images/Wiki_slope_in_2d.png" src="Images/Wiki_slope_in_2d.png" style="width: 40%;" /></a>
 <figcaption>
-<p><span class="caption-text">The rate of change of some function corresponds to the slope of the
+<p><span class="caption-number">Fig. 6.1 </span><span class="caption-text">The rate of change of some function corresponds to the slope of the
 curve of the function. As a first approximation, we can determine the
 slope at a point <span class="math notranslate nohighlight">\(x_{1}\)</span> by considering how much the value of the
 function differs compared to another point <span class="math notranslate nohighlight">\(x_{2}\)</span>. This is exact if the
@@ -431,7 +445,7 @@ otherwise it is an
 approximation.</span><a class="headerlink" href="#fig-approximating-the-rate" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>As you can see from <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:Approximating-the-rate</span></code> the slope or gradient is the
+<p>As you can see from <a class="reference internal" href="#fig-approximating-the-rate"><span class="std std-numref">Fig. 6.1</span></a> the slope or gradient is the
 ratio of opposite to the adjacent which corresponds to the
 trigonometretic function <span class="math notranslate nohighlight">\(\tan(\theta)\)</span>, which is why we often refer to
 the slope as the tangent to the the function. Typical notation uses the
@@ -444,7 +458,7 @@ values of variable such as <span class="math notranslate nohighlight">\(\delta x
 <figure class="align-default" id="fig-tangent-calculus">
 <a class="reference internal image-reference" href="Images/Tangent-calculus.png"><img alt="Images/Tangent-calculus.png" src="Images/Tangent-calculus.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-text">The derivative of a function at a point <span class="math notranslate nohighlight">\(x\)</span> can be illustrated with as
+<p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">The derivative of a function at a point <span class="math notranslate nohighlight">\(x\)</span> can be illustrated with as
 the <a class="reference external" href="https://en.wikipedia.org/wiki/Derivative">tangent</a></span><a class="headerlink" href="#fig-tangent-calculus" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
@@ -456,7 +470,7 @@ it approaches the limiting value of zero, which we denote as
 <span class="math notranslate nohighlight">\(y_2=f(x_2)=f(x_1+\delta x)\)</span>, the derivative becomes in the limit of
 <span class="math notranslate nohighlight">\(\delta x\rightarrow0\)</span></p>
 <div class="math notranslate nohighlight" id="equation-eq-diff1">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-diff1" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-eq-diff1" title="Permalink to this equation">#</a></span>\[
 \lim_{\delta x\to0}\frac{\delta y}{\delta x}=\frac{f(x+\delta x)-f(x)}{\delta x}
 \]</div>
 <p>This turns out to be such a useful quantity in physics that we replace
@@ -467,13 +481,13 @@ the notation</p>
 \]</div>
 <p>with</p>
 <div class="math notranslate nohighlight" id="equation-eq-diff2">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-diff2" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-eq-diff2" title="Permalink to this equation">#</a></span>\[
 \frac{dy}{dx}
 \]</div>
 <p>which we refer to as the rate of
 change of <span class="math notranslate nohighlight">\(y\)</span> with <span class="math notranslate nohighlight">\(x\)</span>. Hence we have,</p>
 <div class="math notranslate nohighlight" id="equation-eq-diff3">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-diff3" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(6.3)<a class="headerlink" href="#equation-eq-diff3" title="Permalink to this equation">#</a></span>\[
 \frac{dy}{dx}=\frac{f(x+\delta x)-f(x)}{\delta x}
 \]</div>
 <p>We can use equation <span class="xref myst"></span> to determine the rate of change of any function.
@@ -509,7 +523,7 @@ for small enough differences between points the slope does not depend on
 the difference. Hence the slope becomes a property of the value of the
 input point alone. Finally we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-diff-quad">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-diff-quad" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(6.4)<a class="headerlink" href="#equation-eq-diff-quad" title="Permalink to this equation">#</a></span>\[
 \frac{dy}{dx} =6x=f'(x)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(dy/dx\)</span> represents
@@ -525,13 +539,13 @@ of a function that you will encounter:</p>
 \]</div>
 <p>which all mean
 the same.</p>
-<p>In <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:Differentiation-example</span></code>, we see both the function and
+<p>In <a class="reference internal" href="#fig-differentiation-example"><span class="std std-numref">Fig. 6.3</span></a>, we see both the function and
 its derivative visualised allowing us a more intuitive understanding of
 the meaning of differentiation.</p>
 <figure class="align-default" id="fig-differentiation-example">
 <a class="reference internal image-reference" href="Images/Diff_Eg.png"><img alt="Images/Diff_Eg.png" src="Images/Diff_Eg.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-text">Differentiation is an analysis of the instantaneous rate of change in
+<p><span class="caption-number">Fig. 6.3 </span><span class="caption-text">Differentiation is an analysis of the instantaneous rate of change in
 a function. Here in the example of <span class="math notranslate nohighlight">\(f(x)=3x^{2}+2\)</span> the derivative is
 determined as <span class="math notranslate nohighlight">\(f'(x)=6x\)</span>. Notice, this is a constant rate of change. The
 process effectively associates a <span class="math notranslate nohighlight">\(x^{2}\)</span> function to a <span class="math notranslate nohighlight">\(x^{1}\)</span> function.
@@ -542,7 +556,7 @@ More generally, we can say it is a mapping from <span class="math notranslate no
 <figure class="align-default" id="fig-differentiation-example2">
 <a class="reference internal image-reference" href="Images/Diff_Eg2.png"><img alt="Images/Diff_Eg2.png" src="Images/Diff_Eg2.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-text">An example of a composite function in the form of <span class="math notranslate nohighlight">\(y=f(g(x)\)</span> and its
+<p><span class="caption-number">Fig. 6.4 </span><span class="caption-text">An example of a composite function in the form of <span class="math notranslate nohighlight">\(y=f(g(x)\)</span> and its
 derivative <span class="math notranslate nohighlight">\(y'\)</span>. The latter can be derived analytically using the chain
 rule. The rate of change is all negative in this domain of <span class="math notranslate nohighlight">\(x\)</span> with a
 minimum near <span class="math notranslate nohighlight">\(x=0.63\)</span></span><a class="headerlink" href="#fig-differentiation-example2" title="Permalink to this image">#</a></p>
@@ -550,7 +564,7 @@ minimum near <span class="math notranslate nohighlight">\(x=0.63\)</span></span>
 </figure>
 </section>
 <section id="rules-of-differentiation">
-<h2>Rules of differentiation <span class="xref std std-ref"> </span><a class="headerlink" href="#rules-of-differentiation" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.2. </span>Rules of differentiation <span class="xref std std-ref"> </span><a class="headerlink" href="#rules-of-differentiation" title="Permalink to this heading">#</a></h2>
 <p>In our example above, from
 Eq. <span class="xref myst"></span>-<span class="xref myst"></span>, we used around 6 steps to go from <span class="math notranslate nohighlight">\(f(x)\)</span> to <span class="math notranslate nohighlight">\(f'(x)\)</span>.
 This is referred to as differentiation from first principles. Once we
@@ -558,7 +572,7 @@ determine this for standard functions, we can switch to using shorthand
 ‘rules’ for our standard derivatives such as those listed in
 Table <span class="xref myst">1.1</span>.</p>
 <table class="table" id="tab-standardfuncs">
-<caption><span class="caption-text">Differentiation Rules : As we tend to work with many standard functions, their derivatives tend to be familiar and become memorised. These of course can all be derived from first principles. Notice, in the case of exponential, its derivative is itself!</span><a class="headerlink" href="#tab-standardfuncs" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-number">Table 6.1 </span><span class="caption-text">Differentiation Rules : As we tend to work with many standard functions, their derivatives tend to be familiar and become memorised. These of course can all be derived from first principles. Notice, in the case of exponential, its derivative is itself!</span><a class="headerlink" href="#tab-standardfuncs" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Type</p></th>
 <th class="head"><p>Function</p></th>
@@ -603,7 +617,7 @@ than having to derive the combined derivatives from first principles, it
 is more convenient to use rules appropriate to the way that the
 functions are combined.</p>
 <table class="table" id="tab-combinedrules">
-<caption><span class="caption-text">Combined Differentiation Rules : When analysing combinations of functions there are a number of shorthand methods.</span><a class="headerlink" href="#tab-combinedrules" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-number">Table 6.2 </span><span class="caption-text">Combined Differentiation Rules : When analysing combinations of functions there are a number of shorthand methods.</span><a class="headerlink" href="#tab-combinedrules" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Type</p></th>
 <th class="head"><p>Function</p></th>
@@ -663,7 +677,7 @@ replacing <span class="math notranslate nohighlight">\(g\)</span> by <span class
 \]</div>
 </section>
 <section id="differentiating-implicit-functions">
-<h2>Differentiating implicit functions <span class="xref std std-ref"> </span><a class="headerlink" href="#differentiating-implicit-functions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.3. </span>Differentiating implicit functions <span class="xref std std-ref"> </span><a class="headerlink" href="#differentiating-implicit-functions" title="Permalink to this heading">#</a></h2>
 <p>There are two methods for differentiating implicit functions. First
 solve the equation for <span class="math notranslate nohighlight">\(y\)</span> to determine an explicit function and then
 differentiate using the rules above. The alternative, and often simpler,
@@ -723,14 +737,14 @@ lower half of the circle (negative <span class="math notranslate nohighlight">\(
 <figure class="align-default" id="fig-implicitdiff">
 <a class="reference internal image-reference" href="Images/CircleDerivative.png"><img alt="Images/CircleDerivative.png" src="Images/CircleDerivative.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-text">For the positive semi-circle, the derivative is shown in red and tends
+<p><span class="caption-number">Fig. 6.5 </span><span class="caption-text">For the positive semi-circle, the derivative is shown in red and tends
 to infinity as
 <span class="math notranslate nohighlight">\(|x|\rightarrow1\)</span>.</span><a class="headerlink" href="#fig-implicitdiff" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="logarithmic-differentiation">
-<h2>Logarithmic differentiation <span class="xref std std-ref"> </span><a class="headerlink" href="#logarithmic-differentiation" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.4. </span>Logarithmic differentiation <span class="xref std std-ref"> </span><a class="headerlink" href="#logarithmic-differentiation" title="Permalink to this heading">#</a></h2>
 <p>A useful application of implicit differentiation is for functions,
 <span class="math notranslate nohighlight">\(f(x)\)</span>, where <span class="math notranslate nohighlight">\(x\)</span> is an exponent. For example</p>
 <div class="math notranslate nohighlight">
@@ -803,6 +817,24 @@ explicit expression for the derivative</p>
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Topic2_MD.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Trigonometric and Hyperbolic Functions <span class="xref std std-ref"> </span></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Topic4_MD.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Minima, maxima and points of inflection <span class="xref std std-ref"> </span></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -818,10 +850,10 @@ explicit expression for the derivative</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rates-of-change">Rates of change <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-of-differentiation">Rules of differentiation <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiating-implicit-functions">Differentiating implicit functions <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logarithmic-differentiation">Logarithmic differentiation <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rates-of-change">6.1. Rates of change <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-of-differentiation">6.2. Rules of differentiation <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiating-implicit-functions">6.3. Differentiating implicit functions <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logarithmic-differentiation">6.4. Logarithmic differentiation <span class="xref std std-ref"> </span></a></li>
 </ul>
   </nav></div>
 
