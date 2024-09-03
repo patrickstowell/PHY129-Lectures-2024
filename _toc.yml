@@ -25,13 +25,13 @@ parts:
 - caption: Stream B - Notes
   numbered: True
   chapters:
-    - file: Topic1_MD
-    - file: Topic2_MD
+    - file: StreamB/Topic1_MD
+    - file: StreamB/Topic2_MD
       title: Trigonometry
-    - file: Topic3_MD
-    - file: Topic4_MD
-    - file: Topic5_MD
-    - file: Topic6_MD
-    - file: Topic7_MD
-    - file: Topic8_MD
-    - file: Topic9_MD
+    - file: StreamB/Topic3_MD
+    - file: StreamB/Topic4_MD
+    - file: StreamB/Topic5_MD
+    - file: StreamB/Topic6_MD
+    - file: StreamB/Topic7_MD
+    - file: StreamB/Topic8_MD
+    - file: StreamB/Topic9_MD

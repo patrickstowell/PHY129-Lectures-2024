@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Differential Equations &#8212; PHY129 Mathematics for Physicists</title>
+    <title>12. Differential Equations &#8212; PHY129 Mathematics for Physicists</title>
   
   
   
@@ -70,6 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'StreamB/Topic9_MD';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="11. Integration by Parts" href="Topic8_MD.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,6 +185,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix3A_MD.html">Examples from Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix4A_MD.html">Adjoint Proof</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix5A_MD.html">Similarity Transforms</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream B - Notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Topic1_MD.html">4. Stream B Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2_MD.html">5. Trigonometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic3_MD.html">6. Differentiation <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic4_MD.html">7. Minima, maxima and points of inflection <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic5_MD.html">8. Power and Maclaurin Series <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic6_MD.html">9. Taylor Series, L’Hopital’s rule and approximation errors <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic7_MD.html">10. Integration <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic8_MD.html">11. Integration by Parts</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">12. Differential Equations <span class="xref std std-ref"> </span></a></li>
 </ul>
 
     </div>
@@ -379,15 +392,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-differential-equations">Introduction to Differential Equations <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-of-differential-equations">Classification of Differential Equations <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#independent-and-dependent-variables">Independent and Dependent Variables <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-brief-note-on-partial-differentiation">A brief note on partial differentiation <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinary-or-partial">Ordinary or Partial? <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-or-non-linear">Linear or Non-linear? <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#order-of-an-equation">Order of an Equation <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#homogeneous-or-inhomogeneous">Homogeneous or Inhomogeneous? <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#showing-a-function-satisfies-a-differential-equation">Showing a Function Satisfies a Differential Equation <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-differential-equations">12.1. Introduction to Differential Equations <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-of-differential-equations">12.1.1. Classification of Differential Equations <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#independent-and-dependent-variables">12.1.2. Independent and Dependent Variables <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-brief-note-on-partial-differentiation">12.1.3. A brief note on partial differentiation <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinary-or-partial">12.1.4. Ordinary or Partial? <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-or-non-linear">12.1.5. Linear or Non-linear? <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#order-of-an-equation">12.1.6. Order of an Equation <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#homogeneous-or-inhomogeneous">12.1.7. Homogeneous or Inhomogeneous? <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#showing-a-function-satisfies-a-differential-equation">12.1.8. Showing a Function Satisfies a Differential Equation <span class="xref std std-ref"> </span></a></li>
 </ul>
 </li>
 </ul>
@@ -402,9 +415,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="differential-equations">
-<h1>Differential Equations <span class="xref std std-ref"> </span><a class="headerlink" href="#differential-equations" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">12. </span>Differential Equations <span class="xref std std-ref"> </span><a class="headerlink" href="#differential-equations" title="Permalink to this heading">#</a></h1>
 <section id="introduction-to-differential-equations">
-<h2>Introduction to Differential Equations <span class="xref std std-ref"> </span><a class="headerlink" href="#introduction-to-differential-equations" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">12.1. </span>Introduction to Differential Equations <span class="xref std std-ref"> </span><a class="headerlink" href="#introduction-to-differential-equations" title="Permalink to this heading">#</a></h2>
 <p>Differential equations are equations where variables are linked together
 by differentiation, for example</p>
 <div class="math notranslate nohighlight">
@@ -451,13 +464,13 @@ differential equations. Next year you will learn how to solve second
 order ordinary differential equations and introduced to methods for
 solving partial differential equations.</p>
 <section id="classification-of-differential-equations">
-<h3>Classification of Differential Equations <span class="xref std std-ref"> </span><a class="headerlink" href="#classification-of-differential-equations" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.1.1. </span>Classification of Differential Equations <span class="xref std std-ref"> </span><a class="headerlink" href="#classification-of-differential-equations" title="Permalink to this heading">#</a></h3>
 <p>There are many different ways to classify differential equations and it
 is important that you are able to identify the different types of
 equations you will see.</p>
 </section>
 <section id="independent-and-dependent-variables">
-<h3>Independent and Dependent Variables <span class="xref std std-ref"> </span><a class="headerlink" href="#independent-and-dependent-variables" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.1.2. </span>Independent and Dependent Variables <span class="xref std std-ref"> </span><a class="headerlink" href="#independent-and-dependent-variables" title="Permalink to this heading">#</a></h3>
 <p>The first thing you need to be able to determine is which variable(s)
 are <em>independent</em> and which are <em>dependent</em>. For example, in</p>
 <div class="math notranslate nohighlight">
@@ -469,7 +482,7 @@ are <em>independent</em> and which are <em>dependent</em>. For example, in</p>
 independent and <span class="math notranslate nohighlight">\(y\)</span> is dependent.</p>
 </section>
 <section id="a-brief-note-on-partial-differentiation">
-<h3>A brief note on partial differentiation <span class="xref std std-ref"> </span><a class="headerlink" href="#a-brief-note-on-partial-differentiation" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.1.3. </span>A brief note on partial differentiation <span class="xref std std-ref"> </span><a class="headerlink" href="#a-brief-note-on-partial-differentiation" title="Permalink to this heading">#</a></h3>
 <p>When we have a function of more than one variable such as the the
 displacement of a oscillating string in the <span class="math notranslate nohighlight">\(y\)</span> direction which is
 dependent on both the distance along the string in the <span class="math notranslate nohighlight">\(x\)</span> direction and
@@ -486,7 +499,7 @@ physics, treating <span class="math notranslate nohighlight">\(t\)</span> as a c
 differentiation in more detail next semester.</p>
 </section>
 <section id="ordinary-or-partial">
-<h3>Ordinary or Partial? <span class="xref std std-ref"> </span><a class="headerlink" href="#ordinary-or-partial" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.1.4. </span>Ordinary or Partial? <span class="xref std std-ref"> </span><a class="headerlink" href="#ordinary-or-partial" title="Permalink to this heading">#</a></h3>
 <p>In an ordinary differential equation, or <em>ODE</em>, there is only one
 independent variable. For example, in</p>
 <div class="math notranslate nohighlight">
@@ -507,7 +520,7 @@ depends on <span class="math notranslate nohighlight">\(x\)</span> and <span cla
 harder to solve than ODEs.</p>
 </section>
 <section id="linear-or-non-linear">
-<h3>Linear or Non-linear? <span class="xref std std-ref"> </span><a class="headerlink" href="#linear-or-non-linear" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.1.5. </span>Linear or Non-linear? <span class="xref std std-ref"> </span><a class="headerlink" href="#linear-or-non-linear" title="Permalink to this heading">#</a></h3>
 <p>An equation is <em>linear</em> if the highest power of the dependent variable
 or any of its derivatives is one. For example,</p>
 <div class="math notranslate nohighlight">
@@ -540,7 +553,7 @@ though some methods work for both. Often, nonlinear equations can only
 be solved numerically.</p>
 </section>
 <section id="order-of-an-equation">
-<h3>Order of an Equation <span class="xref std std-ref"> </span><a class="headerlink" href="#order-of-an-equation" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.1.6. </span>Order of an Equation <span class="xref std std-ref"> </span><a class="headerlink" href="#order-of-an-equation" title="Permalink to this heading">#</a></h3>
 <p>The order of an equation is given by the highest derivative it contains.
 For example</p>
 <div class="math notranslate nohighlight">
@@ -561,7 +574,7 @@ because of the second derivative.</p>
 higher order ones.</p>
 </section>
 <section id="homogeneous-or-inhomogeneous">
-<h3>Homogeneous or Inhomogeneous? <span class="xref std std-ref"> </span><a class="headerlink" href="#homogeneous-or-inhomogeneous" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.1.7. </span>Homogeneous or Inhomogeneous? <span class="xref std std-ref"> </span><a class="headerlink" href="#homogeneous-or-inhomogeneous" title="Permalink to this heading">#</a></h3>
 <p>A linear differential equation is said to be <em>homogeneous</em> if all the
 terms contain the dependent variable. Thus</p>
 <div class="math notranslate nohighlight">
@@ -582,7 +595,7 @@ this is to realise that a homogeneous linear equation will always have a
 solution with the dependent variable equal to zero.</p>
 </section>
 <section id="showing-a-function-satisfies-a-differential-equation">
-<h3>Showing a Function Satisfies a Differential Equation <span class="xref std std-ref"> </span><a class="headerlink" href="#showing-a-function-satisfies-a-differential-equation" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.1.8. </span>Showing a Function Satisfies a Differential Equation <span class="xref std std-ref"> </span><a class="headerlink" href="#showing-a-function-satisfies-a-differential-equation" title="Permalink to this heading">#</a></h3>
 <p>With experience, we are sometimes able to guess the solution, and then
 just demonstrate that it satisfies the differential equation, which
 might also lead to relationships between constants. Suppose that you are
@@ -649,6 +662,15 @@ the equation is satisfied.</p>
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Topic8_MD.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Integration by Parts</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
@@ -664,15 +686,15 @@ the equation is satisfied.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-differential-equations">Introduction to Differential Equations <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-of-differential-equations">Classification of Differential Equations <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#independent-and-dependent-variables">Independent and Dependent Variables <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-brief-note-on-partial-differentiation">A brief note on partial differentiation <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinary-or-partial">Ordinary or Partial? <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-or-non-linear">Linear or Non-linear? <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#order-of-an-equation">Order of an Equation <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#homogeneous-or-inhomogeneous">Homogeneous or Inhomogeneous? <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#showing-a-function-satisfies-a-differential-equation">Showing a Function Satisfies a Differential Equation <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-differential-equations">12.1. Introduction to Differential Equations <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-of-differential-equations">12.1.1. Classification of Differential Equations <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#independent-and-dependent-variables">12.1.2. Independent and Dependent Variables <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-brief-note-on-partial-differentiation">12.1.3. A brief note on partial differentiation <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinary-or-partial">12.1.4. Ordinary or Partial? <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-or-non-linear">12.1.5. Linear or Non-linear? <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#order-of-an-equation">12.1.6. Order of an Equation <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#homogeneous-or-inhomogeneous">12.1.7. Homogeneous or Inhomogeneous? <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#showing-a-function-satisfies-a-differential-equation">12.1.8. Showing a Function Satisfies a Differential Equation <span class="xref std std-ref"> </span></a></li>
 </ul>
 </li>
 </ul>

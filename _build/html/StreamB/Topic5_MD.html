@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Power and Maclaurin Series &#8212; PHY129 Mathematics for Physicists</title>
+    <title>8. Power and Maclaurin Series &#8212; PHY129 Mathematics for Physicists</title>
   
   
   
@@ -70,6 +70,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'StreamB/Topic5_MD';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9. Taylor Series, L’Hopital’s rule and approximation errors" href="Topic6_MD.html" />
+    <link rel="prev" title="7. Minima, maxima and points of inflection" href="Topic4_MD.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,6 +186,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix3A_MD.html">Examples from Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix4A_MD.html">Adjoint Proof</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../AppendixA/Appendix5A_MD.html">Similarity Transforms</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream B - Notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Topic1_MD.html">4. Stream B Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2_MD.html">5. Trigonometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic3_MD.html">6. Differentiation <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic4_MD.html">7. Minima, maxima and points of inflection <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Power and Maclaurin Series <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic6_MD.html">9. Taylor Series, L’Hopital’s rule and approximation errors <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic7_MD.html">10. Integration <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic8_MD.html">11. Integration by Parts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic9_MD.html">12. Differential Equations <span class="xref std std-ref"> </span></a></li>
 </ul>
 
     </div>
@@ -379,11 +393,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#approximating-functions-using-series">Approximating functions using series <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#power-series">Power series <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-series-centred-at-zero">Taylor series centred at zero <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-the-exponential-series">Example 1: The exponential series</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-the-binomial-series">Example 2: The Binomial series <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#approximating-functions-using-series">8.1. Approximating functions using series <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#power-series">8.2. Power series <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-series-centred-at-zero">8.3. Taylor series centred at zero <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-the-exponential-series">8.3.1. Example 1: The exponential series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-the-binomial-series">8.3.2. Example 2: The Binomial series <span class="xref std std-ref"> </span></a></li>
 </ul>
 </li>
 </ul>
@@ -398,9 +412,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="power-and-maclaurin-series">
-<h1>Power and Maclaurin Series <span class="xref std std-ref"> </span><a class="headerlink" href="#power-and-maclaurin-series" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">8. </span>Power and Maclaurin Series <span class="xref std std-ref"> </span><a class="headerlink" href="#power-and-maclaurin-series" title="Permalink to this heading">#</a></h1>
 <section id="approximating-functions-using-series">
-<h2>Approximating functions using series <span class="xref std std-ref"> </span><a class="headerlink" href="#approximating-functions-using-series" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">8.1. </span>Approximating functions using series <span class="xref std std-ref"> </span><a class="headerlink" href="#approximating-functions-using-series" title="Permalink to this heading">#</a></h2>
 <p>We can already see how higher derivatives can enable functions to be
 analysed for critical points including maxima and minima. Another, even
 more powerful application of higher derivatives is approximating
@@ -413,7 +427,7 @@ approximations can reduce the work involved and may ultimately enable
 predictions or deeper insights to be made.</p>
 </section>
 <section id="power-series">
-<h2>Power series <span class="xref std std-ref"> </span><a class="headerlink" href="#power-series" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">8.2. </span>Power series <span class="xref std std-ref"> </span><a class="headerlink" href="#power-series" title="Permalink to this heading">#</a></h2>
 <p>An infinite <strong>power series</strong> about some point <span class="math notranslate nohighlight">\(x=c\)</span> is defined as</p>
 <div class="math notranslate nohighlight">
 \[
@@ -477,7 +491,7 @@ also become increasingly small. Such an approximation is referred to as
 a Taylor series.</p>
 </section>
 <section id="taylor-series-centred-at-zero">
-<h2>Taylor series centred at zero <span class="xref std std-ref"> </span><a class="headerlink" href="#taylor-series-centred-at-zero" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">8.3. </span>Taylor series centred at zero <span class="xref std std-ref"> </span><a class="headerlink" href="#taylor-series-centred-at-zero" title="Permalink to this heading">#</a></h2>
 <p>This special case is often referred to as a Maclaurin series. It takes
 the form</p>
 <div class="math notranslate nohighlight">
@@ -495,7 +509,7 @@ to approximate. We need to calculate the value of this function and its
 derivatives at <span class="math notranslate nohighlight">\(x=0\)</span>. By doing so, we are then able to approximate the
 function for <span class="math notranslate nohighlight">\(x \ne 0\)</span>.</p>
 <section id="example-1-the-exponential-series">
-<h3>Example 1: The exponential series<a class="headerlink" href="#example-1-the-exponential-series" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">8.3.1. </span>Example 1: The exponential series<a class="headerlink" href="#example-1-the-exponential-series" title="Permalink to this heading">#</a></h3>
 <p>The easiest example to start with is the function <span class="math notranslate nohighlight">\(e^{x}\)</span>, since its
 derivatives all equal the function itself. Here we expand the series to
 a 4<span class="math notranslate nohighlight">\(^{\mathrm{th}}\)</span> degree polynomial:</p>
@@ -509,12 +523,12 @@ e^{x}\approx e^{0}+e^{0}x+\frac{e^{0}}{2}x^{2}+\frac{e^{0}}{6}x^{3}+\frac{e^{0}}
 e^{x}\approx1+x+\frac{x^{2}}{2}+\frac{x^{3}}{6}+\frac{x^{4}}{24}
 \]</div>
 <p>As
-shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:ex-Taylor-approximation</span></code>, this simple approximation is
+shown in <a class="reference internal" href="#fig-ex-taylor-approximation"><span class="std std-numref">Fig. 8.1</span></a>, this simple approximation is
 accurate up to <span class="math notranslate nohighlight">\(x\approx 2\)</span> and diverges afterwards.</p>
 <figure class="align-default" id="fig-ex-taylor-approximation">
 <a class="reference internal image-reference" href="Images/Taylor_e.png"><img alt="Images/Taylor_e.png" src="Images/Taylor_e.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-text">The Taylor approximation of <span class="math notranslate nohighlight">\(e^{x}\)</span> is shown as a 4th degree, 6th
+<p><span class="caption-number">Fig. 8.1 </span><span class="caption-text">The Taylor approximation of <span class="math notranslate nohighlight">\(e^{x}\)</span> is shown as a 4th degree, 6th
 degree and 10th degree polynomial.</span><a class="headerlink" href="#fig-ex-taylor-approximation" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
@@ -532,7 +546,7 @@ e^{x}\approx1+x+\frac{x^{2}}{2}+\frac{x^{3}}{6}+\frac{x^{4}}{24}+\frac{x^{5}}{12
 \]</div>
 </section>
 <section id="example-2-the-binomial-series">
-<h3>Example 2: The Binomial series <span class="xref std std-ref"> </span><a class="headerlink" href="#example-2-the-binomial-series" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">8.3.2. </span>Example 2: The Binomial series <span class="xref std std-ref"> </span><a class="headerlink" href="#example-2-the-binomial-series" title="Permalink to this heading">#</a></h3>
 <p>Binomial functions are of the form</p>
 <div class="math notranslate nohighlight">
 \[
@@ -619,6 +633,24 @@ special relatively.</p>
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Topic4_MD.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Minima, maxima and points of inflection <span class="xref std std-ref"> </span></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Topic6_MD.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Taylor Series, L’Hopital’s rule and approximation errors <span class="xref std std-ref"> </span></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -634,11 +666,11 @@ special relatively.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#approximating-functions-using-series">Approximating functions using series <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#power-series">Power series <span class="xref std std-ref"> </span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-series-centred-at-zero">Taylor series centred at zero <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-the-exponential-series">Example 1: The exponential series</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-the-binomial-series">Example 2: The Binomial series <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#approximating-functions-using-series">8.1. Approximating functions using series <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#power-series">8.2. Power series <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-series-centred-at-zero">8.3. Taylor series centred at zero <span class="xref std std-ref"> </span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-the-exponential-series">8.3.1. Example 1: The exponential series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-the-binomial-series">8.3.2. Example 2: The Binomial series <span class="xref std std-ref"> </span></a></li>
 </ul>
 </li>
 </ul>
