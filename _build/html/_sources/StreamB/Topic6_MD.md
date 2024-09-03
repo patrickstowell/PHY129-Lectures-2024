@@ -150,7 +150,7 @@ analysed to yield real or infinite values. These examples are visualised
 in {numref}`fig:IndeterminateExamples`.
 
 
-```{figure} ../Images/HospitalExamples.png
+```{figure} ImagesB/HospitalExamples.png
 ---
 width: 50%
 name: fig:IndeterminateExamples
@@ -198,7 +198,7 @@ $$
 $$
 
 
-```{figure} ../Images/CosineTaylor.png
+```{figure} ImagesB/CosineTaylor.png
 ---
 width: 50%
 name: fig:A-Taylor-Error
@@ -276,7 +276,7 @@ as shown in {numref}`fig:Remainders`.
 
 
 
-```{figure} ../Images/RemainderTaylor.png
+```{figure} ImagesB/RemainderTaylor.png
 ---
 width: 50%
 name: fig:Remainders

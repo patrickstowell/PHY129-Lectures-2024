@@ -33,7 +33,7 @@ Due to their periodic nature, trigonometric functions are used
 frequently in physics to describe oscillating phenomena.
 
 
-```{figure} Images/Sin-cos-define.png
+```{figure} ImagesB/Sin-cos-define.png
 ---
 width: 40%
 name: SinCos-Define
@@ -46,7 +46,7 @@ triangle.
 
 
 
-```{figure} Images/SinCos.png
+```{figure} ImagesB/SinCos.png
 ---
 width: 50%
 name: SinCos
@@ -58,7 +58,7 @@ in phase by $\pi/2$.
 ```
 
 
-```{figure} Images/Tan.png
+```{figure} ImagesB/Tan.png
 ---
 width: 50%
 name: Tan
@@ -141,7 +141,7 @@ hyperbola ($x^{2}-y^{2}=1$) as shown in
 Fig. [1.2](#fig:Hyperbola). The geometry defined by hyperbolic
 functions have numerous applications in physics.
 
-```{figure} Images/UnitHyperbola.png
+```{figure} ImagesB/UnitHyperbola.png
 ---
 width: 40%
 name: Hyperbola
@@ -150,7 +150,7 @@ label: fig:Hyperbola
 The hyperbola defined by the equation $x^{2}-y^{2}=1$.
 ```
 
-```{figure} Images/cosh_sinh.png
+```{figure} ImagesB/cosh_sinh.png
 ---
 width: 50%
 name: hyperbolicfuncs1
@@ -159,7 +159,7 @@ label: fig:hyperbolic1
 The main hyperbolic functions are shown for $\sinh x$ and $\cosh x$
 ```
 
-```{figure} Images/tanh.png
+```{figure} ImagesB/tanh.png
 ---
 width: 50%
 name: hyperbolicfuncs2

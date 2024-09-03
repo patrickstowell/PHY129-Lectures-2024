@@ -46,7 +46,7 @@ The diagram below shows the function $f\left(x\right)=3x$ and how the
 integral $F\left(x\right)$ gives the area under the function.
 
 
-```{figure} ../Images/AreaUnderCurve.png
+```{figure} ImagesB/AreaUnderCurve.png
 ---
 width: 70%
 name: fig:AreaUnderCurve
@@ -71,7 +71,7 @@ an approximation but becomes more precise as $\delta x$ becomes very
 small.
 
 
-```{figure} ../Images/FirstPrinciples.png
+```{figure} ImagesB/FirstPrinciples.png
 ---
 width: 50%
 name: fig:U4_FirstPrinciples
@@ -172,7 +172,7 @@ $f\left(x\right)=x^{4}-x^{2}+3$ and the right is the odd function
 $f\left(x\right)=x^{3}-x$.
 
 
-```{figure} ../Images/Evenfunction.png
+```{figure} ImagesB/Evenfunction.png
 ---
 width: 50%
 name: fig:U4_Symm
@@ -182,7 +182,7 @@ $f\left(x\right)=x^{4}-x^{2}+3$. Yellow regions are the areas under the curve
 between symmetric limits.
 ```
 
-```{figure} ../Images/Oddfunction.png
+```{figure} ImagesB/Oddfunction.png
 ---
 width: 50%
 name: fig:U4_SymmOdd
