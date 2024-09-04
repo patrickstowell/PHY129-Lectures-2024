@@ -3,8 +3,7 @@
 ## Acknowledgements 
 
 These lecture notes are adapted from those given to me by colleagues who
-have previously taught this course in particular Rhoda Hawkins was
-incredibly helpful in sharing her materials with me.
+have previously taught this course in particular Rhoda Hawkins and Nigel Clarke have been incredibly helpful in sharing their materials with us.
 
 ## Your input 
 
@@ -42,7 +41,7 @@ to suppoort learning of key concepts.
 Below are the learning objectives (LOs) of this module for Stream A. By the end of
 the module you should be able to:
 
--   Know basic trig.....
+-   Know basic trig..... (Stowell to ADD)
 
 ### Learning objectives of Stream B
 

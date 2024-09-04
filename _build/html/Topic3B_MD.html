@@ -1,0 +1,911 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>6. Differentiation &#8212; PHY129 Mathematics for Physicists</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"HTML-CSS": {"matchFontHeight": true, "scale": 80}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Topic3B_MD';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="7. Minima, maxima and points of inflection" href="Topic4B_MD.html" />
+    <link rel="prev" title="5. Trigonometric and Hyperbolic Functions" href="Topic2B_MD.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="Overview.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="PHY129 Mathematics for Physicists - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="PHY129 Mathematics for Physicists - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="Overview.html">
+                    Overview
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream A - Notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Topic1A_MD.html">1. Complex Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2A_MD.html">2. Vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic3A_MD.html">3. Matrices</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream A - Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="AppendixA/Appendix1A_MD.html">Row Reduction Inverse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AppendixA/Appendix2A_MD.html">Matrix Diagonalisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AppendixA/Appendix3A_MD.html">Examples from Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AppendixA/Appendix4A_MD.html">Adjoint Proof</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AppendixA/Appendix5A_MD.html">Similarity Transforms</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream B - Notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Topic1B_MD.html">4. Stream B Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2B_MD.html">5. Trigonometry</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Differentiation <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic4B_MD.html">7. Minima, maxima and points of inflection <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic5B_MD.html">8. Power and Maclaurin Series <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic6B_MD.html">9. Taylor Series, L’Hopital’s rule and approximation errors <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic7B_MD.html">10. Integration <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic8B_MD.html">11. Integration by Parts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic9B_MD.html">12. Differential Equations <span class="xref std std-ref"> </span></a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTopic3B_MD.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Topic3B_MD.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Differentiation  </h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rates-of-change">6.1. Rates of change <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-of-differentiation">6.2. Rules of differentiation <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiating-implicit-functions">6.3. Differentiating implicit functions <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logarithmic-differentiation">6.4. Logarithmic differentiation <span class="xref std std-ref"> </span></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="differentiation">
+<h1><span class="section-number">6. </span>Differentiation <span class="xref std std-ref"> </span><a class="headerlink" href="#differentiation" title="Permalink to this heading">#</a></h1>
+<p><span class="xref std std-ref"> </span></p>
+<p>Once we are comfortable recognising and using different functions, a key
+next step is analysing them to determine their rate of change. This type
+of analysis is referred to as differential calculus. The rate of change,
+or derivative, can be used to determine quantities such as the slope of
+the function at specific values of input. If we repeat this process we
+may obtain the rate of change of the derivative which can enable us to
+determine local points of maxima, minima or even inflection. This power
+to describe how variables change with each other was instrumental in the
+development of physics and will be a key component in your analytical
+toolbox.</p>
+<section id="rates-of-change">
+<h2><span class="section-number">6.1. </span>Rates of change <span class="xref std std-ref"> </span><a class="headerlink" href="#rates-of-change" title="Permalink to this heading">#</a></h2>
+<p>The rate of change of some function corresponds to the slope of the
+curve of the function. As a first approximation, we can determine the
+slope at a point <span class="math notranslate nohighlight">\(x_{1}\)</span> by considering how much the value of the
+function differs compared to another point <span class="math notranslate nohighlight">\(x_{2}\)</span>. This is approximate
+if the variation of the function between the two points is not a
+straight line. If, for these two values of input, the corresponding
+outputs of the function are <span class="math notranslate nohighlight">\(y_{1}\)</span> and <span class="math notranslate nohighlight">\(y_{2}\)</span>, respectively, then the
+slope corresponds to the change in <span class="math notranslate nohighlight">\(y\)</span> relative to the change in <span class="math notranslate nohighlight">\(x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{slope}=\frac{y_{2}-y_{1}}{x_{2}-x_{1}}=\tan\theta\]</div>
+<figure class="align-default" id="fig-approximating-the-rate">
+<a class="reference internal image-reference" href="_images/Wiki_slope_in_2d.png"><img alt="_images/Wiki_slope_in_2d.png" src="_images/Wiki_slope_in_2d.png" style="width: 40%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.1 </span><span class="caption-text">The rate of change of some function corresponds to the slope of the
+curve of the function. As a first approximation, we can determine the
+slope at a point <span class="math notranslate nohighlight">\(x_{1}\)</span> by considering how much the value of the
+function differs compared to another point <span class="math notranslate nohighlight">\(x_{2}\)</span>. This is exact if the
+variation of the function between the two points is a straight line,
+otherwise it is an
+approximation.</span><a class="headerlink" href="#fig-approximating-the-rate" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>As you can see from <a class="reference internal" href="#fig-approximating-the-rate"><span class="std std-numref">Fig. 6.1</span></a> the slope or gradient is the
+ratio of opposite to the adjacent which corresponds to the
+trigonometretic function <span class="math notranslate nohighlight">\(\tan(\theta)\)</span>, which is why we often refer to
+the slope as the tangent to the the function. Typical notation uses the
+Greek letter delta (<span class="math notranslate nohighlight">\(\delta,\,\Delta\)</span>) for increment or difference in
+values of variable such as <span class="math notranslate nohighlight">\(\delta x\)</span>. Hence the rate of change is:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{slope}=\frac{\delta y}{\delta x}=\frac{y_{2}-y_{1}}{x_{2}-x_{1}}
+\]</div>
+<figure class="align-default" id="fig-tangent-calculus">
+<a class="reference internal image-reference" href="_images/Tangent-calculus.png"><img alt="_images/Tangent-calculus.png" src="_images/Tangent-calculus.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">The derivative of a function at a point <span class="math notranslate nohighlight">\(x\)</span> can be illustrated with as
+the <a class="reference external" href="https://en.wikipedia.org/wiki/Derivative">tangent</a></span><a class="headerlink" href="#fig-tangent-calculus" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>As long as we choose a small enough increment of <span class="math notranslate nohighlight">\(\delta x\)</span>, this method
+of finding the slope works well even for functions that do not vary
+linearly. We can take this further by choosing this increment such that
+it approaches the limiting value of zero, which we denote as
+<span class="math notranslate nohighlight">\(\delta x\rightarrow0\)</span>. Noting that <span class="math notranslate nohighlight">\(y_1 = f(x_1)\)</span> and
+<span class="math notranslate nohighlight">\(y_2=f(x_2)=f(x_1+\delta x)\)</span>, the derivative becomes in the limit of
+<span class="math notranslate nohighlight">\(\delta x\rightarrow0\)</span></p>
+<div class="math notranslate nohighlight" id="equation-eq-diff1">
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-eq-diff1" title="Permalink to this equation">#</a></span>\[
+\lim_{\delta x\to0}\frac{\delta y}{\delta x}=\frac{f(x+\delta x)-f(x)}{\delta x}
+\]</div>
+<p>This turns out to be such a useful quantity in physics that we replace
+the notation</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{\delta x \to 0}\frac{\delta y}{\delta x}
+\]</div>
+<p>with</p>
+<div class="math notranslate nohighlight" id="equation-eq-diff2">
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-eq-diff2" title="Permalink to this equation">#</a></span>\[
+\frac{dy}{dx}
+\]</div>
+<p>which we refer to as the rate of
+change of <span class="math notranslate nohighlight">\(y\)</span> with <span class="math notranslate nohighlight">\(x\)</span>. Hence we have,</p>
+<div class="math notranslate nohighlight" id="equation-eq-diff3">
+<span class="eqno">(6.3)<a class="headerlink" href="#equation-eq-diff3" title="Permalink to this equation">#</a></span>\[
+\frac{dy}{dx}=\frac{f(x+\delta x)-f(x)}{\delta x}
+\]</div>
+<p>We can use equation <span class="xref myst"></span> to determine the rate of change of any function.
+For example, consider the quadratic function <span class="math notranslate nohighlight">\(f(x)=3x^{2}+2\)</span>, for which
+we have,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+f(x+\delta x) &amp; =3[(x+\delta x)^{2}]+2\nonumber \\
+ &amp; =3[x^{2}+2x\delta x+(\delta x)^{2}]+2\nonumber \\
+f(x+\delta x)-f(x) &amp; =6x\delta x+3(\delta x)^{2}=\delta y\nonumber \end{aligned}
+\end{split}\]</div>
+<p>Hence
+$<span class="math notranslate nohighlight">\(
+\begin{aligned}
+f(x+\delta x)-f(x) =6x\delta x+3(\delta x)^{2}=\delta y\nonumber \end{aligned}
+\)</span>$</p>
+<p>Once we have the change <span class="math notranslate nohighlight">\(\delta y\)</span>, we can determine the rate of change
+by using eq. <span class="xref myst"></span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\lim_{\delta x\to0}\frac{\delta y}{\delta x} &amp; =\frac{6x\delta x+3(\delta x)^{2}}{\delta x}\label{diff2}\\
+\lim_{\delta x\to0}\frac{\delta y}{\delta x} &amp; =6x+3\delta x = 6x\nonumber \\\end{aligned}
+\end{split}\]</div>
+<p>The last step, where we eliminate the term <span class="math notranslate nohighlight">\(3\delta x\)</span>, is what we mean
+by taking <span class="math notranslate nohighlight">\(\delta x\)</span> to be small enough. This technique of considering
+what happens when the difference between two points approaches zero is
+something that we make a great deal of use of in deriving mathematical
+descriptions of the physical world. As you can see the end result for
+the slope is now independent of the value of <span class="math notranslate nohighlight">\(\delta x\)</span>, in other words
+for small enough differences between points the slope does not depend on
+the difference. Hence the slope becomes a property of the value of the
+input point alone. Finally we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-diff-quad">
+<span class="eqno">(6.4)<a class="headerlink" href="#equation-eq-diff-quad" title="Permalink to this equation">#</a></span>\[
+\frac{dy}{dx} =6x=f'(x)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(dy/dx\)</span> represents
+the <em>instantaneous</em> rate of change of the function. On the right hand
+side of eq. <span class="xref myst"></span> we have introduced the notation <span class="math notranslate nohighlight">\(f'(x)\)</span>, where
+the prime, <span class="math notranslate nohighlight">\((')\)</span>, after the <span class="math notranslate nohighlight">\(f\)</span> tells us that this is the first
+differential of <span class="math notranslate nohighlight">\(f\)</span> with respect to the input variable, which in tis
+case is <span class="math notranslate nohighlight">\(x\)</span>. There are a variety of notation styles for the derivative
+of a function that you will encounter:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{df}{dx}=\frac{d}{dx}f(x)=f'(x)=y'=\frac{dy}{dx}
+\]</div>
+<p>which all mean
+the same.</p>
+<p>In <a class="reference internal" href="#fig-differentiation-example"><span class="std std-numref">Fig. 6.3</span></a>, we see both the function and
+its derivative visualised allowing us a more intuitive understanding of
+the meaning of differentiation.</p>
+<figure class="align-default" id="fig-differentiation-example">
+<a class="reference internal image-reference" href="_images/Diff_Eg.png"><img alt="_images/Diff_Eg.png" src="_images/Diff_Eg.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.3 </span><span class="caption-text">Differentiation is an analysis of the instantaneous rate of change in
+a function. Here in the example of <span class="math notranslate nohighlight">\(f(x)=3x^{2}+2\)</span> the derivative is
+determined as <span class="math notranslate nohighlight">\(f'(x)=6x\)</span>. Notice, this is a constant rate of change. The
+process effectively associates a <span class="math notranslate nohighlight">\(x^{2}\)</span> function to a <span class="math notranslate nohighlight">\(x^{1}\)</span> function.
+More generally, we can say it is a mapping from <span class="math notranslate nohighlight">\(x^{n}\)</span> to
+<span class="math notranslate nohighlight">\(nx^{n-1}\)</span>.</span><a class="headerlink" href="#fig-differentiation-example" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-differentiation-example2">
+<a class="reference internal image-reference" href="_images/Diff_Eg2.png"><img alt="_images/Diff_Eg2.png" src="_images/Diff_Eg2.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.4 </span><span class="caption-text">An example of a composite function in the form of <span class="math notranslate nohighlight">\(y=f(g(x)\)</span> and its
+derivative <span class="math notranslate nohighlight">\(y'\)</span>. The latter can be derived analytically using the chain
+rule. The rate of change is all negative in this domain of <span class="math notranslate nohighlight">\(x\)</span> with a
+minimum near <span class="math notranslate nohighlight">\(x=0.63\)</span></span><a class="headerlink" href="#fig-differentiation-example2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="rules-of-differentiation">
+<h2><span class="section-number">6.2. </span>Rules of differentiation <span class="xref std std-ref"> </span><a class="headerlink" href="#rules-of-differentiation" title="Permalink to this heading">#</a></h2>
+<p>In our example above, from
+Eq. <span class="xref myst"></span>-<span class="xref myst"></span>, we used around 6 steps to go from <span class="math notranslate nohighlight">\(f(x)\)</span> to <span class="math notranslate nohighlight">\(f'(x)\)</span>.
+This is referred to as differentiation from first principles. Once we
+determine this for standard functions, we can switch to using shorthand
+‘rules’ for our standard derivatives such as those listed in
+Table <span class="xref myst">1.1</span>.</p>
+<table class="table" id="tab-standardfuncs">
+<caption><span class="caption-number">Table 6.1 </span><span class="caption-text">Differentiation Rules : As we tend to work with many standard functions, their derivatives tend to be familiar and become memorised. These of course can all be derived from first principles. Notice, in the case of exponential, its derivative is itself!</span><a class="headerlink" href="#tab-standardfuncs" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Function</p></th>
+<th class="head"><p>Derivative</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Constant</p></td>
+<td><p><span class="math notranslate nohighlight">\(c\)</span></p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Power</p></td>
+<td><p><span class="math notranslate nohighlight">\(x^{n}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(nx^{n-1}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Exponential</p></td>
+<td><p>e<span class="math notranslate nohighlight">\(^{x}\)</span></p></td>
+<td><p>e<span class="math notranslate nohighlight">\(^{x}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Log</p></td>
+<td><p><span class="math notranslate nohighlight">\(\ln x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{x}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Cosine</p></td>
+<td><p><span class="math notranslate nohighlight">\(\cos x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-\sin x\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Sine</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sin x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\cos x\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Tan</p></td>
+<td><p><span class="math notranslate nohighlight">\(\tan x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{\cos^{2}x}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>In the case of single functions, all is relatively straight forward.
+However, there are times when a function is comprised of multiple other
+functions referred to as <span class="math notranslate nohighlight">\(f(x)\)</span> and <span class="math notranslate nohighlight">\(g(x)\)</span> for example . Hence, rather
+than having to derive the combined derivatives from first principles, it
+is more convenient to use rules appropriate to the way that the
+functions are combined.</p>
+<table class="table" id="tab-combinedrules">
+<caption><span class="caption-number">Table 6.2 </span><span class="caption-text">Combined Differentiation Rules : When analysing combinations of functions there are a number of shorthand methods.</span><a class="headerlink" href="#tab-combinedrules" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Function</p></th>
+<th class="head"><p>Derivative</p></th>
+<th class="head"><p>Rule Name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Summed</p></td>
+<td><p><span class="math notranslate nohighlight">\(f(x)+g(x)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(f'+g'\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Multiplied</p></td>
+<td><p><span class="math notranslate nohighlight">\(f(x).g(x)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(fg'+gf'\)</span></p></td>
+<td><p>Product</p></td>
+</tr>
+<tr class="row-even"><td><p>Divided</p></td>
+<td><p><span class="math notranslate nohighlight">\(f(x)/g(x)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\((f'g-fg')/g^{2}\)</span></p></td>
+<td><p>Quotient</p></td>
+</tr>
+<tr class="row-odd"><td><p>Composite</p></td>
+<td><p><span class="math notranslate nohighlight">\(f(g(x))\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(f^{\prime}(g(x)).g^{\prime}(x)\)</span></p></td>
+<td><p>Chain</p></td>
+</tr>
+</tbody>
+</table>
+<p>For different types of combined functions, the composite type requires
+the most effort. Here it is useful to provide an example of applying the
+Chain Rule. To differentiate <span class="math notranslate nohighlight">\(y=(5x^{3}-7)^{4}\)</span>, first we use the
+substitution <span class="math notranslate nohighlight">\(g(x)=5x^{3}-7\)</span>, such that <span class="math notranslate nohighlight">\(y=g^{4}\)</span>. The chain rule has
+two steps. First we differentiate <span class="math notranslate nohighlight">\(y\)</span> with respect to <span class="math notranslate nohighlight">\(g\)</span> using the
+standard rule for differentiating powers</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dg}=4g^3
+\]</div>
+<p>and then
+we differentiate <span class="math notranslate nohighlight">\(g\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span> again using the rule for
+differentiating powers</p>
+<div class="math notranslate nohighlight">
+\[\frac{dg}{dx}=15x^2\]</div>
+<p>The chain rule then tells
+us that to find <span class="math notranslate nohighlight">\(dy/dx\)</span> we combine these two</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx}=\frac{dy}{dg}\frac{dg}{dx}=4g^3 \times15x^2
+\]</div>
+<p>Finally
+replacing <span class="math notranslate nohighlight">\(g\)</span> by <span class="math notranslate nohighlight">\(5x^{3}-7\)</span>, we obtain</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx}=4(5x^{3}-7)^3 \times 15x^2 = 60x^2 (5x^{3}-7)^3
+\]</div>
+</section>
+<section id="differentiating-implicit-functions">
+<h2><span class="section-number">6.3. </span>Differentiating implicit functions <span class="xref std std-ref"> </span><a class="headerlink" href="#differentiating-implicit-functions" title="Permalink to this heading">#</a></h2>
+<p>There are two methods for differentiating implicit functions. First
+solve the equation for <span class="math notranslate nohighlight">\(y\)</span> to determine an explicit function and then
+differentiate using the rules above. The alternative, and often simpler,
+method is to differentiate implicit functions directly without first
+solving for <span class="math notranslate nohighlight">\(y\)</span>. This is called <strong>implicit differentiation</strong> and follows
+these steps:</p>
+<ol class="arabic simple">
+<li><p>Differentiate both sides of the equation with respect to <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+<li><p>Treat the variable <span class="math notranslate nohighlight">\(y\)</span> as an unknown differentiable function of x.</p></li>
+<li><p>Solve for the resulting equation to make <span class="math notranslate nohighlight">\(dy/dx\)</span> the subject.</p></li>
+</ol>
+<p>Consider the implicit equation for the unit circle:</p>
+<div class="math notranslate nohighlight">
+\[
+x^{2}+y^{2} =1
+\]</div>
+<p>Differentiating all terms with respect to <span class="math notranslate nohighlight">\(x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dx^2}{dx}+\frac{dy^2}{dx}=\frac{d1}{dx}
+\]</div>
+<p>The first term on the left hand side is a standard differential</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dx^2}{dx}=2x
+\]</div>
+<p>The second term on the left hand side requires
+use of the chain rule and application of standard differentiation:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy^2}{dx}=\frac{dy^2}{dy}\frac{dy}{dx}=2y\frac{dy}{dx}
+\]</div>
+<p>Finally, since the differential of a constant is zero, we have</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dx^2}{dx}+\frac{dy^2}{dx}=2x+2y\frac{dy}{dx}=0
+\]</div>
+<p>Rearranging</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx} =-\frac{x}{y}
+\]</div>
+<p>In this case, since we can write <span class="math notranslate nohighlight">\(y\)</span> as
+an explicit function of <span class="math notranslate nohighlight">\(x\)</span>, we can also now write the derivative as an
+explicit function by substituting <span class="math notranslate nohighlight">\(y=\pm\sqrt{1-x^2}\)</span> so that derivative
+of the upper half of the circle (positive <span class="math notranslate nohighlight">\(y\)</span>) is</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx} =-\frac{x}{\sqrt{1-x^2}}
+\]</div>
+<p>and the derivative of the
+lower half of the circle (negative <span class="math notranslate nohighlight">\(y\)</span>) is</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx} =\frac{x}{\sqrt{1-x^2}}
+\]</div>
+<figure class="align-default" id="fig-implicitdiff">
+<a class="reference internal image-reference" href="_images/CircleDerivative.png"><img alt="_images/CircleDerivative.png" src="_images/CircleDerivative.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.5 </span><span class="caption-text">For the positive semi-circle, the derivative is shown in red and tends
+to infinity as
+<span class="math notranslate nohighlight">\(|x|\rightarrow1\)</span>.</span><a class="headerlink" href="#fig-implicitdiff" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="logarithmic-differentiation">
+<h2><span class="section-number">6.4. </span>Logarithmic differentiation <span class="xref std std-ref"> </span><a class="headerlink" href="#logarithmic-differentiation" title="Permalink to this heading">#</a></h2>
+<p>A useful application of implicit differentiation is for functions,
+<span class="math notranslate nohighlight">\(f(x)\)</span>, where <span class="math notranslate nohighlight">\(x\)</span> is an exponent. For example</p>
+<div class="math notranslate nohighlight">
+\[
+y=a^x
+\]</div>
+<p>First take the natural logarithm</p>
+<div class="math notranslate nohighlight">
+\[
+\ln y=\ln a^x=x \ln a
+\]</div>
+<p>Differentiate both side with respect to <span class="math notranslate nohighlight">\(x\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d\ln y}{dx}=\frac{d}{dx}x \ln a
+\]</div>
+<p>Using the chain rule on the left hand side and standard differentiation
+on the right hand side</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d\ln y}{dy}\frac{dy}{dx}= \ln a
+\]</div>
+<p>Finally using the standard form for the derivative of the natural
+logarithm</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{y}\frac{dy}{dx}= \ln a
+\]</div>
+<p>Rearranging</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx}= y\ln a
+\]</div>
+<p>Finally substituting <span class="math notranslate nohighlight">\(y=a^x\)</span> on the right hand side, we obtain an
+explicit expression for the derivative</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx}= a^x\ln a
+\]</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Topic2B_MD.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Trigonometric and Hyperbolic Functions <span class="xref std std-ref"> </span></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Topic4B_MD.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Minima, maxima and points of inflection <span class="xref std std-ref"> </span></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rates-of-change">6.1. Rates of change <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-of-differentiation">6.2. Rules of differentiation <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiating-implicit-functions">6.3. Differentiating implicit functions <span class="xref std std-ref"> </span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logarithmic-differentiation">6.4. Logarithmic differentiation <span class="xref std std-ref"> </span></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Alex Ramadan, Patrick Stowell
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
