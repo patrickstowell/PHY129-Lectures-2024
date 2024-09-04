@@ -9,7 +9,7 @@ future sections we will explore the diferentiation of functions and how
 we can approximate functions using series expansions. A flavour of what
 these tools enable is shown in {numref}`fig:U1_topics`.
 
-```{figure} ImagesB/CosDiffTaylor.png
+```{figure} ./ImagesB/CosDiffTaylor.png
 ---
 width: 40%
 name: fig:U1_topics
