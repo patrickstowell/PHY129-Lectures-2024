@@ -1,4 +1,4 @@
-# Examples from physics {#sec:physics}
+# Examples from physics
 
 Here are some examples that demonstrate the usefulness of matrices in
 physics, and help you develop a bit of an intuition about what they are
@@ -20,13 +20,17 @@ so the vectors will have only real elements. The polarisations for
 horizontal and vertical polarisation can be chosen as 
 
 $$
-
+ \DeclareMathOperator{\h}{\vec{h}} 
+ \DeclareMathOperator{\v}{\vec{v}}
+ \DeclareMathOperator{\d}{\vec{d}} 
+ \DeclareMathOperator{\a}{\vec{a}}
+ \DeclareMathOperator{\L}{\vec{L}} 
+ \DeclareMathOperator{\s}{\vec{s}} 
 \begin{aligned}
  \h = \begin{pmatrix} 1 \\ 0 \end{pmatrix}
  \qquad\text{and}\qquad
  \v = \begin{pmatrix} 0 \\ 1 \end{pmatrix}\, .
 \end{aligned}
-
 $$
 
  We can also have polarisation at $\pm 45^\circ$ from
@@ -160,9 +164,6 @@ conclusions using matrices without getting vectors involved at all.
 Consider the one-dimensional problem of two masses $m$, each connected
 to opposite walls by springs with spring constant $k$. The masses are
 connected by a spring with spring constant $k'$:
-
-::: center
-:::
 
 The displacement from the equilibrium position of the two masses is
 $x_1$ and $x_2$.

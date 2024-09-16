@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Matrix Diagonalisation &#8212; PHY129 Mathematics for Physicists</title>
+    <title>Inverse of a matrix: proof of the adjoint method {#sec:adjointmethod} &#8212; PHY129 Mathematics for Physicists</title>
   
   
   
@@ -19,59 +19,59 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/myfile.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"HTML-CSS": {"matchFontHeight": true, "scale": 80}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'AppendixA/Appendix2A_MD';</script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Examples from physics {#sec:physics}" href="Appendix3A_MD.html" />
-    <link rel="prev" title="Calculating the inverse of a matrix through row reduction" href="Appendix1A_MD.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Appendix4B_MD';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Similarity transformations" href="Appendix5B_MD.html" />
+    <link rel="prev" title="Examples from physics" href="Appendix3B_MD.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -108,7 +108,7 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
-      action="../search.html"
+      action="search.html"
       method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
@@ -147,7 +147,7 @@ const thebe_selector_output = ".output, .cell_output"
 
   
 
-<a class="navbar-brand logo" href="../Overview.html">
+<a class="navbar-brand logo" href="Overview.html">
   
   
   
@@ -158,8 +158,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="PHY129 Mathematics for Physicists - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="PHY129 Mathematics for Physicists - Home"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="PHY129 Mathematics for Physicists - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="PHY129 Mathematics for Physicists - Home"/>`);</script>
   
   
 </a></div>
@@ -168,36 +168,36 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../Overview.html">
+                <a class="reference internal" href="Overview.html">
                     Overview
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream A - Notes</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Topic1A_MD.html">1. Complex Numbers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Topic2A_MD.html">2. Vectors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Topic3A_MD.html">3. Matrices</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream A - Appendix</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Appendix1A_MD.html">Row Reduction Inverse</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Matrix Diagonalisation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Appendix3A_MD.html">Examples from Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Appendix4A_MD.html">Adjoint Proof</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Appendix5A_MD.html">Similarity Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1A_MD.html">1. Stream A Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2A_MD.html">2. Trigonometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic3A_MD.html">3. Differentiation <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic4A_MD.html">4. Minima, maxima and points of inflection <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic5A_MD.html">5. Power and Maclaurin Series <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic6A_MD.html">6. Taylor Series, L’Hopital’s rule and approximation errors <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic7A_MD.html">7. Integration <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic8A_MD.html">8. Integration by Parts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic9A_MD.html">9. Differential Equations <span class="xref std std-ref"> </span></a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream B - Notes</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Topic1B_MD.html">4. Stream B Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Topic2B_MD.html">5. Trigonometry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Topic3B_MD.html">6. Differentiation <span class="xref std std-ref"> </span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Topic4B_MD.html">7. Minima, maxima and points of inflection <span class="xref std std-ref"> </span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Topic5B_MD.html">8. Power and Maclaurin Series <span class="xref std std-ref"> </span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Topic6B_MD.html">9. Taylor Series, L’Hopital’s rule and approximation errors <span class="xref std std-ref"> </span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Topic7B_MD.html">10. Integration <span class="xref std std-ref"> </span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Topic8B_MD.html">11. Integration by Parts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Topic9B_MD.html">12. Differential Equations <span class="xref std std-ref"> </span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic1B_MD.html">10. Complex Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic2B_MD.html">11. Vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topic3B_MD.html">12. Matrices</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stream B - Appendix</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Appendix1B_MD.html">Row Reduction Inverse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Appendix2B_MD.html">Matrix Diagonalisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Appendix3B_MD.html">Examples from Physics</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Adjoint Proof</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Appendix5B_MD.html">Similarity Transforms</a></li>
 </ul>
 
     </div>
@@ -269,7 +269,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FAppendixA/Appendix2A_MD.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FAppendix4B_MD.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -299,7 +299,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/AppendixA/Appendix2A_MD.md" target="_blank"
+      <li><a href="_sources/Appendix4B_MD.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -381,7 +381,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Matrix Diagonalisation</h1>
+    <h1>Inverse of a matrix: proof of the adjoint method {#sec:adjointmethod}</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -395,75 +395,72 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="matrix-diagonalisation">
-<h1>Matrix Diagonalisation<a class="headerlink" href="#matrix-diagonalisation" title="Permalink to this heading">#</a></h1>
-<p>The matrix <span class="math notranslate nohighlight">\(A\)</span> in equation
-(<span class="xref myst">[eq:bgrwoeijsd]</span>{reference-type=”ref”
-reference=”eq:bgrwoeijsd”}) can be written in a different basis such
-that it has only nonzero diagonal elements. This is called <em>matrix
-diagonalisation</em>. It is a type of <em>similarity transform</em>. See
-appendix <span class="xref myst">[sec:similarity]</span>{reference-type=”ref”
-reference=”sec:similarity”} for more on similarity transforms. Matrix
-diagonalisation is a similarity transform that takes the unit vectors
-<span class="math notranslate nohighlight">\(\hat{\vec{x}}\)</span> and <span class="math notranslate nohighlight">\(\hat{\vec{y}}\)</span> (i.e. the basis vectors in which
-<span class="math notranslate nohighlight">\(A\)</span> was written) and turns them into the two eigenvectors. The matrix
-that does this similarity transform can be constructed by taking the
-column vector eigenvectors to give <span class="math notranslate nohighlight">\(S = (\vec{u}_+ ~ \vec{u}_-)\)</span>, i.e.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="inverse-of-a-matrix-proof-of-the-adjoint-method-sec-adjointmethod">
+<h1>Inverse of a matrix: proof of the adjoint method {#sec:adjointmethod}<a class="headerlink" href="#inverse-of-a-matrix-proof-of-the-adjoint-method-sec-adjointmethod" title="Permalink to this heading">#</a></h1>
+<p>For any matrix <span class="math notranslate nohighlight">\(A\)</span>, we can define the adjoint of a matrix <span class="math notranslate nohighlight">\(adj~A\)</span> as
+the matrix containing all the cofactors, and taking the transpose:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
- S = 
-   \begin{pmatrix}
-  3 &amp; 3 \\
-  3+\sqrt{15} &amp; 3-\sqrt{15}
+\[\begin{split}
+\begin{aligned}
+\DeclareMathOperator{\adj}{adj}
+ A =
+  \begin{pmatrix}
+  a_{11} &amp; a_{12} &amp; a_{13} \\ a_{21} &amp; a_{22} &amp; a_{23} \\ a_{31} &amp; a_{32} &amp; a_{33}
+ \end{pmatrix}
+ \quad\longrightarrow\quad
+ \adj A =
+  \begin{pmatrix}
+  A_{11} &amp; A_{21} &amp; A_{31} \\ A_{12} &amp; A_{22} &amp; A_{32} \\ A_{13} &amp; A_{23} &amp; A_{33}
  \end{pmatrix}\, .
 \end{aligned}\end{split}\]</div>
-<p>This is takes the basis states to the eigenvectors. The
-eigenvalue equation can now be written in the form</p>
+<p>Note that the adjoint is not at all the same as the
+Hermitian adjoint operator <span class="math notranslate nohighlight">\(\dagger\)</span> from section
+<span class="xref myst">[sec:special]</span>{reference-type=”ref”
+reference=”sec:special”}! In fact, while the <span class="math notranslate nohighlight">\(\dagger\)</span> is easy to
+calculate, the adjoint requires us to calculate <span class="math notranslate nohighlight">\(n^2\)</span> cofactors, which
+can be a lot of work.</p>
+<p>Now consider the top left (“11”) component of the matrix product
+<span class="math notranslate nohighlight">\(A \adj A\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[AS=SA^{\prime}\]</div>
-<p>where <span class="math notranslate nohighlight">\(A^{\prime}\)</span> is the diagonal matrix given in
-equation <span class="xref myst">[eq:diagonal]</span>{reference-type=”ref”
-reference=”eq:diagonal”}. Therefore to calculate the diagonal matrix we
-have</p>
+\[\begin{aligned}
+ (A \adj A)_{11} = a_{11} A_{11} + a_{12} A_{12} + a_{13} A_{13} = \det A\, .
+\end{aligned}\]</div>
+<p>This element is the determinant of <span class="math notranslate nohighlight">\(A\)</span>. Similarly, we
+can calculate the “12” element of the matrix product <span class="math notranslate nohighlight">\(A \adj A\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[A^{\prime}=S^{-1}AS\]</div>
-<p>so we need to calculate the inverse of <span class="math notranslate nohighlight">\(S\)</span>
-(see section <span class="xref myst">[sec:inverse]</span>{reference-type=”ref”
-reference=”sec:inverse”}). In our example this is</p>
+\[\begin{aligned}
+ (A \adj A)_{12} = a_{11} A_{21} + a_{12} A_{22} + a_{13} A_{23} = 0\, .
+\end{aligned}\]</div>
+<p>This expression is zero, because it is equal to the
+determinant of <span class="math notranslate nohighlight">\(A\)</span> with the second row replaced with the first one
+(write this out for a <span class="math notranslate nohighlight">\(3\times 3\)</span> matrix if you do not see it). Since we
+now have a matrix with two identical rows, the determinant is zero.
+Continuing this type of argument, you can show that therefore</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
- S^{-1} = 
-   \begin{pmatrix}
-  \frac{-3+\sqrt{15}}{6\sqrt{15}} &amp; \frac{1}{2\sqrt{15}} \\
-  \frac{3+\sqrt{15}}{6\sqrt{15}}&amp; -\frac{1}{2\sqrt{15}}
- \end{pmatrix}\, .
+ A \adj A = 
+ \begin{pmatrix}
+  \det A &amp; 0 &amp; 0 \\ 0 &amp; \det A &amp; 0 \\ 0 &amp; 0 &amp; \det A
+ \end{pmatrix}
+ = \det A \; I\, .
 \end{aligned}\end{split}\]</div>
-<p>We can then verify that</p>
+<p>Since <span class="math notranslate nohighlight">\(\det A\)</span> is just a number, we have that</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
- S^{-1}AS = 
- \begin{pmatrix}
-  \frac{-3+\sqrt{15}}{6\sqrt{15}} &amp; \frac{1}{2\sqrt{15}} \\
-  \frac{3+\sqrt{15}}{6\sqrt{15}}&amp; -\frac{1}{2\sqrt{15}}
- \end{pmatrix}
- \begin{pmatrix}
-  1 &amp; 3 \\ 2 &amp; 7
- \end{pmatrix}
- \begin{pmatrix}
-  3 &amp; 3 \\
-  3+\sqrt{15} &amp; 3-\sqrt{15}
- \end{pmatrix}
- =
- \begin{pmatrix}
-  4+\sqrt{15} &amp; 0 \\ 0 &amp; 4-\sqrt{15} 
- \end{pmatrix}
-\end{aligned}\end{split}\]</div>
-<p>as expected.</p>
-<p>In summary the general rule for matrix diagonalisation is to create the
-similarity transform matrix <span class="math notranslate nohighlight">\(S\)</span> by collecting the (column) eigenvectors
-of <span class="math notranslate nohighlight">\(A\)</span>, and calculating <span class="math notranslate nohighlight">\(S^{-1} A S\)</span>. eigenvectors are orthonormal, the
-similarity transform is unitary, then <span class="math notranslate nohighlight">\(S^{-1} = S^\dagger\)</span> and
-<span class="math notranslate nohighlight">\(A' = S^\dagger AS\)</span>.</p>
+\[\begin{aligned}
+ A \left( \frac{\adj A}{\det A} \right) = I \quad\rightarrow\quad A^{-1} = \frac{\adj A}{\det A}\, .
+\end{aligned}\]</div>
+<p>Calculating the cofactors and the determinant of <span class="math notranslate nohighlight">\(A\)</span>
+therefore allows you to find the inverse of <span class="math notranslate nohighlight">\(A\)</span> directly. The argument
+above works for all <span class="math notranslate nohighlight">\(n\times n\)</span> matrices.</p>
+<p>Note that the inverse does not exist if the determinant is zero. You can
+understand this from the meaning of the determinant we explored above: a
+zero determinant operation maps vectors onto spaces of a lower
+dimension. Since the inverse of a matrix is the transformation that
+“undoes” the effect of the original matrix, it should take any vector
+back to its original. However, if more than one vector gets mapped to
+the same transformed vector, the reverse operation will not be able to
+tell which of the possible input vectors the original matrix operated
+on.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -479,7 +476,7 @@ similarity transform is unitary, then <span class="math notranslate nohighlight"
         },
         kernelOptions: {
             name: "python3",
-            path: "./AppendixA"
+            path: "./."
         },
         predefinedOutput: true
     }
@@ -497,20 +494,20 @@ similarity transform is unitary, then <span class="math notranslate nohighlight"
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Appendix1A_MD.html"
+       href="Appendix3B_MD.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Calculating the inverse of a matrix through row reduction</p>
+        <p class="prev-next-title">Examples from physics</p>
       </div>
     </a>
     <a class="right-next"
-       href="Appendix3A_MD.html"
+       href="Appendix5B_MD.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Examples from physics {#sec:physics}</p>
+        <p class="prev-next-title">Similarity transformations</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -564,8 +561,8 @@ By Alex Ramadan, Patrick Stowell
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>

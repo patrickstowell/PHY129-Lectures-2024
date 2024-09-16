@@ -1,12 +1,15 @@
-# Similarity transformations {#sec:similarity}
+# Similarity transformations
 
-In section [\[sec:linear\]](#sec:linear){reference-type="ref"
-reference="sec:linear"}, we saw that matrices can be viewed as taking a
+In section [\[sec:linear\]](#sec:linear), we saw that matrices can be viewed as taking a
 set of basis vectors to another set of basis vectors. This means that
 the actual numbers in a matrix are intimately connected to the initial
 basis. For example, a matrix 
 
 $$
+ \DeclareMathOperator{\tr}{Tr} 
+ \DeclareMathOperator{\a}{\vec{a}}
+ \DeclareMathOperator{\b}{\vec{b}} 
+
 
 \begin{aligned}
  A = 

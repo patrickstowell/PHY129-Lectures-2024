@@ -1,12 +1,12 @@
 # Inverse of a matrix: proof of the adjoint method {#sec:adjointmethod}
 
-For any matrix $A$, we can define the adjoint of a matrix $\adj A$ as
+For any matrix $A$, we can define the adjoint of a matrix $adj~A$ as
 the matrix containing all the cofactors, and taking the transpose:
 
 
 $$
-
 \begin{aligned}
+\DeclareMathOperator{\adj}{adj}
  A =
   \begin{pmatrix}
   a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33}
