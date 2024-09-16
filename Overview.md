@@ -41,7 +41,17 @@ to suppoort learning of key concepts.
 Below are the learning objectives (LOs) of this module for Stream A. By the end of
 the module you should be able to:
 
--   Know basic trig..... (Stowell to ADD)
+-   Use basic trigonemtric functions.
+
+-   Differentate basic equations and understand the fundementals of differentiation.
+
+-   Be able to use inflection to understand function shapes.
+
+-   Use different series to approximate the behaviour of functions.
+
+-   Integrate basic equations.
+
+-   Solve partial differential equations.
 
 ### Learning objectives of Stream B
 
@@ -92,7 +102,7 @@ the course. When this happens you have several options for how to ask
 for help. During the session you can ask either myself or the graduate
 teaching assistants for help relating to the material covered in the
 lecture or in the problem class sheets. If you have a question outside
-of the session you can email us (a.ramadan@sheffield.ac.uk for Stream A, p.stowell@sheffield.ac.uk for Stream B) and we will
+of the session you can email us (p.stowell@sheffield.ac.uk for Stream A, a.ramadan@sheffield.ac.uk for Stream B) and we will
 aim to respond within 48 hours during the semester (not including
 weekends) or you can book a slot in my office hours so we can go over
 your problem in person. If you email during the winter holiday (late

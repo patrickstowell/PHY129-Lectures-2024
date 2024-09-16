@@ -8,30 +8,31 @@ parts:
   chapters:
     - file: Topic1A_MD
     - file: Topic2A_MD
+      title: Trigonometry
     - file: Topic3A_MD
-- caption: Stream A - Appendix
-  numbered: False
-  chapters:
-    - file: AppendixA/Appendix1A_MD
-      title: Row Reduction Inverse
-    - file: AppendixA/Appendix2A_MD  
-      title: Matrix Diagonalisation
-    - file: AppendixA/Appendix3A_MD  
-      title: Examples from Physics
-    - file: AppendixA/Appendix4A_MD  
-      title: Adjoint Proof
-    - file: AppendixA/Appendix5A_MD  
-      title: Similarity Transforms
+    - file: Topic4A_MD
+    - file: Topic5A_MD
+    - file: Topic6A_MD
+    - file: Topic7A_MD
+    - file: Topic8A_MD
+    - file: Topic9A_MD
 - caption: Stream B - Notes
   numbered: True
   chapters:
     - file: Topic1B_MD
     - file: Topic2B_MD
-      title: Trigonometry
     - file: Topic3B_MD
-    - file: Topic4B_MD
-    - file: Topic5B_MD
-    - file: Topic6B_MD
-    - file: Topic7B_MD
-    - file: Topic8B_MD
-    - file: Topic9B_MD
+- caption: Stream B - Appendix
+  numbered: False
+  chapters:
+    - file: Appendix1B_MD
+      title: Row Reduction Inverse
+    - file: Appendix2B_MD  
+      title: Matrix Diagonalisation
+    - file: Appendix3B_MD  
+      title: Examples from Physics
+    - file: Appendix4B_MD  
+      title: Adjoint Proof
+    - file: Appendix5B_MD  
+      title: Similarity Transforms
+

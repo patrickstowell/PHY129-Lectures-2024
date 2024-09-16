@@ -1,379 +1,396 @@
-# Complex Numbers
+Stream A Introduction
+=====================
+{ref}` <#sec:chapter1>`
 
-The material in this topic is also covered in chapter 6 of the textbook
-Martin and Shaw "Mathematics for Physicists". In Boas "Mathematical
-Methods in the Physical Sciences" it is in chapter 2.
 
-## Introduction
+In this first session, we revise functions, their visualisation and the
+behaviour of some of the most commonly used functions in physics. In
+future sections we will explore the diferentiation of functions and how
+we can approximate functions using series expansions. A flavour of what
+these tools enable is shown in {numref}`fig:U1_topics`.
 
-Complex numbers are used in many areas of physics. You will soon meet
-them in waves and oscillations, electromagnetism, and quantum mechanics.
-This section of the course is designed to help you develop the skills to
-tackle mathematical problems involving complex numbers across your
-university course.
+```{figure} ./ImagesB/CosDiffTaylor.png
+---
+width: 40%
+name: fig:U1_topics
+---
+The function $f(x) = \cos x$ corresponds to the blue curve. The slope
+of the function, which is obtained by differentiation, corresponds to
+the function $-\sin x$. Near $x = 0$, $f(x) = \cos x$ can be
+approximated by a polynomial using a series expansion. The tools of
+differentiation and series expansion will be introduced in subsequent
+sections.
+```
 
-## Definition
+Functions are the primary tools of the mathematical description of the physical world. The
+simplest functions are those defined as in terms of a single variable
+such as $x$ notated as $f(x)$, or 'f of x'. In physics, we are often
+looking to determine some unknown function, such as how does position
+vary with time for a particle experiencing constant acceleration? What
+is mathematically meant by a function?
 
-A complex number is a number that has real and imaginary parts, it is
-the sum of a real number and an imaginary number. An imaginary number is
-one that is proportional to $i$ where $i^2=-1$ i.e. $i=\sqrt{-1}$. The
-definition of a complex number, $z$ is 
+A function is a process of association. In maths, we can associate
+numbers from one set to another. In physics, we can associate values of
+position with values of time. Mathematically, the association of an
+output to an input is often, but not always, unique; i.e., a given input
+produces a single output. Functions are powerful since they enable us to
+make predictions.
+
+The notation used in mathematics typically has the form $y=f(x)$. Since
+there is just a single input, $x$, this is a one dimensional (1D)
+function. A 2D function takes the form $z=f(x,y)$ and so on. What
+exactly the function $f$ is can then be defined in terms of the input
+variables, constants and indeed other functions.
+
+There are a number of common terms to describe functions. Since $y$ is
+dependent on $x$, it is referred to as the dependent variable, whilst
+the input $x$ is referred to as the independent variable. All values of
+the input which produce a defined output is referred to as the
+**domain** of the function. 
+
+For example, if we insist on the output
+being a real number, then the domain of the function $f(x)=\sqrt(x)$
+corresponds to positive, real numbers, since the square root of a
+negative number is not a real number. Similarly, if the output for a
+particular input has no well defined value, then that input value is not
+part of the domain of the function. For example, $f(x)=1/x$ does not
+have a well defined output for $x = 0$; hence, the input value, $x = 0$
+is not part of the domain of the function. The corresponding values of
+the output are referred to as the **range** of the function. 
+
+
+Visualising functions can provide us with an intuitive understanding of the physical
+behaviour. In physics, we focus mostly on graphing functions: the domain
+is typically on the horizontal axis and the range on the vertical axis.
+The function can then be visualised as a 1D curve of these $x,\,\,y$
+points. Such visual graphs are also very useful in performing analysis
+of function such as how the function changes (i.e. differentiation).
+
+### Explicit functions
+{ref}` <#sec:explicit-functions>`
+
+Explicit functions are those that we encounter most frequently. Some of
+the more frequently occurring functions in physics are shown in
+{numref}`tab:standardFuncs`.
+
+
+```{list-table} Basic maths functions
+:header-rows: 1
+:name: tab:standardFuncs
+
+* - Name
+  - Function
+* - Polynomial
+  - $y=a_{0}+a_{1}x$
+* - Power law     
+  - $y=x^{a}$
+* - Exponential      
+  - $y=a^{x}$
+* - Logarithm $^{x}$     
+  - $y=\log_{a}x$
+* - Trigonometric    
+  - $\cos x$, $\sin x$, $\tan x$
+```
+
+#### Polynomial functions 
+{ref}` <#sec:polynomial-functions>`
+
+These take the form:
 
 $$
+y=a_{0}+a_{1}x+a_{2}x^{2}+a_{3}x^{3}+...+a_{n}x^{n}
+$$ (eq:polynomial)
 
-z=x+iy
+ Polynomials are
+defined by the highest power or degree. For example:
 
-$$
+-   Linear: $y=13x-2$ has degree of 1
 
- where $x$ and $y$ are
-real numbers and $i^2=-1$. We call $x$ the real part, $\mathrm{Re}(z)$,
-and $y$ the imaginary part, $\mathrm{Im}(z)$. Two complex numbers $z_1$
-and $z_2$ are only equal if both their real parts and their imaginary
-parts are equal. i.e. $z_1=z_2$ if and only if
-$\mathrm{Re}(z_1)=\mathrm{Re}(z_2)$ and
-$\mathrm{Im}(z_1)=\mathrm{Im}(z_2)$.
+-   Quadratic: $y=x^{2}-4x+1$ has degree of 2
 
-## Addition and subtraction
+-   Cubic: $y=x^{3}+x-3$ has degree of 3
 
-To add complex numbers together, you need to separately add their real
-and imaginary parts i.e. if $z_1=x_1+iy_1$ and $z_2=x_2+iy_2$ then
+and so on as visualised in {numref}`fig:Poly`.
 
+```{figure} ImagesB/Polynoms.png
+---
+width: 50%
+name: fig:Poly
+---
+Examples of polynomial functions with linear, quadratic and
+cubic.
+```
 
-$$
+#### Exponential and Log functions 
+{ref}` <#sec:exponential-and-log-functions>`
 
-z_1+z_2=(x_1+iy_1)+(x_2+iy_2)=(x_1+x_2)+(y_1+y_2)i.
-
-$$
-
-
-
-Similarly for subtraction we obtain;
-
-
-$$
-
-z_1-z_2=(x_1+iy_1)-(x_2+iy_2)=(x_1-x_2)+(y_1-y_2)i.
+The exponential function occurs frequently in the description of
+physical phenomenon
 
 $$
+y=e^{x}
+$$ (expform)
 
+Its special place in physics arises from the property that the slope of
+the curve is the same function. We will explore this again when we
+explore differentiation. We refer to $x$ as the exponent. The sign of
+the exponent determines if the function describes exponential decay,
+$y=e^{-x}$, or exponential increase, $y=e^{+x}$.
 
-
-## Multiplication
-
-To multiply a complex number by a real number we must multiply both the
-real and imaginary parts of the complex number. For example, let us
-multiply the complex number $z$ by a real number $a$;
-
-
-$$
-
-az=a(x+iy)=ax+iay.
+The natural logarithmic function is the inverse of the exponential
+function and is denoted as:
 
 $$
+y=\log_{e}x = \ln x
+$$ (logform)
 
- We can also multiply a complex number by an
-imaginary number. For example, let us multiply the complex number $z$ by
-an imaginary number $bi$; 
+$e$ demotes the base of the logarithm. The base
+can be any number, although in physics we most commonly encounter the
+base $e$, or the natural, logarithm, or the base $10$ logarithm. The
+function $y=\log_{10}x$ is the inverse of $y=10^x$.
+
+
+If we start with the equation $y=x^a$ it follows that $\log_a y = x$
+where the notation $\log_a$ means $\log$ to the base $a$ (for $a>1$). We
+often use the notation $\log_e = \ln x$ for the natural logarithm, but
+note that programming languages (e.g. Matlab and Python use $\log(x)$ to
+denote the natural logarithm of $x$, and $\log10(x)$ to denote the base
+10 logarithm of $x$.
+
+#### Logarithm Rules 
+{ref}` <#sec:U0_logrules>`
+
+There are some rules of logarithms that you should be completely
+familiar and at ease with: 
 
 $$
-
-zbi=(x+iy)bi=bxi+byi^2=bxi-by=-by+bxi.
-
-$$
-
-
-
-To multiply two complex numbers we perform the multiplication in the
-same way as we would multiply out brackets in normal algebra i.e.
-
-
-$$
-
 \begin{aligned}
-  z_1z_2=&(x_1+iy_1)(x_2+iy_2)\\
-  =&x_1x_2+x_1y_2i+y_1x_2i +y_1y_2i^2\\
-  =&x_1x_2+x_1y_2i+y_1x_2i -y_1y_2\\
-  =&(x_1x_2-y_1y_2)+(x_1y_2+y_1x_2)i\\
-\end{aligned}
-
+\log_a x + \log_a y &= \log_a (xy)\\
+\log_a x - \log_a y &= \log_a \left(\dfrac{x}{y}\right)\\
+n\log_a x &= \log_a x^n\\
+\log_a 1 &= 0\\
+\log_a x &= \dfrac{\log_b x}{\log_b a}\end{aligned}
 $$
 
+ where $x$ and $y$
+are any positive number and $b>1$.
 
 
-## Argand Diagram
+### Implicit functions 
+{ref}` <#sec:implicit-functions>`
 
 
-```{figure} ImagesA/Argand.png
+To illustrate what is meant by an **implicit function**, consider the
+equation for a circle: 
+
+$$
+x^{2}+y^{2}=1 
+$$ (circle)
+
+ What is $f(x)$
+here? For such implicit equations, we have to coax out the function or
+functions. We do this by solving the equation for the dependent variable
+$y$. In the case of the circle equation, first subtract $x^2$ from the
+left and the right hand sides of the equation:
+
+$$
+y^{2}=1-x^{2}
+$$ (circle2)
+
+ and then take the square root of
+both sides: 
+
+$$
+y =\pm\sqrt{1-x^{2}}
+$$ (circlesol)
+
+ The symbol $\pm$ tells us that both
+positive and native values are solutions, and since we want our
+functions to map an input to a unique output, the explicit functions
+relating the input, $x$, with the output, $y$, are then
+
+$$
+\begin{aligned}
+f(x) & =\sqrt{1-x^{2}}\\
+g(x) & =-\sqrt{1-x^{2}}\end{aligned}
+$$ (circleexplicit)
+
+These are the positive and
+negative semi-circles as shown in
+{numref}`fig:circle`.
+
+```{figure} ImagesB/Circle.png
 ---
 width: 50%
-name: fig:Argand
+name: fig:circle
 ---
-An Argand
-diagram depicting a complex number, <span
-class="math inline"><em>z</em> = <em>x</em> + <em>i</em><em>y</em></span>
-with the <span class="math inline"><em>x</em></span> axis representing
-the real part of <span class="math inline"><em>z</em></span> and the
-<span class="math inline"><em>y</em></span> axis representing the
-imaginary part of <span class="math inline"><em>z</em></span>. The
-complex number <span class="math inline"><em>z</em></span> is the point
-marked on the graph with a filled black circle. The line from the origin
-to the point <span class="math inline"><em>z</em></span> is shown as a
-thick black line with distance labelled as <span
-class="math inline"><em>r</em></span>. The angle between the <span
-class="math inline"><em>x</em></span>-axis and the line from the origin
-to the point <span class="math inline"><em>z</em></span> is labelled as
-<span class="math inline"><em>θ</em></span>. These labels <span
-class="math inline">(<em>r</em>, <em>θ</em>)</span> correspond to polar
-coordinates.
+The equation for a circle is not an explicit function. Instead it is
+comprised of two implicit functions defining two
+semi-circles.
 ```
 
-An Argand diagram, shown in
-figure {numref}`fig:Argand`,
-is a graphical way of representating complex numbers. The real
-components are represented on the horizontal axis and the imaginary
-components on the vertical axis. We call this space the complex plane.
+### Parametric functions 
+{ref}` <#sec:parametric-functions>`
 
-Using the complex plane we can visualise the geometrical interpretation
-of adding two complex numbers (see {numref}`fig:ArgandAddition`).
+Another type of implicit function is when two, or more, variables are
+dependent on some other variable. For example, we might have two
+functions $x=f(t)$ and $y=g(t)$. Due to this extra dependency on the
+parameter $t$, these are referred to as **parametric functions**.
 
-
-```{figure} ImagesA/ArgandAddition.png
----
-width: 50%
-name: fig:ArgandAddition
----
-An Argand diagram showing addition of
-two complex numbers <span
-class="math inline"><em>z</em><sub>1</sub></span> and <span
-class="math inline"><em>z</em><sub>2</sub></span>.
-```
-
-The sum of two complex numbers $z_1$ and $z_2$ depicted as points on the
-complex plane in an Argand diagram is the point obtained by forming a
-parallelogram in which the sides are the lines from the origin to the
-points $z_1$ and $z_2$. If you consider these lines as vectors you can
-see that the addition of complex numbers on the complex plane is the
-same as adding vectors on a graph.
-
-## Polar form
-
-The polar form of a complex number is another way that we can represent
-a complex number. It has two parts: the modulus and the argument. The
-*modulus* of $z$ is the absolute value or magnitude, written as $|z|$.
-On the Argand diagram ({numref}`fig:Argand`) the modulus of the complex number $|z|$ is the
-distance, $r$, of the point $z$ from the origin. By Pythagoras' theorem
-we can calculate this as; 
-
-$$
-|z|=r=\sqrt{x^2+y^2}.
-$$
-
-
-
-The *argument* (or phase) of $z$ is the angle, $\theta$, between $r$ and
-the positive $x$-axis. Here the standard convention is used whereby
-angles are measured anticlockwise from the positive $x$-axis. The
-argument of $z$ is often written as $\mathrm{arg}(z)$. We can calculate
-the angle using trigonometry as;
-
-
-$$
-\mathrm{arg}(z)=\theta=\tan^{-1}{\left(\frac{y}{x}\right)}
-$$
-
- Usually
-we use the principal argument which is defined as the angle in the range
-$-\pi<\theta\le\pi$. We can also write $\theta$ in terms of the modulus,
-$r$, i.e.
-
-
-$$
-\tan{\theta}=\frac{y}{x},\quad\quad \sin{\theta}=\frac{y}{r}\quad{\text{and}}\quad\cos{\theta}=\frac{x}{r}.
-$$
-
-
-Therefore we can write any complex number $z$ in the trigonometric form
-or *polar form* which is equivalent to expressing $z$ in polar
-coordinates i.e. 
-
-$$
-z=r(\cos{\theta}+i\,\sin{\theta}).
-$$ (eq:polarz)
-
-
-Using Euler's formula, $e^{i\theta}=\cos{\theta}+i\,\sin{\theta}$, a
-complex number can be written in exponential form as 
-
-$$
-z=re^{i\theta}.
-$$ (eq:expz)
-
- Let us consider a famous example of a complex number
-in this form. Let $r=1$ and $\theta=\pi$ then using
-equations ([\[eq:polarz\]](#eq:polarz){reference-type="ref"
-reference="eq:polarz"}) and 
-([\[eq:expz\]](#eq:expz){reference-type="ref" reference="eq:expz"}) we
-have 
-
-$$
-e^{i\pi}=\cos{\pi}+i\,\sin{\pi}=-1.
-$$
-
- This particular example
-appears in the equation known as Euler's identity: 
-
-$$
-e^{i\pi}+1=0
-$$
-
-
-Complex numbers are used in most areas of physics and the exponential
-form is particularly powerful.
-
-## Complex conjugate
-
-Every complex number has associated with it another complex number which
-is known as its complex conjugate. The *complex conjugate* of a complex
-number $z=x+iy$ is given by;
-
-
-$$
-\bar{z}=z^{*}=x-iy=r(\cos{\theta}-i\sin{\theta})=re^{-i\theta}.
-$$
-
- Both
-notations $\bar{z}$, "z bar", or $z^{*}$, "z star", are used to mean the
-complex conjugate of $z$.
-
-On an Argand diagram the complex conjugate is the reflection in the real
-axis (the $x$-axis) as shown in
-figure {numref}`fig:ArgandConjugate`.
-
-
-
-```{figure} ImagesA/ArgandConjugate.png
----
-width: 50%
-name: fig:ArgandConjugate
----
-An Argand diagram showing the complex
-number <span class="math inline"><em>z</em></span> (black filled circle)
-and its complex conjugate <span class="math inline"><em>z̄</em></span>
-(blue filled circle).
-```
-
-Multiplying a complex number by its complex conjugate gives the square
-of its modulus: 
-
-$$
-z^{*}z=z\bar{z}=(x+iy)(x-iy)=x^2+y^2=r^2=|z|^2.
-$$
-
- Note
-that multiplying a complex number by its complex conjugate gives a real
-number.
-
-We can write the real and imaginary parts of a complex number in terms
-of its complex conjugate as;
-
-
-$$
-\mathrm{Re}(z)=\frac{z+\bar{z}}{2}\quad{\text{and}}\quad\mathrm{Im}(z)=\frac{z-\bar{z}}{2i}
-$$
-
-
-This shows that a complex number is real if and only if it equals its
-own conjugate i.e. if $z=\bar{z}$ then $z$ is real since its imaginary
-part is zero.
-
-## Division
-
-Division of a complex number $z_1$ by another complex number $z_2$ is
-complex. It is not directly possible to divide one complex number by
-another, so we have to use a mathematical trick to enable this. There
-are three ways you can approach division of a complex number $z_1$ by
-another complex number $z_2$:
-
-1\. Using the complex conjugate:
-
-
-
-$$
-\frac{z_1}{z_2}=\frac{z_1z_2^{*}}{z_2z_2^{*}}=z_1\frac{z_2^{*}}{|z_2|^2}=\frac{(x_1+iy_1)(x_2-iy_2)}{x_2^2+y_2^2}=\frac{x_1x_2+y_1y_2}{x_2^2+y_2^2}+\frac{(y_1x_2-x_1y_2)i}{x_2^2+y_2^2}
-$$
-
-
-
-2\. Using the complex exponential approach:
-
-
-$$
-\frac{z_1}{z_2}=\frac{r_1e^{i\theta_1}}{r_2e^{i\theta_2}}=\frac{r_1}{r_2}e^{i\theta_1}e^{-i\theta_2}=\frac{r_1}{r_2}e^{i(\theta_1-\theta_2)}
-$$
-
-
-
-3\. Using the polar form using the following trigonometric identities :
+An example of the use of parametric functions in physics are the
+kinematic equations for motion in 2D which describe the position of
+particle in the $x$ and the $y$ directions as a function of time $t$:
 
 
 $$
 \begin{aligned}
-  \sin{(a\pm b)}=&\sin{a}\cos{b}\pm\cos{a}\sin{b}\\
-  \cos{(a\pm b)}=&\cos{a}\cos{b}\mp\sin{a}\sin{b}.
-\end{aligned}
+x(t) & =x_{0}+v_{x_{0}}t+\frac{a_{x}}{2}t^{2}\\
+y(t) & =y_{0}+v_{y_{0}}t+\frac{a_{y}}{2}t^{2}\end{aligned}
 $$
 
- Note that these trigonometric identities will be given
-to you in an exam on the formula sheet so you don't need to worry about
-memorising them. Division can be done as
+ The path
+that the particle follows as $t$ is varied is shown in
+{numref}`fig:kinematicparabola`.
+
+```{figure} ImagesB/ParametricProjectile.png
+---
+width: 50%
+name: fig:kinematicparabola
+---
+An example of parametric equations in physics are the kinematic
+equations of motion. Here we calculate the $x,y$ spatial variables as a
+function of time $t$ for some object with initial speed
+$v_{x_{0}},v_{y_{0}}=50,20$ m/s. In this example, the variable for time,
+$t$, is the 'parameter' which both $x,y$ are dependent
+upon.
+```
+
+### Continuous and discontinuous functions 
+{ref}` <#sec:continuous-and-discontinuous-functions>`
 
 
-$$
-\frac{z_1}{z_2}=\frac{r_1}{r_2}(\cos{(\theta_1-\theta_2)}+i\sin{(\theta_1-\theta_2)})
-$$
+**Continuous** functions are those for which $y$ vary smoothly without
+sudden 'jumps' when the value of $x$ is varied. **Discontinuous**
+functions have breakages such as when the function has no value or goes
+to infinity. Simple examples of discontinuous functions are of the form
+$1/x^{n}$, these break down as we approach $x=0$ as shown in
+{numref}`fig:discont`. The trigonometric function $\tan x$ breaks
+down repeatedly at $x=\pi/2,\,\,3\pi/2..$ where it goes to infinity.
 
 
-by simply dividing the absolute values and subtracting the arguments.
 
-## Powers and de Moivre's theorem
-
-Taking a complex number to the power $n$ where $n$ is an integer can be
-done most easily by considering the exponential form of a complex
-number, given in equation ([\[eq:expz\]](#eq:expz){reference-type="ref"
-reference="eq:expz"}). Taking the exponential form to the power $n$
-gives 
-
-$$
-z^n=(re^{i\theta})^n=r^ne^{i n\theta}.
-$$
-
- Putting this into
-trigonometric form gives
+```{figure} ImagesB/1_x3.png
+---
+width: 50%
+name: fig:discont
+---
+Examples of discontinuous functions; $x^{-3}$ goes to infinity as
+$x\rightarrow0$.
+```
 
 
-$$
-(r(\cos{\theta} + i\sin{\theta}))^n=r^n(\cos{n\theta}+i\sin{n\theta}).
-$$
+### Asymptotes
+{ref}` <#sec:asymptotes>`
 
 
-This reveals another trigonometric identity, known as de Moivre's
-theorem, also called de Moivre's formula or de Moivre's identity. It
-states that 
-
-$$
-(\cos{\theta} + i\sin{\theta})^n=\cos{n\theta}+i\sin{n\theta}
-$$ (eq:deMoivre)
-
- for any
-integer $n$.
-
-Using de Moivre's
-identity ([\[eq:deMoivre\]](#eq:deMoivre){reference-type="ref"
-reference="eq:deMoivre"}) we can find, for example, that
+An asymptote of a function is a horizontal or a vertical line that the
+curve of the function approaches, but never reaches, as it tends towards
+infinity. As an example, consider again the function $f(x)=\tan x$. This
+has vertical asymptotes, shown as dashed lines in
+{numref}`fig:discont2`,
+at $x=\pi/2,\,\,3\pi/2$ and so on. The function $f(x)=1/x$ has a
+vertical asymptote at $x = 0$ and a horizontal asymptote at $y = 0$.
 
 
-$$
-z^n+\frac{1}{z^n}=2\cos{n\theta}\quad\text{and}\quad z^n-\frac{1}{z^n}=2i\sin{n\theta}
-$$
+
+```{figure} ImagesB/tan2.png
+---
+width: 50%
+name: fig:discont2
+---
+Examples of discontinuous functions; $\tan x$ is periodically discontinuous at every odd
+multiple of $\pi/2$. Vertical asymptotes are shown for $\tan x$ as
+dashed lines. 
+```
 
 
+### Symmetry
+{ref}` <#sec:symmetry>`
+
+
+Another useful property of a function is its symmetry for positive and
+negative $x$. For example, if $f(-x)=f(x)$, then the function is
+referred to as **even**. If $f(-x)= -f(x)$, then the function is
+described as **odd**. It is easy to appreciate this by visualising the
+function and checking if it is symmetric with respect to the $y$-axis or
+the origin. The symmetry is easy to appreciate via graphs such as in {numref}`fig:-Even-Odd` and {numref}`fig:-Even-Odd2`.
+
+
+```{figure} ImagesB/Even1.png
+---
+width: 50%
+name: fig:-Even-Odd
+---
+Even and odd functions are defined if there are symmetric around the
+$y$-axis or origin respectively; an even function such as $\cos x$
+is symmetric around the $y$-axis.
+```
+
+
+```{figure} ImagesB/Odd1.png
+---
+width: 50%
+name: fig:-Even-Odd2
+---
+Even and odd functions are defined if there are symmetric around the
+$y$-axis or origin respectively; an odd function such as $x^{3}$
+has rotational symmetry with respect to the origin, meaning that its
+graph remains unchanged after rotation of 180$^{\circ}$ about the
+origin.
+```
+
+### The inverse of a function
+{ref}` <#inverse-of-functions>`
+
+For a typical function, we can map values of $y$ to $x$ using $y=f(x)$.
+Often we may wish to reverse this process and map values of $x$ to
+values of $y$. This is usually straight forward via:
+
+1.  *Transpose* the equation $y=f(x)$ by solving for $x$.
+
+2.  Swap $y$ with $x$ in the transposed equation.
+
+3.  Replace $y=$ with $f^{-1}(x)$
+
+4.  Note that the inverse function $f^{-1}(x)$ is not the same as
+    $1/f(x)$.
+
+To illustrate this, consider the example of $y=f(x)=x^{3}$:
+
+1.  *Transpose* the equation $y=x^3$ by solving for $x$:
+    $x=y^{\frac{1}{3}}$.
+
+2.  Swap $y$ with $x$ in the transposed equation: $y=x^{\frac{1}{3}}$.
+
+3.  Replace $y=$ with $f^{-1}(x)$: $f^{-1}(x) =x^{\frac{1}{3}}$.
+
+4.  Note that the inverse function $f^{-1}(x) =x^{\frac{1}{3}}$ is not
+    the same as $1/f(x)=x^{-3}$.
+
+As shown in {numref}`fig:inverse`, the function and its inverse have a symmetry.
+Another way to think above inverse functions is to visualise $f(x)$ and
+then reflect it through a $45^{\circ}$ line in the $x,\,y$ plane.
+
+
+
+```{figure} ImagesB/Inverse1.png
+---
+width: 50%
+name: fig:inverse
+---
+When visualised the inverse of a function will be its reflection
+through a 45$^{\circ}$ line. The axis labels will swap such that for the
+inverse function $y$ will be on the horizontal. The inverse function
+effectively enables us to determine a value of $x$ for a given
+$y$.
+```
