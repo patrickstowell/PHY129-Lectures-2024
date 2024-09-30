@@ -116,7 +116,7 @@ the axes to be in. A vector of length one is called a *unit vector* and
 is usually denoted by a hat on top e.g. $\hat{\vec{x}}$. The basis
 vector in the $x$ direction is sometimes called $\hat{\vec{i}}$. The
 $x$ and $y$ basis vectors are indicated on
-figure {eqref}`fig:vectorCart`.
+{numref}`fig:vectorCart`.
 
 Since the 3 basis vectors in the Cartesian coordinate system are
 mutually perpendicular we can write any point in space as a combination
@@ -225,8 +225,7 @@ acceleration are vectors i.e. $\vec{F}=m\vec{a}$. To find the
 resulting acceleration of an object subject to several forces, we need
 to use vector addition of the forces.
 
-Graphically (see figure [1.2](#fig:vectorAdd){reference-type="ref"
-reference="fig:vectorAdd"}) we can add vectors using the triangle (or
+Graphically (see {numref}`fig:vectorAdd`) we can add vectors using the triangle (or
 parallelogram) law. To add a vector $\vec{b}$ to a vector $\vec{a}$,
 we displace $\vec{b}$, without changing its orientation, so that it
 starts where $\vec{a}$ ends i.e. place the tail of the arrow
@@ -234,8 +233,7 @@ representing $\vec{b}$ at the head of the arrow $\vec{a}$. Then we
 draw the line joining the start of $\vec{a}$ to the end of $\vec{b}$
 (from the tail of $\vec{a}$ to the head of $\vec{b}$) to get the
 vector representing the addition of $\vec{a}$ and $\vec{b}$. This is
-shown in figure [1.2](#fig:vectorAdd){reference-type="ref"
-reference="fig:vectorAdd"}.
+shown in {numref}`fig:vectorAdd`.
 
 
 
@@ -340,8 +338,7 @@ subtraction. There are different kinds of products of two vectors. One,
 called the *scalar product*, gives a result which is a scalar. Another
 type of product, called the vector product, gives a result which is a
 vector. We will discuss the vector product in
-section [1.3.4](#sec:crossprod){reference-type="ref"
-reference="sec:crossprod"}. There is a third type of product of two
+section {ref}`Cross Product`. There is a third type of product of two
 vectors, called the outer product, which results in a matrix. Here we
 discuss the *scalar product* which is also called the *dot product* or
 *inner product*.
@@ -352,10 +349,8 @@ dot, product is given by
 
 
 $$
-
-\vec{a}\cdot\vec{b}=\vec{a}\cdot\vec{b} = a_xb_x + a_yb_y +a_zb_z = ab\cos{\theta}\label{eq:scalarproduct}
-
-$$
+\vec{a}\cdot\vec{b}=\vec{a}\cdot\vec{b} = a_xb_x + a_yb_y +a_zb_z = ab\cos{\theta}
+$$ (eq:scalarproduct)
 
 
 where $\theta$ is the angle between the two vectors. Note that the
@@ -364,9 +359,8 @@ also that that to denote this kind of product between vectors we use a
 dot $\cdot$ which is why it is also called it the dot product. Note that
 the dot product between two perpendicular vevctors is zero.
 
-From
-equation ([\[eq:scalarproduct\]](#eq:scalarproduct){reference-type="ref"
-reference="eq:scalarproduct"}), we can see that the scalar product is
+From equation
+{eq}`eq:scalarproduct`, we can see that the scalar product is
 commutative; i.e.,
 
 
@@ -395,8 +389,7 @@ $$
 
 We can use the scalar product to find the angle between two lines by
 rearragning
-equation ([\[eq:scalarproduct\]](#eq:scalarproduct){reference-type="ref"
-reference="eq:scalarproduct"}) to obtain;
+equation {eq}`eq:scalarproduct` to obtain;
 
 
 $$
@@ -460,8 +453,7 @@ $$
 
 In this equation $\theta$ is the angle between $\vec{a}$ and
 $\vec{b}$, and n is the unit vector parallel to the plane. See
-figure [1.3](#fig:Cross product){reference-type="ref"
-reference="fig:Cross product"})
+figure {numref}`fig:CrossProduct`
 
 The cross product can also be expressed as a three--by--three
 determinant 
@@ -505,14 +497,12 @@ $$
 \vec{a}\times\vec{b} = -\vec{b}\times\vec{a}
 $$
 
- It is distributive
+It is distributive
 i.e.
-
 
 $$
 \vec{a}\times(\vec{b}+\vec{c})=\vec{a}\times\vec{b}+\vec{a}\times\vec{c}
 $$
-
 
 
 Cross products occur in many areas of physics, for example, the force on
@@ -522,7 +512,6 @@ resultant force is perpendicular to both the direction of movement and
 the magnetic field.
 
 The magnitude of the vector product is given by
-
 
 $$
 \left|\vec{a}\,\times\,\vec{b}\,\right| = a\,b\,|\sin{\theta} |
@@ -542,21 +531,15 @@ in a vector.
 The scalar triple product is given by the dot product between one vector
 and the cross product of the other two vectors i.e.
 
-
 $$
-
 \vec{a}\cdot(\vec{b}\times\vec{c})
-
 $$
-
 
 
 The triple scalar product can be obtained from the three--by--three
 determinant of the matrix with the vectors as the rows i.e.
 
-
 $$
-
 \begin{aligned}
 \vec{a}\cdot(\vec{b}\times\vec{c})
 & = & {\left|\begin{array}{ccc}    
@@ -564,7 +547,6 @@ $$
 &&\\
 & = &a_x(b_yc_z - b_zc_y)- a_y(b_xc_z-b_zc_x)+ a_z(b_xc_y - b_yc_x)
 \end{aligned}
-
 $$
 
 
@@ -575,19 +557,14 @@ maintained i.e.
 
 
 $$
-
 \vec{a}\cdot(\vec{b}\times\vec{c})=\vec{b}\cdot(\vec{c}\times\vec{a})=\vec{c}\cdot(\vec{a}\times\vec{b})
-
 $$
 
 
 Swapping the order of the operations does not change the value i.e.
 
-
 $$
-
 \vec{a}\cdot(\vec{b}\times\vec{c})=(\vec{a}\times\vec{b})\cdot\vec{c}
-
 $$
 
 
@@ -595,13 +572,11 @@ But swapping the order or any two of the vectors changes the sign of the
 triple product i.e. 
 
 $$
-
 \begin{aligned}
   \vec{a}\cdot(\vec{b}\times\vec{c})=&-\vec{a}\cdot(\vec{c}\times\vec{b})\\
   =&-\vec{b}\cdot(\vec{a}\times\vec{c})\\
     =&-\vec{c}\cdot(\vec{b}\times\vec{a})
 \end{aligned}
-
 $$
 
 
@@ -684,10 +659,8 @@ any point on the line is given by
 
 
 $$
-
-\vec{r} = \vec{a} + \lambda \vec{c}\label{eq:line}
-
-$$
+\vec{r} = \vec{a} + \lambda \vec{c}
+$$ (eq:line)
 
  where $\lambda$
 is a scalar, $\vec{a}=(a_{x},a_{y},a_{z})$ is the position vector of a
@@ -709,43 +682,33 @@ the equation of a line using vectors.
 
 
 Since, a vector has components in each of the directions, the line in
-equation ([\[eq:line\]](#eq:line){reference-type="ref"
-reference="eq:line"}) can also be expressed in a *symmetric form* as;
+equation {eq}`eq:line` can also be expressed in a *symmetric form* as;
 
 
 $$
-
 \frac{x-a_{x}}{c_{x}} =  \frac{y-a_{y}}{c_{y}} = 
 \frac{z-a_{z}}{c_{z}} = \lambda
-
 $$
-
-
 
 Alternatively, if we know the coordinates of two points on a line,
 $\vec{a}$ and $\vec{b}$, then the line can be expressed in parametric
 form as; 
 
 $$
-
 \vec{r} = \vec{a} + \lambda (\vec{b}-\vec{a})
-
 $$
 
  since the
 difference between the position vectors of two points on the line gives
 a vector along the line i.e. a vector in the direction of $\vec{c}$ in
-equation ([\[eq:line\]](#eq:line){reference-type="ref"
-reference="eq:line"}). This relationship is a direct consequence of the
+equation {eq}`eq:line`. This relationship is a direct consequence of the
 triangle law of vector addition (see
-figure [1.2](#fig:vectorAdd){reference-type="ref"
-reference="fig:vectorAdd"}).
+figure {numref}`fig:vectorAdd`).
 
 ### Equation of a plane
 
 We can also use vectors to write down an equation for a plane (see
-figure [1.5](#fig:eqplane){reference-type="ref"
-reference="fig:eqplane"}). The parametric equation of a plane which
+figure {numref}`fig:eqplane`. The parametric equation of a plane which
 passes through a point with position vector $\vec{c}$, and which
 contains non-parallel vectors $\vec{a}$ and $\vec{b}$ is
 
@@ -791,15 +754,13 @@ vector $\vec{n}$. Therefore the scalar product between
 $(\vec{r} - \vec{c})$ and $\vec{n}$ must be zero i.e., 
 
 $$
-
 \begin{aligned}
   (\vec{r} - \vec{c}) \cdot \vec{n} &= 0\nonumber\\
   \vec{r}\cdot\vec{n}& =  \vec{c}\cdot\vec{n}
 \end{aligned}
-
 $$ (eq:plane)
 
- The perpendicular distance from the plane to the origin,
+The perpendicular distance from the plane to the origin,
 $d$, is given by the projection of the position vector of any point in
 the plane onto the unit normal, $\hat{\vec{n}}=\vec{n}/|\vec{n}|$, i.e.
 
@@ -809,7 +770,7 @@ d=\vec{c}\cdot\hat{\vec{n}}.
 $$
 
  This enables us to write the equation
-of a plane {numref}`eq:plane` in the more compact form
+of a plane from {eq}`eq:plane` in the more compact form
 
 
 $$

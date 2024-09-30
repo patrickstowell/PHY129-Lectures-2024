@@ -26,6 +26,8 @@ $$
  \DeclareMathOperator{\a}{\vec{a}}
  \DeclareMathOperator{\L}{\vec{L}} 
  \DeclareMathOperator{\s}{\vec{s}} 
+ \DeclareMathOperator{\bm}{{\bf m}} 
+
 \begin{aligned}
  \h = \begin{pmatrix} 1 \\ 0 \end{pmatrix}
  \qquad\text{and}\qquad
@@ -199,8 +201,7 @@ $$
 
  for some $\omega$, $\phi$, and amplitudes $\alpha_1$ and
 $\alpha_2$. The expressions in equation
-([\[eq:028y4rehiudfs\]](#eq:028y4rehiudfs){reference-type="ref"
-reference="eq:028y4rehiudfs"}) then become 
+{eq}`eq:028y4rehiudfs` then become 
 
 $$
 
@@ -261,8 +262,7 @@ $$
 $$
 
  Substituting these values back into equation
-([\[eq:204yigrweh\]](#eq:204yigrweh){reference-type="ref"
-reference="eq:204yigrweh"}), we find that 
+{eq}`eq:204yigrweh`, we find that 
 
 $$
 
@@ -356,8 +356,7 @@ $$
  However, angular momentum is a three-dimensional vector
 ($\L$), and so is the angular rotation $\bm\omega$ if we take into
 account the rotation axis. So equation
-([\[eq:294iruhef\]](#eq:294iruhef){reference-type="ref"
-reference="eq:294iruhef"}) must be fixed. Given that the moment of
+{eq}`eq:294iruhef` must be fixed. Given that the moment of
 inertia is axis-dependent, $I$ must be a $3\times 3$ matrix:
 
 
@@ -558,8 +557,7 @@ $$
  The matrices $L_x$, $L_y$, and $L_z$ are called the
 *generators* of rotations. Any three matrices of size $n\times n$ (with
 $n\geq 3$) that obey the commutation relations in equation
-([\[eq:vjhg49820uwoeij\]](#eq:vjhg49820uwoeij){reference-type="ref"
-reference="eq:vjhg49820uwoeij"}) generate rotation matrices in a space
+{eq}`eq:vjhg49820uwoeij` generate rotation matrices in a space
 of dimension $n$.
 
 Finally, we can see how the matrices $L_j$ are related to angular
@@ -769,10 +767,8 @@ $$
 $$
 
  Can you derive this from equations
-([\[eq:gh304woeijrs\]](#eq:gh304woeijrs){reference-type="ref"
-reference="eq:gh304woeijrs"}) and
-([\[eq:gry4y928woesd\]](#eq:gry4y928woesd){reference-type="ref"
-reference="eq:gry4y928woesd"})?
+{eq}`eq:gh304woeijrs` and
+{eq}`eq:gry4y928woesd`?
 
 ## Energy levels in a two-level atom
 
@@ -842,8 +838,7 @@ which means that its eigenvalues are real.
 The energy levels of the two-level system interacting with a laser
 change. To find the new energy levels, we must find the eigenvalues of
 $H$ in equation
-([\[eq:buhg9834owr\]](#eq:buhg9834owr){reference-type="ref"
-reference="eq:buhg9834owr"}). Let $E_g = 0$, $E_e 
+{eq}`eq:buhg9834owr`. Let $E_g = 0$, $E_e 
 = 1.2$ eV, and $\hbar\Omega = 0.3 i$ eV. We find the eigenvalues by
 calculating 
 

@@ -41,17 +41,11 @@ to suppoort learning of key concepts.
 Below are the learning objectives (LOs) of this module for Stream A. By the end of
 the module you should be able to:
 
--   Use basic trigonemtric functions.
+-   Know how to apply the various rules of differentiation and integration to previously unseen functions.
 
--   Differentate basic equations and understand the fundementals of differentiation.
+-  Be able to apply the methods of differentiation to find stationary points of functions and series approximations to functions.
 
--   Be able to use inflection to understand function shapes.
-
--   Use different series to approximate the behaviour of functions.
-
--   Integrate basic equations.
-
--   Solve partial differential equations.
+-  Know how to olve first and second order differential equations of relevance to physics.
 
 ### Learning objectives of Stream B
 
