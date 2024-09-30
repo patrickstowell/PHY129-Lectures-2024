@@ -1,4 +1,4 @@
-# Inverse of a matrix: proof of the adjoint method {#sec:adjointmethod}
+# Inverse of a matrix: proof of the adjoint method 
 
 For any matrix $A$, we can define the adjoint of a matrix $adj~A$ as
 the matrix containing all the cofactors, and taking the transpose:
@@ -22,8 +22,7 @@ $$
 
  Note that the adjoint is not at all the same as the
 Hermitian adjoint operator $\dagger$ from section
-[\[sec:special\]](#sec:special){reference-type="ref"
-reference="sec:special"}! In fact, while the $\dagger$ is easy to
+{eq}`Special Matrices`! In fact, while the $\dagger$ is easy to
 calculate, the adjoint requires us to calculate $n^2$ cofactors, which
 can be a lot of work.
 

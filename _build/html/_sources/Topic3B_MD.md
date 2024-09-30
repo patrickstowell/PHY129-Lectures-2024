@@ -19,7 +19,6 @@ columns:
 $$
 
 \begin{aligned}
-\label{eq:matrixA}
  A = 
  \begin{pmatrix} 
   3 & 5 & 1 & 2 \cr 
@@ -28,7 +27,7 @@ $$
  \end{pmatrix}\, .
 \end{aligned}
 
-$$
+$$ (eq:matrixA)
 
  Each individual number in the matrix is called a *matrix
 element*. Row vectors can be thought of as matrices with only one row
@@ -58,8 +57,7 @@ row and the $k^{\text{th}}$ column. In these notes, I will use upper
 case roman letters for matrices and their corresponding lower case for
 its elements. The element $a_{jk}$ is different from the matrix element
 $a_{kj}$. In the matrix $A$ above
-(equation [\[eq:matrixA\]](#eq:matrixA){reference-type="ref"
-reference="eq:matrixA"}), element $a_{12}=5$ and $a_{21}=0$, so
+(equation {eq}`eq:matrixA`, element $a_{12}=5$ and $a_{21}=0$, so
 $a_{12} \neq a_{21}$. The convention for the order of the indices is
 *row-column*. It is crucial you get this the right way around in matrix
 calculations. In general, we can write an $n\times m$ (pronounced "$n$
@@ -98,13 +96,11 @@ $$
 
  We denote the transpose of a matrix by a superscript
 $T$. The transpose of the matrix $A$
-(equation [\[eq:matrixA\]](#eq:matrixA){reference-type="ref"
-reference="eq:matrixA"}) can be written as 
+(equation {eq}`eq:matrixA`) can be written as 
 
 $$
 
 \begin{aligned}
-\label{eq:matrixAT}
  A^T = 
  \begin{pmatrix} 
   3 & 0 & 4  \cr 
@@ -114,7 +110,7 @@ $$
  \end{pmatrix}\, .
 \end{aligned}
 
-$$
+$$ (eq:matrixAT)
 
  Note how the rows and coloumns have swapped in $A^T$
 compared to $A$. We can find the transpose by reflecting the elements in
@@ -147,7 +143,6 @@ see that $A^* = A$. A less trivial example would be
 $$
 
 \begin{aligned}
-\label{eq:matrixB}
  B = 
  \begin{pmatrix} 
   1 & 2i & 0  \cr 
@@ -161,7 +156,7 @@ $$
  \end{pmatrix}\, .
 \end{aligned}
 
-$$
+$$ (eq:matrixB)
 
  Each element stays in place, but is complex conjugated:
 $b_{jk} \rightarrow b_{jk}^*$. Remember that to get a complex conjugate
@@ -198,7 +193,6 @@ $$
 $$
 
 \begin{aligned}
-\label{eq:matrixBH}
  B^\dagger = 
  \begin{pmatrix} 
   1 & 6+i  \cr 
@@ -207,11 +201,10 @@ $$
  \end{pmatrix}\, .
 \end{aligned}
 
-$$
+$$ (eq:matrixBH)
 
  conjugate without the transpose, but to see why we have
-wait until section [1.7](#sec:eigen){reference-type="ref"
-reference="sec:eigen"}.
+wait until section {ref}`Eigenvalues`.
 
 ## Adding and multiplying matrices
 
@@ -219,16 +212,11 @@ reference="sec:eigen"}.
 
 We can add two matrices, but *only when they have the same size and
 shape $n\times m$*. So, for example, we cannot add $A$
-(equation [\[eq:matrixA\]](#eq:matrixA){reference-type="ref"
-reference="eq:matrixA"}) and $B$
-(equation [\[eq:matrixB\]](#eq:matrixB){reference-type="ref"
-reference="eq:matrixB"}), or $A$ and $A^T$
-(equation [\[eq:matrixAT\]](#eq:matrixAT){reference-type="ref"
-reference="eq:matrixAT"}), or $B$ and $B^\dagger$
-(equation [\[eq:matrixBH\]](#eq:matrixBH){reference-type="ref"
-reference="eq:matrixBH"}). But we can add $B$ and $B^*$
-(equation [\[eq:matrixB\]](#eq:matrixB){reference-type="ref"
-reference="eq:matrixB"}): 
+(equation {eq}`eq:matrixA`) and $B$
+(equation {eq}`eq:matrixB`), or $A$ and $A^T$
+(equation {eq}`eq:matrixAT`), or $B$ and $B^\dagger$
+(equation {eq}`eq:matrixBH`). But we can add $B$ and $B^*$
+(equation {eq}`eq:matrixB`): 
 
 $$
 
@@ -316,11 +304,8 @@ $A$ and $B$ with $D=A+B$, each element of $D$ can be written as and $k$
 free variables) fully describes the behaviour of the entire matrix,
 because the matrix is merely the array of its elements (i.e., values and
 their positions). Expressing the commutative and distributive law in
-terms of the elements in equations
-([\[eq:nbt5340wi\]](#eq:nbt5340wi){reference-type="ref"
-reference="eq:nbt5340wi"}) and
-([\[eq:b943whfi\]](#eq:b943whfi){reference-type="ref"
-reference="eq:b943whfi"}) is called *index notation*. We will be using
+terms of the elements in equations {eq}`eq:nbt5340wi` and
+{eq}`eq:b943whfi` is called *index notation*. We will be using
 it here, because it is a very convenient and compact notation, and
 consequently it is used extensively in physics. Even though you may not
 encounter index notation much this year, we will come back to this in
@@ -340,7 +325,6 @@ $\vec{a}=(2\; 4)$ and $\vec{b} = \begin{pmatrix} 1 \\ 3
 $$
 
 \begin{aligned}
-\label{eq:bg94oweisnkj}
  \vec{a}\cdot\vec{b} = \begin{pmatrix}
   2 & 4 
  \end{pmatrix}
@@ -350,7 +334,7 @@ $$
 =2 \times 1+4 \times3 = 14\, .
 \end{aligned}
 
-$$
+$$ (eq:bg94oweisnkj)
 
  This is only possible if the length of the row of
 $\vec{a}$ is equal to the length of the column of $\vec{b}$. The
@@ -547,7 +531,7 @@ sum over $l$ and the position of the indices. Matrix multiplication is
 explained graphically [in this video by
 3Blue1Brown](https://www.youtube.com/watch?v=XkY2DOUCWMU&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&index=5).
 
-## Special matrices {#sec:special}
+## Special matrices 
 
 In the previous sections we covered the basic techniques of matrix
 algebra. Here, we will consider some special types of matrices.
@@ -696,7 +680,7 @@ $$
 
 $$
 
- In section [1.7](#sec:eigen) we will learn about the eigenvalues of a matrix,
+ In section {ref}`Eigenvalues` we will learn about the eigenvalues of a matrix,
 and Hermitian matrices always have real eigenvalues even though the
 elements of Hermitian matrices are not necessarily real. This property
 of having real eigenvalues makes them of special interest in physics. An
@@ -750,9 +734,7 @@ get the original matrix again: $(A^{-1})^{-1} = A$.
 
 Sometimes the inverse of a matrix does not exist, just like the inverse
 of $\lambda = 0$ does not exist. We will study ways to calculate the
-inverse in section [1.6](#sec:inverse){reference-type="ref"
-reference="sec:inverse"} and identify ways to tell whether the inverse
-exists.
+inverse in section {ref}`Matrix Inversion` and identify ways to tell whether the inverse exists.
 
 ### Unitary matrix
 
@@ -817,7 +799,7 @@ it a lot.
 An intuitive explanation of the concept of the determinant is given [in
 this video by 3Blue1Brown](https://www.youtube.com/watch?v=Ip3X9LOh2dk).
 
-### Matrix cofactors and minor determinants {#sec:cofactors}
+### Matrix cofactors and minor determinants 
 
 Calculating the determinant of a three-dimensional matrix such as;
 
@@ -825,14 +807,13 @@ Calculating the determinant of a three-dimensional matrix such as;
 $$
 
 \begin{aligned}
-\label{eq:dfb429wehuisfnj}
  A =
   \begin{pmatrix}
   a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\a_{31} & a_{32} & a_{33}
  \end{pmatrix}\, ,
 \end{aligned}
 
-$$
+$$ (eq:dfb429wehuisfnj)
 
  is more complicated than for a $2\times 2$ matrix. Let
 us first introduce two concepts that will help us find the $3\times 3$
@@ -866,18 +847,16 @@ $$
 $$
 
 \begin{aligned}
-\label{eq:cofactor}
  C_{jk} = (-1)^{j+k} m_{jk}\, .
 \end{aligned}
 
-$$
+$$ (eq:cofactor)
 
  We will use the matrix cofactors, $C$, to calculate the
 determinant of larger matrices.
 
 To calculate the determinant of $A$ in equation
-([\[eq:dfb429wehuisfnj\]](#eq:dfb429wehuisfnj){reference-type="ref"
-reference="eq:dfb429wehuisfnj"}), we can use the so-called *Laplace
+{eq}`eq:dfb429wehuisfnj`, we can use the so-called *Laplace
 rule*: We start by picking a row or a column (it does not matter which
 one we pick). Then we multiply each element in that row or column by its
 cofactor. The determinant is the sum of these products. For example,
@@ -952,13 +931,12 @@ $\vec{a}$ and $\vec{b}$. We construct the following matrix:
 $$
 
 \begin{aligned}
-\label{eq:b9woiersfkjn}
   \begin{pmatrix}
   \hat{\vec{e}}_x & \hat{\vec{e}}_y & \hat{\vec{e}}_z \\ a_x & a_y & a_z \\ b_x & b_y & b_z
  \end{pmatrix}\, .
 \end{aligned}
 
-$$
+$$ (eq:b9woiersfkjn)
 
  Here, instead of numbers in the top row, we entered
 vectors so this is not a proper matrix. However if we pick the top row
@@ -982,9 +960,7 @@ $\vec{a}\times\vec{b}$ is the area of the parallelogram spanned by
 $\vec{a}$ and $\vec{b}$. If we take the dot product of
 $\vec{a}\times\vec{b}$ with a vector $\vec{c}$ we get a number that
 is the volume of the parallelepiped formed by $\vec{a}$, $\vec{b}$,
-and $\vec{c}$. We could therefore replace the unit vectors in equation
-([\[eq:b9woiersfkjn\]](#eq:b9woiersfkjn){reference-type="ref"
-reference="eq:b9woiersfkjn"}) with $c_x$, $c_y$, and $c_z$, and then the
+and $\vec{c}$. We could therefore replace the unit vectors in equation {eq}`eq:b9woiersfkjn` with $c_x$, $c_y$, and $c_z$, and then the
 determinant is the volume change of the transformation that takes the
 unit cube to the parallelepiped. also [this video by
 3Blue1Brown](https://www.youtube.com/watch?v=eu6i7WJeinw&index=11&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
@@ -1050,12 +1026,12 @@ we call it *singluar*.
 
 One way to calculate the inverse of a matrix, $A^{-1}$, is to first
 calculate the matrix of cofactors, $C$, (see
-section [1.5.1](#sec:cofactors){reference-type="ref"
-reference="sec:cofactors"}). We then caclulate the determinant of $A$
+section {ref}`Matrix cofactors and minor determinants`). We then caclulate the determinant of $A$
 and the transpose of the matrix of cofactors, $C^T$. $C^{T}$ is
 sometimes called the adjoint of the matrix i.e. $C^T=\adj A$. This is
 not the same as the Hermitian adjoint operator $\dagger$ from section
-[1.4](#sec:special){reference-type="ref" reference="sec:special"}.
+{ref}`Special Matrices`.
+
 Finding the matrix of cofactors $C$ can be a lot of work. The inverse is
 then given by; 
 
@@ -1068,10 +1044,8 @@ A^{-1} = \frac{C^T}{\det A}
 $$
 
  where $C_{ij}$ is the cofactor of $A_{ij}$ as given in
-equation [\[eq:cofactor\]](#eq:cofactor){reference-type="ref"
-reference="eq:cofactor"}. For a proof of why this method works see
-Appendix [\[sec:adjointmethod\]](#sec:adjointmethod){reference-type="ref"
-reference="sec:adjointmethod"}.
+equation {eq}`eq:cofactor`. For a proof of why this method works see
+Appendix {ref}`Inverse of a matrix: proof of the adjoint method`.
 
 ## Eigenvalue problems 
 
@@ -1156,14 +1130,13 @@ As a simple example, let's calculate the eigenvalues of
 $$
 
 \begin{aligned}
-\label{eq:bgrwoeijsd}
  A = 
  \begin{pmatrix}
   1 & 3 \\ 2 & 7
  \end{pmatrix}\, .
 \end{aligned}
 
-$$
+$$ (eq:bgrwoeijsd)
 
  We need to calculate the determinant 
 
@@ -1185,11 +1158,10 @@ formula, and find
 $$
 
 \begin{aligned}
-\label{eq:egevalues}
  \lambda_{\pm} = \frac{8 \pm \sqrt{64-4}}{2} = 4 \pm \sqrt{15}\, .
 \end{aligned}
 
-$$
+$$ (eq:egevalues)
 
  giving the two eigenvalues of $A$ as
 $\lambda_{+}= 4 + \sqrt{15}$ and $\lambda_{-}= 4 - \sqrt{15}$.
@@ -1203,11 +1175,10 @@ The eigenvalue equation then becomes
 $$
 
 \begin{aligned}
-\label{eq:vn49woesrjd}
  A \vec{u}_j = \lambda_j \vec{u}_j\, .
 \end{aligned}
 
-$$
+$$ (eq:vn49woesrjd)
 
  Since $A$ is known and the $\lambda_j$ are known, we can
 substitute these into the eigenvalue equation and solve for $\vec{u}_j$. The
@@ -1215,15 +1186,12 @@ eigenvectors are not completely determined by this equation, however. We
 obtain the eigenvectors only up to a constant scaling factor i.e. we get
 the directions but the length can be anything. If we wish we can divide
 both sides of equation
-([\[eq:vn49woesrjd\]](#eq:vn49woesrjd){reference-type="ref"
-reference="eq:vn49woesrjd"}) by the length of $\vec{u}_j$, in which
+{eq}`eq:vn49woesrjd` by the length of $\vec{u}_j$, in which
 case we obtain the *normalised eigenvector* (i.e., it has unit length).
 
 Let's do this for the example above in
-equation [\[eq:bgrwoeijsd\]](#eq:bgrwoeijsd){reference-type="ref"
-reference="eq:bgrwoeijsd"}. Starting with $\lambda_+$ given in
-equation [\[eq:egevalues\]](#eq:egevalues){reference-type="ref"
-reference="eq:egevalues"}, the eigenvalue equation becomes
+equation {eq}`eq:bgrwoeijsd`. Starting with $\lambda_+$ given in
+equation {eq}`eq:egevalues`, the eigenvalue equation becomes
 
 
 $$
@@ -1347,13 +1315,12 @@ and $z$ is
 $$
 
 \begin{aligned}
-\label{eq:vnbgh3408woij}
  3 x + 2 y - z & = 0\, , \cr
  x - 5 y + 2 z & = 0\, , \\
  y - z & = 0\, .\nonumber
 \end{aligned}
 
-$$
+$$ (eq:vnbgh3408woij)
 
  From the bottom equation we can see that $z=y$.
 Substituting this into the other equations gives $3x = -y$ and $x=3y$.
@@ -1367,14 +1334,12 @@ this question, and we will work out the solutions if we establish there
 are indeed nontrivial solutions.
 
 Note that we can write equation
-([\[eq:vnbgh3408woij\]](#eq:vnbgh3408woij){reference-type="ref"
-reference="eq:vnbgh3408woij"}) in matrix form $A \vec{x} = \vec{b}$,
+{eq}`eq:vnbgh3408woij` in matrix form $A \vec{x} = \vec{b}$,
 with 
 
 $$
 
 \begin{aligned}
-\label{eq:Ax=0eg}
  A = 
  \begin{pmatrix}
   3 & 2 & -1 \\ 1 & -5 & 2 \\ 0 & 1 & -1
@@ -1391,7 +1356,7 @@ $$
  \end{pmatrix}\, .
 \end{aligned}
 
-$$
+$$ (eq:Ax=0eg)
 
  In this case, where $\vec{b} = 0$, we have a
 *homogeneous* set of linearly coupled equations. When $\vec{b}\neq0$,
@@ -1417,8 +1382,7 @@ independent. However, we know that when the rows of $A$ are linearly
 dependent, the determinant of $A$ should be zero. Therefore if the
 determinant is nonzero there are no nontrivial solutions. Let's
 calculate the determinant of the matrix $A$ from
-equation [\[eq:Ax=0eg\]](#eq:Ax=0eg){reference-type="ref"
-reference="eq:Ax=0eg"}: 
+equation {eq}`eq:Ax=0eg`: 
 
 $$
 
@@ -1442,8 +1406,7 @@ $$
 
  So the determinant is not zero, and therefore $x=y=z=0$
 is the only solution to
-equations [\[eq:vnbgh3408woij\]](#eq:vnbgh3408woij){reference-type="ref"
-reference="eq:vnbgh3408woij"}.
+equations {eq}`eq:vnbgh3408woij`.
 
 If we find that the determinant of a matrix $A$ in $A\vec{x}=0$ is
 zero, how do we find the solutions for the variables $\vec{x}$? We will
@@ -1509,8 +1472,7 @@ $$
 be a fairly big task.
 
 Another method, uses row reduction (similar to that used for finding the
-inverse in section [1.6](#sec:inverse){reference-type="ref"
-reference="sec:inverse"}). The rules of matrix row reduction are:
+inverse in section {ref}`Inverse of a matrix`. The rules of matrix row reduction are:
 
 -   multiply any row by a nonzero constant $\lambda \neq 0$;
 
@@ -1527,7 +1489,6 @@ equivalent set of equations. We demonstrate it with an example. Let
 $$
 
 \begin{aligned}
-\label{eq:eqinhomosimeqs}
    \begin{array}{ccc}
   2x + 3y &=& 2  \\
   4x+y&=&7
@@ -1545,7 +1506,7 @@ $$
  \end{pmatrix}\, .
 \end{aligned}
 
-$$
+$$ (eq:eqinhomosimeqs)
 
  where we have written the set of equations on the left
 and the matrix form on the right. Now let us write just the numbers into
@@ -1661,8 +1622,7 @@ $$
 
  from which we can read off $x = 19/10$ and $y = -3/5$ as
 the solutions to the inhomogeneous
-equations [\[eq:eqinhomosimeqs\]](#eq:eqinhomosimeqs){reference-type="ref"
-reference="eq:eqinhomosimeqs"}.
+equations {eq}`eq:eqinhomosimeqs`.
 
 Linear coupled equations occur a lot in physics, and knowing these
 methods will help you quickly solve them. You can even use this method

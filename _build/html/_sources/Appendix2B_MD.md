@@ -1,12 +1,10 @@
 # Matrix Diagonalisation
 
 The matrix $A$ in equation
-([\[eq:bgrwoeijsd\]](#eq:bgrwoeijsd){reference-type="ref"
-reference="eq:bgrwoeijsd"}) can be written in a different basis such
+{eq}`eq:bgrwoeijsd` can be written in a different basis such
 that it has only nonzero diagonal elements. This is called *matrix
 diagonalisation*. It is a type of *similarity transform*. See
-appendix [\[sec:similarity\]](#sec:similarity){reference-type="ref"
-reference="sec:similarity"} for more on similarity transforms. Matrix
+appendix {eq}`sec:similarity` for more on similarity transforms. Matrix
 diagonalisation is a similarity transform that takes the unit vectors
 $\hat{\vec{x}}$ and $\hat{\vec{y}}$ (i.e. the basis vectors in which
 $A$ was written) and turns them into the two eigenvectors. The matrix
@@ -37,8 +35,7 @@ $$
 
 
 where $A^{\prime}$ is the diagonal matrix given in
-equation [\[eq:diagonal\]](#eq:diagonal){reference-type="ref"
-reference="eq:diagonal"}. Therefore to calculate the diagonal matrix we
+equation {eq}`eq:diagonal`. Therefore to calculate the diagonal matrix we
 have 
 
 $$
@@ -48,8 +45,7 @@ A^{\prime}=S^{-1}AS
 $$
 
  so we need to calculate the inverse of $S$
-(see section [\[sec:inverse\]](#sec:inverse){reference-type="ref"
-reference="sec:inverse"}). In our example this is 
+(see section {ref}`Inverse of a matrix`). In our example this is 
 
 $$
 

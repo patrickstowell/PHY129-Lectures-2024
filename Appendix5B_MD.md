@@ -171,10 +171,7 @@ transforms are the trickiest part of this course on matrices.
 
 ## Rotations around an arbitrary axis
 
-We left a question in section
-[\[sec:linear\]](#sec:linear){reference-type="ref"
-reference="sec:linear"} about how we can construct a matrix around an
-arbitrary axis in three dimensions. Consider the 3D rotation matrix
+We left a question in section {ref}`Linear Matrices` about how we can construct a matrix around an arbitrary axis in three dimensions. Consider the 3D rotation matrix
 around the $x$-axis: 
 
 $$
@@ -259,7 +256,7 @@ arbitrary axis or plane.
 
 Similarity transforms preserve some aspects of a matrix. From the
 properties of the determinant in section
-[\[sec:det\]](#sec:det){reference-type="ref" reference="sec:det"} you
+{ref}`Determinants` you
 can see that the determinant of a matrix after a similarity transform
 remains unchanged: 
 

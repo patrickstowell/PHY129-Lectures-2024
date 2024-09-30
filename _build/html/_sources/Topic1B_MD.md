@@ -196,10 +196,10 @@ Therefore we can write any complex number $z$ in the trigonometric form
 or *polar form* which is equivalent to expressing $z$ in polar
 coordinates i.e. 
 
-$$
+```{math}
+:label: eq:polarz
 z=r(\cos{\theta}+i\,\sin{\theta}).
-$$ (eq:polarz)
-
+```
 
 Using Euler's formula, $e^{i\theta}=\cos{\theta}+i\,\sin{\theta}$, a
 complex number can be written in exponential form as 
@@ -208,11 +208,10 @@ $$
 z=re^{i\theta}.
 $$ (eq:expz)
 
- Let us consider a famous example of a complex number
+Let us consider a famous example of a complex number
 in this form. Let $r=1$ and $\theta=\pi$ then using
-equations ([\[eq:polarz\]](#eq:polarz){reference-type="ref"
-reference="eq:polarz"}) and 
-([\[eq:expz\]](#eq:expz){reference-type="ref" reference="eq:expz"}) we
+equations {eq}`eq:polarz` and 
+{eq}`eq:expz` we
 have 
 
 $$
@@ -339,8 +338,7 @@ by simply dividing the absolute values and subtracting the arguments.
 
 Taking a complex number to the power $n$ where $n$ is an integer can be
 done most easily by considering the exponential form of a complex
-number, given in equation ([\[eq:expz\]](#eq:expz){reference-type="ref"
-reference="eq:expz"}). Taking the exponential form to the power $n$
+number, given in equation {eq}`eq:expz`. Taking the exponential form to the power $n$
 gives 
 
 $$
@@ -368,8 +366,7 @@ $$ (eq:deMoivre)
 integer $n$.
 
 Using de Moivre's
-identity ([\[eq:deMoivre\]](#eq:deMoivre){reference-type="ref"
-reference="eq:deMoivre"}) we can find, for example, that
+identity in equation {eq}`eq:deMoivre` we can find, for example, that
 
 
 $$

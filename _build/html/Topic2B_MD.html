@@ -513,7 +513,7 @@ the axes to be in. A vector of length one is called a <em>unit vector</em> and
 is usually denoted by a hat on top e.g. <span class="math notranslate nohighlight">\(\hat{\vec{x}}\)</span>. The basis
 vector in the <span class="math notranslate nohighlight">\(x\)</span> direction is sometimes called <span class="math notranslate nohighlight">\(\hat{\vec{i}}\)</span>. The
 <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> basis vectors are indicated on
-figure <a href="#id1"><span class="problematic" id="id2">fig:vectorCart</span></a>.</p>
+<a class="reference internal" href="#fig-vectorcart"><span class="std std-numref">Fig. 11.1</span></a>.</p>
 <p>Since the 3 basis vectors in the Cartesian coordinate system are
 mutually perpendicular we can write any point in space as a combination
 of the basis vectors. There are several notations used for the basis
@@ -582,8 +582,7 @@ valid for one dimensional problems. But in 2D or 3D space force and
 acceleration are vectors i.e. <span class="math notranslate nohighlight">\(\vec{F}=m\vec{a}\)</span>. To find the
 resulting acceleration of an object subject to several forces, we need
 to use vector addition of the forces.</p>
-<p>Graphically (see figure <span class="xref myst">1.2</span>{reference-type=”ref”
-reference=”fig:vectorAdd”}) we can add vectors using the triangle (or
+<p>Graphically (see <a class="reference internal" href="#fig-vectoradd"><span class="std std-numref">Fig. 11.2</span></a>) we can add vectors using the triangle (or
 parallelogram) law. To add a vector <span class="math notranslate nohighlight">\(\vec{b}\)</span> to a vector <span class="math notranslate nohighlight">\(\vec{a}\)</span>,
 we displace <span class="math notranslate nohighlight">\(\vec{b}\)</span>, without changing its orientation, so that it
 starts where <span class="math notranslate nohighlight">\(\vec{a}\)</span> ends i.e. place the tail of the arrow
@@ -591,8 +590,7 @@ representing <span class="math notranslate nohighlight">\(\vec{b}\)</span> at th
 draw the line joining the start of <span class="math notranslate nohighlight">\(\vec{a}\)</span> to the end of <span class="math notranslate nohighlight">\(\vec{b}\)</span>
 (from the tail of <span class="math notranslate nohighlight">\(\vec{a}\)</span> to the head of <span class="math notranslate nohighlight">\(\vec{b}\)</span>) to get the
 vector representing the addition of <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span>. This is
-shown in figure <span class="xref myst">1.2</span>{reference-type=”ref”
-reference=”fig:vectorAdd”}.</p>
+shown in <a class="reference internal" href="#fig-vectoradd"><span class="std std-numref">Fig. 11.2</span></a>.</p>
 <figure class="align-default" id="fig-vectoradd">
 <a class="reference internal image-reference" href="_images/vectorAdd.png"><img alt="_images/vectorAdd.png" src="_images/vectorAdd.png" style="width: 50%;" /></a>
 <figcaption>
@@ -659,24 +657,24 @@ subtraction. There are different kinds of products of two vectors. One,
 called the <em>scalar product</em>, gives a result which is a scalar. Another
 type of product, called the vector product, gives a result which is a
 vector. We will discuss the vector product in
-section <span class="xref myst">1.3.4</span>{reference-type=”ref”
-reference=”sec:crossprod”}. There is a third type of product of two
+section <span class="xref std std-ref">Cross Product</span>. There is a third type of product of two
 vectors, called the outer product, which results in a matrix. Here we
 discuss the <em>scalar product</em> which is also called the <em>dot product</em> or
 <em>inner product</em>.</p>
 <p>If <span class="math notranslate nohighlight">\(\vec{a} = a_x\hat{i} + a_y\hat{j} + a_z\hat{k}\)</span> and
 <span class="math notranslate nohighlight">\(\vec{b} = b_x\hat{i} + b_y\hat{j} + b_z\hat{k}\)</span>, then the scalar, or
 dot, product is given by</p>
-<div class="math notranslate nohighlight">
-\[\vec{a}\cdot\vec{b}=\vec{a}\cdot\vec{b} = a_xb_x + a_yb_y +a_zb_z = ab\cos{\theta}\label{eq:scalarproduct}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-scalarproduct">
+<span class="eqno">(11.1)<a class="headerlink" href="#equation-eq-scalarproduct" title="Permalink to this equation">#</a></span>\[
+\vec{a}\cdot\vec{b}=\vec{a}\cdot\vec{b} = a_xb_x + a_yb_y +a_zb_z = ab\cos{\theta}
+\]</div>
 <p>where <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between the two vectors. Note that the
 result is a scalar, which is why we call it the scalar product. Note
 also that that to denote this kind of product between vectors we use a
 dot <span class="math notranslate nohighlight">\(\cdot\)</span> which is why it is also called it the dot product. Note that
 the dot product between two perpendicular vevctors is zero.</p>
-<p>From
-equation (<span class="xref myst">[eq:scalarproduct]</span>{reference-type=”ref”
-reference=”eq:scalarproduct”}), we can see that the scalar product is
+<p>From equation
+<a class="reference internal" href="#equation-eq-scalarproduct">(11.1)</a>, we can see that the scalar product is
 commutative; i.e.,</p>
 <div class="math notranslate nohighlight">
 \[
@@ -696,8 +694,7 @@ k(\vec{a}\cdot\vec{b})=(k\vec{a})\cdot\vec{b}=\vec{a}\cdot(k\vec{b})
 \]</div>
 <p>We can use the scalar product to find the angle between two lines by
 rearragning
-equation (<span class="xref myst">[eq:scalarproduct]</span>{reference-type=”ref”
-reference=”eq:scalarproduct”}) to obtain;</p>
+equation <a class="reference internal" href="#equation-eq-scalarproduct">(11.1)</a> to obtain;</p>
 <div class="math notranslate nohighlight">
 \[
 \theta = \cos^{-1}\left(\frac{\vec{a}\cdot\vec{b}}{ab}\right).
@@ -746,8 +743,7 @@ can be used to define the cross product:</p>
 \[\vec{a}\,\times\,\vec{b} = \left|\vec{a}\,\right|\left|\vec{b}\,\right|\sin{\theta} \vec{n}\]</div>
 <p>In this equation <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between <span class="math notranslate nohighlight">\(\vec{a}\)</span> and
 <span class="math notranslate nohighlight">\(\vec{b}\)</span>, and n is the unit vector parallel to the plane. See
-figure [1.3](#fig:Cross product){reference-type=”ref”
-reference=”fig:Cross product”})</p>
+figure <a class="reference internal" href="#fig-crossproduct"><span class="std std-numref">Fig. 11.3</span></a></p>
 <p>The cross product can also be expressed as a three–by–three
 determinant</p>
 <div class="math notranslate nohighlight">
@@ -791,7 +787,7 @@ resultant force is perpendicular to both the direction of movement and
 the magnetic field.</p>
 <p>The magnitude of the vector product is given by</p>
 <div class="math notranslate nohighlight" id="equation-eq-crossproduct">
-<span class="eqno">(11.1)<a class="headerlink" href="#equation-eq-crossproduct" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(11.2)<a class="headerlink" href="#equation-eq-crossproduct" title="Permalink to this equation">#</a></span>\[
 \left|\vec{a}\,\times\,\vec{b}\,\right| = a\,b\,|\sin{\theta} |
 \]</div>
 <p>Hence the cross product (as well as the dot product) also provides a
@@ -806,33 +802,43 @@ in a vector.</p>
 <p>The scalar triple product is given by the dot product between one vector
 and the cross product of the other two vectors i.e.</p>
 <div class="math notranslate nohighlight">
-\[\vec{a}\cdot(\vec{b}\times\vec{c})\]</div>
+\[
+\vec{a}\cdot(\vec{b}\times\vec{c})
+\]</div>
 <p>The triple scalar product can be obtained from the three–by–three
 determinant of the matrix with the vectors as the rows i.e.</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
+\[\begin{split}
+\begin{aligned}
 \vec{a}\cdot(\vec{b}\times\vec{c})
 &amp; = &amp; {\left|\begin{array}{ccc}    
   a_x&amp;a_y&amp;a_z\\b_x&amp;b_y&amp;b_z\\c_x&amp;c_y&amp;c_z\end{array}\right|}\\
 &amp;&amp;\\
 &amp; = &amp;a_x(b_yc_z - b_zc_y)- a_y(b_xc_z-b_zc_x)+ a_z(b_xc_y - b_yc_x)
-\end{aligned}\end{split}\]</div>
+\end{aligned}
+\end{split}\]</div>
 <p>Changing the vector one starts with in a triple scalar product does not
 change the value as long as the circular order of the vectors is
 maintained i.e.</p>
 <div class="math notranslate nohighlight">
-\[\vec{a}\cdot(\vec{b}\times\vec{c})=\vec{b}\cdot(\vec{c}\times\vec{a})=\vec{c}\cdot(\vec{a}\times\vec{b})\]</div>
+\[
+\vec{a}\cdot(\vec{b}\times\vec{c})=\vec{b}\cdot(\vec{c}\times\vec{a})=\vec{c}\cdot(\vec{a}\times\vec{b})
+\]</div>
 <p>Swapping the order of the operations does not change the value i.e.</p>
 <div class="math notranslate nohighlight">
-\[\vec{a}\cdot(\vec{b}\times\vec{c})=(\vec{a}\times\vec{b})\cdot\vec{c}\]</div>
+\[
+\vec{a}\cdot(\vec{b}\times\vec{c})=(\vec{a}\times\vec{b})\cdot\vec{c}
+\]</div>
 <p>But swapping the order or any two of the vectors changes the sign of the
 triple product i.e.</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
+\[\begin{split}
+\begin{aligned}
   \vec{a}\cdot(\vec{b}\times\vec{c})=&amp;-\vec{a}\cdot(\vec{c}\times\vec{b})\\
   =&amp;-\vec{b}\cdot(\vec{a}\times\vec{c})\\
     =&amp;-\vec{c}\cdot(\vec{b}\times\vec{a})
-\end{aligned}\end{split}\]</div>
+\end{aligned}
+\end{split}\]</div>
 <p>Note that, since the the cross product between parallel vectors is zero
 and the dot product of perpendicular vectors is zero and the cross
 product of two vectors is perpendicular to both the original vectors,
@@ -867,8 +873,10 @@ the order) we have;</p>
 <p>In the Cartesian coordinate system, we can describe any straight line by
 an equation using vectors. The position vector, <span class="math notranslate nohighlight">\(\vec{r}=(x,y,z)\)</span> of
 any point on the line is given by</p>
-<div class="math notranslate nohighlight">
-\[\vec{r} = \vec{a} + \lambda \vec{c}\label{eq:line}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-line">
+<span class="eqno">(11.3)<a class="headerlink" href="#equation-eq-line" title="Permalink to this equation">#</a></span>\[
+\vec{r} = \vec{a} + \lambda \vec{c}
+\]</div>
 <p>where <span class="math notranslate nohighlight">\(\lambda\)</span>
 is a scalar, <span class="math notranslate nohighlight">\(\vec{a}=(a_{x},a_{y},a_{z})\)</span> is the position vector of a
 point on the line and <span class="math notranslate nohighlight">\(\vec{c}=(c_{x},c_{y},c_{z})\)</span> is a vector parallel
@@ -882,30 +890,30 @@ the equation of a line using vectors.</span><a class="headerlink" href="#fig-eql
 </figcaption>
 </figure>
 <p>Since, a vector has components in each of the directions, the line in
-equation (<span class="xref myst">[eq:line]</span>{reference-type=”ref”
-reference=”eq:line”}) can also be expressed in a <em>symmetric form</em> as;</p>
+equation <a class="reference internal" href="#equation-eq-line">(11.3)</a> can also be expressed in a <em>symmetric form</em> as;</p>
 <div class="math notranslate nohighlight">
-\[\frac{x-a_{x}}{c_{x}} =  \frac{y-a_{y}}{c_{y}} = 
-\frac{z-a_{z}}{c_{z}} = \lambda\]</div>
+\[
+\frac{x-a_{x}}{c_{x}} =  \frac{y-a_{y}}{c_{y}} = 
+\frac{z-a_{z}}{c_{z}} = \lambda
+\]</div>
 <p>Alternatively, if we know the coordinates of two points on a line,
 <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span>, then the line can be expressed in parametric
 form as;</p>
 <div class="math notranslate nohighlight">
-\[\vec{r} = \vec{a} + \lambda (\vec{b}-\vec{a})\]</div>
+\[
+\vec{r} = \vec{a} + \lambda (\vec{b}-\vec{a})
+\]</div>
 <p>since the
 difference between the position vectors of two points on the line gives
 a vector along the line i.e. a vector in the direction of <span class="math notranslate nohighlight">\(\vec{c}\)</span> in
-equation (<span class="xref myst">[eq:line]</span>{reference-type=”ref”
-reference=”eq:line”}). This relationship is a direct consequence of the
+equation <a class="reference internal" href="#equation-eq-line">(11.3)</a>. This relationship is a direct consequence of the
 triangle law of vector addition (see
-figure <span class="xref myst">1.2</span>{reference-type=”ref”
-reference=”fig:vectorAdd”}).</p>
+figure <a class="reference internal" href="#fig-vectoradd"><span class="std std-numref">Fig. 11.2</span></a>).</p>
 </section>
 <section id="equation-of-a-plane">
 <h3><span class="section-number">11.4.2. </span>Equation of a plane<a class="headerlink" href="#equation-of-a-plane" title="Permalink to this heading">#</a></h3>
 <p>We can also use vectors to write down an equation for a plane (see
-figure <span class="xref myst">1.5</span>{reference-type=”ref”
-reference=”fig:eqplane”}). The parametric equation of a plane which
+figure <a class="reference internal" href="#fig-eqplane"><span class="std std-numref">Fig. 11.5</span></a>. The parametric equation of a plane which
 passes through a point with position vector <span class="math notranslate nohighlight">\(\vec{c}\)</span>, and which
 contains non-parallel vectors <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span> is</p>
 <div class="math notranslate nohighlight">
@@ -938,10 +946,12 @@ and since it lies in the plane it must be perpendicular to the normal
 vector <span class="math notranslate nohighlight">\(\vec{n}\)</span>. Therefore the scalar product between
 <span class="math notranslate nohighlight">\((\vec{r} - \vec{c})\)</span> and <span class="math notranslate nohighlight">\(\vec{n}\)</span> must be zero i.e.,</p>
 <div class="math notranslate nohighlight" id="equation-eq-plane">
-<span class="eqno">(11.2)<a class="headerlink" href="#equation-eq-plane" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
+<span class="eqno">(11.4)<a class="headerlink" href="#equation-eq-plane" title="Permalink to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
   (\vec{r} - \vec{c}) \cdot \vec{n} &amp;= 0\nonumber\\
   \vec{r}\cdot\vec{n}&amp; =  \vec{c}\cdot\vec{n}
-\end{aligned}\end{split}\]</div>
+\end{aligned}
+\end{split}\]</div>
 <p>The perpendicular distance from the plane to the origin,
 <span class="math notranslate nohighlight">\(d\)</span>, is given by the projection of the position vector of any point in
 the plane onto the unit normal, <span class="math notranslate nohighlight">\(\hat{\vec{n}}=\vec{n}/|\vec{n}|\)</span>, i.e.</p>
@@ -950,7 +960,7 @@ the plane onto the unit normal, <span class="math notranslate nohighlight">\(\ha
 d=\vec{c}\cdot\hat{\vec{n}}.
 \]</div>
 <p>This enables us to write the equation
-of a plane <code class="xref std std-numref docutils literal notranslate"><span class="pre">eq:plane</span></code> in the more compact form</p>
+of a plane from <a class="reference internal" href="#equation-eq-plane">(11.4)</a> in the more compact form</p>
 <div class="math notranslate nohighlight">
 \[
 \vec{r}\cdot\hat{\vec{n}} =  d.
