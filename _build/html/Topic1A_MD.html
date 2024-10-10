@@ -477,7 +477,7 @@ of function such as how the function changes (i.e. differentiation).</p>
 <p><span class="xref std std-ref"> </span></p>
 <p>Explicit functions are those that we encounter most frequently. Some of
 the more frequently occurring functions in physics are shown in
-<a class="reference internal" href="Topic3A_MD.html#tab-standardfuncs"><span class="std std-numref">Table 3.1</span></a>.</p>
+<a class="reference internal" href="#tab-standardfuncs"><span class="std std-numref">Table 1.1</span></a>.</p>
 <table class="table" id="tab-standardfuncs">
 <caption><span class="caption-number">Table 1.1 </span><span class="caption-text">Basic maths functions</span><a class="headerlink" href="#tab-standardfuncs" title="Permalink to this table">#</a></caption>
 <thead>
@@ -689,6 +689,35 @@ multiple of <span class="math notranslate nohighlight">\(\pi/2\)</span>. Vertica
 dashed lines.</span><a class="headerlink" href="#fig-discont2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p class="rubric">Defining Domains - Added 10/10/24</p>
+<p>When defining the ranges of a function we use the asymptotes to define the edges of validity. For example a function with an asymptote at <span class="math notranslate nohighlight">\(x=0\)</span> but that is valid for all other regions would say to have the domain</p>
+<div class="math notranslate nohighlight">
+\[
+x \rightarrow [-\infty,0] , [0,\infty]
+\]</div>
+<p>A common notation is round brackets are used if the limit value is also valid e.g. <span class="math notranslate nohighlight">\(x \rightarrow (-1,0)\)</span> for both limit values valid or <span class="math notranslate nohighlight">\(x\rightarrow (-1,\infty]\)</span> or <span class="math notranslate nohighlight">\(x\rightarrow [-\infty,-1)\)</span> if just one limit is valid.</p>
+<p>In this course as long as you understand where the limitations of a function may be and understand how to find them for unseen functions, then that is enough.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p class="rubric">Horizon Asymptotes - Added 10/10/24</p>
+<p>When determining horizontal asymptotes there is a standard rule to estimate the presence of one when given fractions which include polynomials on the top on the bottom.</p>
+<p>For example take the function</p>
+<div class="math notranslate nohighlight">
+\[
+f(x) = \frac{Ax^{2} + x + 8}{2x + 4}
+\]</div>
+<p>Here the numerator polynomial has a rank of two (it’s highest power is <span class="math notranslate nohighlight">\(x^{2}\)</span>), whilst the denominator has a rank of one (it’s highest power is <span class="math notranslate nohighlight">\(Bx^{1}\)</span>).</p>
+<p>We can find the rank of any of the polynomials we are given in this form, and determine the rank of the numerator, <span class="math notranslate nohighlight">\(n\)</span>, and the denominator <span class="math notranslate nohighlight">\(d\)</span>.</p>
+<p>The presence of a horizontal asymptote is then determined by</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(n &gt; d\)</span> There is no horizontal asymptote</p></li>
+<li><p><span class="math notranslate nohighlight">\(n == d\)</span> There is one horizontal asymptote at <span class="math notranslate nohighlight">\(y = A/B\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(n &lt; d\)</span> There is one horizontal asymptote at <span class="math notranslate nohighlight">\(y=0\)</span>.</p></li>
+</ul>
+</div>
 </section>
 <section id="symmetry">
 <h2><span class="section-number">1.6. </span>Symmetry<a class="headerlink" href="#symmetry" title="Permalink to this heading">#</a></h2>

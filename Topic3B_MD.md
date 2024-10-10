@@ -754,7 +754,7 @@ vectors. Real-valued unitary matrices describe rotations and
 reflections, while complex unitary matrices are used to describe the
 evolution of quantum systems.
 
-## The determinant {#sec:det}
+## The determinant 
 
 The *determinant* is like the magnitude of the matrix. The determinant
 is useful because it helps us to find the inverse of a matrix. A matrix

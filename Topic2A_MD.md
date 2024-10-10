@@ -36,8 +36,7 @@ frequently in physics to describe oscillating phenomena.
 ```{figure} ImagesB/Sin-cos-define.png
 ---
 width: 40%
-name: SinCos-Define
-label: fig:SinCosDefine
+name: fig:SinCos-Define
 ---
 Trigonometric functions relate the ratio of two sides to an angle of a
 triangle.
@@ -49,8 +48,7 @@ triangle.
 ```{figure} ImagesB/SinCos.png
 ---
 width: 50%
-name: SinCos
-label: fig:SinCos
+name: fig:SinCos
 ---
 Cosine and sine functions are shown for a single cycle for
 $x=0\rightarrow2\pi$. Notice that the functions are identical but differ
@@ -61,8 +59,7 @@ in phase by $\pi/2$.
 ```{figure} ImagesB/Tan.png
 ---
 width: 50%
-name: Tan
-label: fig:Tan
+name: fig:Tan
 ---
 The $y=\tan x$ function shown for a single cycle for
 $x=0\rightarrow2\pi$. Notice the asymptotes at odd multiples of $\pi/2$
@@ -109,7 +106,7 @@ $$
 \begin{aligned}
 {\rm sin}\;A-{\rm sin}\;B & =2{\rm cos}\;(\frac{A+B}{2}){\rm sin}\;(\frac{A-B}{2})\\
 {\rm sin}\;(A\pm B)= & {\rm sin}\;A\;{\rm cos}\;B\pm{\rm cos}\;A\;{\rm sin}\;B\\
-{\rm cos}\;(A\pm B)= & {\rm cos}\;A\;{\rm cos}\;B\pm{\rm sin}\;A\;{\rm sin}\;B\\
+{\rm cos}\;(A\pm B)= & {\rm cos}\;A\;{\rm cos}\;B\mp{\rm sin}\;A\;{\rm sin}\;B\\
 {\rm sin}\;A+{\rm sin}\;B= & 2{\rm sin}\;(\frac{A+B}{2}){\rm cos}\;(\frac{A-B}{2})\\
 {\rm sin}\;A-{\rm sin}\;B= & 2{\rm cos}\;(\frac{A+B}{2}){\rm sin}\;(\frac{A-B}{2})\\
 {\rm cos}\;A+{\rm cos}\;B= & 2{\rm cos}\;(\frac{A+B}{2}){\rm cos}\;(\frac{A-B}{2})\\
@@ -138,14 +135,13 @@ $$\frac{1}{2}ab\sin C=\frac{1}{2}bc\sin A=\frac{1}{2}ac\sin B$$
 Whereas the standard trigonometric functions are based on circles
 ($x^{2}+y^{2}=r^{2}$), hyperbolic trigonometric functions are based on
 hyperbola ($x^{2}-y^{2}=1$) as shown in
-Fig. [1.2](#fig:Hyperbola). The geometry defined by hyperbolic
+Fig. {numref}`fig:Hyperbola`. The geometry defined by hyperbolic
 functions have numerous applications in physics.
 
 ```{figure} ImagesB/UnitHyperbola.png
 ---
 width: 40%
-name: Hyperbola
-label: fig:Hyperbola
+name: fig:Hyperbola
 ---
 The hyperbola defined by the equation $x^{2}-y^{2}=1$.
 ```
@@ -153,8 +149,7 @@ The hyperbola defined by the equation $x^{2}-y^{2}=1$.
 ```{figure} ImagesB/cosh_sinh.png
 ---
 width: 50%
-name: hyperbolicfuncs1
-label: fig:hyperbolic1
+name: fig:hyperbolicfuncs1
 ---
 The main hyperbolic functions are shown for $\sinh x$ and $\cosh x$
 ```
@@ -162,8 +157,7 @@ The main hyperbolic functions are shown for $\sinh x$ and $\cosh x$
 ```{figure} ImagesB/tanh.png
 ---
 width: 50%
-name: hyperbolicfuncs2
-label: fig:hyperbolic2
+name: fig:hyperbolicfuncs2
 ---
 The main hyperbolic functions are shown for $\tanh x$
 ```
@@ -180,9 +174,8 @@ $$
 $$
 
 
-The graphs of these functions are shown in
-Fig. [1.4](#fig:hyperbolicfuncs){reference-type="ref"
-reference="fig:hyperbolicfuncs"}. There are also corresponding
+The graphs of these functions are shown in Fig. {numref}`fig:hyperbolicfuncs1` and
+Fig. {numref}`fig:hyperbolicfuncs2`. There are also corresponding
 reciprocals: 
 
 $$\DeclareMathOperator{\sech}{sech} \sech x = 1/\cosh x$$
