@@ -314,6 +314,52 @@ dashed lines.
 ```
 
 
+
+
+
+```{note}
+#### Defining Domains - Added 10/10/24
+
+When defining the ranges of a function we use the asymptotes to define the edges of validity. For example a function with an asymptote at $x=0$ but that is valid for all other regions would say to have the domain
+
+$$
+x \rightarrow [-\infty,0] , [0,\infty]
+$$
+
+A common notation is round brackets are used if the limit value is also valid e.g. $x \rightarrow (-1,0)$ for both limit values valid or $x\rightarrow (-1,\infty]$ or $x\rightarrow [-\infty,-1)$ if just one limit is valid.
+
+In this course as long as you understand where the limitations of a function may be and understand how to find them for unseen functions, then that is enough.
+```
+
+
+
+
+```{note}
+#### Horizon Asymptotes - Added 10/10/24
+When determining horizontal asymptotes there is a standard rule to estimate the presence of one when given fractions which include polynomials on the top on the bottom.
+
+For example take the function
+
+$$
+f(x) = \frac{Ax^{2} + x + 8}{2x + 4}
+$$
+
+Here the numerator polynomial has a rank of two (it's highest power is $x^{2}$), whilst the denominator has a rank of one (it's highest power is $Bx^{1}$).
+
+We can find the rank of any of the polynomials we are given in this form, and determine the rank of the numerator, $n$, and the denominator $d$. 
+
+The presence of a horizontal asymptote is then determined by
+
+- $n > d$ There is no horizontal asymptote
+- $n == d$ There is one horizontal asymptote at $y = A/B$.
+- $n < d$ There is one horizontal asymptote at $y=0$.
+
+
+```
+
+
+
+
 ### Symmetry
 {ref}` <#sec:symmetry>`
 
@@ -394,3 +440,14 @@ inverse function $y$ will be on the horizontal. The inverse function
 effectively enables us to determine a value of $x$ for a given
 $y$.
 ```
+
+
+
+
+
+
+
+
+
+
+
