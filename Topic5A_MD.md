@@ -35,7 +35,7 @@ that $c = 0$.
 
 Having defined a power series, we now show that we can rewrite functions
 by relating the coefficients $a_n$ to the appropriate order of
-derivative of $f(x)$ evaluated at $x=c$. Consider the 3^rd^ order
+derivative of $f(x)$ evaluated at $x=c$. Consider the 3rd order
 polynomial 
 
 $$
@@ -49,8 +49,8 @@ that we have $a_0=f(x=c)$. The first three derivatives are:
 $$
 \begin{aligned}
     \frac{df}{dx}\equiv f^{(1)}&=a_1+2a_2(x-c)+3a_3(x-c)^2 \\
-    \frac{d^2f}{dx^2}\equiv f^{(2)}&=2a_2+2.3a_3(x-c) \\
-    \frac{d^3f}{dx^3}\equiv f^{(3)}&=2.3a_3 \\  \end{aligned}    
+    \frac{d^2f}{dx^2}\equiv f^{(2)}&=2a_2+2 \cdot 3a_3(x-c) \\
+    \frac{d^3f}{dx^3}\equiv f^{(3)}&=2 \cdot 3a_3 \\  \end{aligned}    
 $$
     
 Hence we can see that the $n$^th^ coefficient in the polynomial corresponds to
@@ -59,9 +59,10 @@ the $n$^th^ derivative evaluated at $x=c$; i.e.,
 $$
 \begin{aligned}
     f^{(0)}(x=c)&=a_0\\
-    f^{(1)}(x=c)&=a_1\\
-    f^{(2)}(x=c)&=2a_2 \\
-    f^{(3)}(x=c)&=2.3a_3 \\ 
+    f^{(1)}(x=c)&=1 \cdot a_1\\
+    f^{(2)}(x=c)&=1 \cdot 2 \cdot a_2 \\
+    f^{(3)}(x=c)&=1 \cdot 2 \cdot 3 \cdot a_3 \\ 
+    f^{(4)}(x=c)&=1 \cdot 2 \cdot 3 \cdot 4 \cdot a_4 \\ 
 \end{aligned}    
 $$
     
@@ -83,7 +84,7 @@ f(x)&=a_{0}+a_{1}(x-c)^{1}+a_{2}(x-c)^{2}+\cdots \\
 $$
 
 where the factor $1/n!$ arises from the repeated differentiations which
-reduce the power by one each time as we saw above for the 3^rd^ order
+reduce the power by one each time as we saw above for the 3rd order
 polynomial.
 
 If the function $f(x)$ is a polynomial, the final relation above is
@@ -206,8 +207,8 @@ $$
 
 
 The binomial series is a useful analytical tool. For example, when both
-$|x|\ll1$ and $|nx|\ll1$ than we use just the first two terms in the
-expansion: 
+$|x|<1$ and $x^{n}|\ll1$ than we use just the first two terms in the
+expansion as higher order terms become very small: 
 
 $$
 (1+x)^{k}\approx1+kx
